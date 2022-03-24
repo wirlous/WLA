@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 
 [RequireComponent(typeof(Rigidbody2D))]
+[RequireComponent(typeof(Animator))]
 [RequireComponent(typeof(Timer))]
 public class PlayerController : MonoBehaviour
 {
@@ -23,9 +24,9 @@ public class PlayerController : MonoBehaviour
 
     // Internal
     PlayerInput playerInput;
+    Animator animator;
     Rigidbody2D rb;
     Timer moveTimer;
-
 
     // public Timer.TimerDelegate moveTimerCallback;
     
@@ -34,6 +35,7 @@ public class PlayerController : MonoBehaviour
         // moveTimerCallback += MoveTimerDone;
 
         rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
         
         moveTimer = GetComponent<Timer>();
         moveTimer.Init(moveSpeedUpTime);
@@ -66,23 +68,19 @@ public class PlayerController : MonoBehaviour
         Debug.Log("Attack");
     }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
     // Update is called once per frame
     void Update()
     {
-        
+        // float speed = moveDir.sqrMagnitude * moveFactor;
+        float speed = moveDir.sqrMagnitude;
+        animator.SetFloat("Speed", speed);
     }
 
     void FixedUpdate()
     {
 
         float t = moveTimer.GetTimeNormalize();
-        float moveFactor = moveSpeedLerp.Evaluate(t);
+        moveFactor = moveSpeedLerp.Evaluate(t);
 
         // Movement
         rb.MovePosition(rb.position + moveDir * moveSpeed * moveFactor * Time.fixedDeltaTime);
@@ -93,8 +91,6 @@ public class PlayerController : MonoBehaviour
     {
         playerInput.Gameplay.Enable();
     }
-
-    
 
     void OnDisable()
     {
