@@ -28,11 +28,9 @@ public class PlayerController : MonoBehaviour
     Rigidbody2D rb;
     Timer moveTimer;
 
-    // public Timer.TimerDelegate moveTimerCallback;
-    
     void Awake()
     {
-        // moveTimerCallback += MoveTimerDone;
+        GameReferences.player = this;
 
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
@@ -42,7 +40,6 @@ public class PlayerController : MonoBehaviour
     
         playerInput = new PlayerInput();
         
-
         // Register Attack
         playerInput.Gameplay.Attack.performed += ctx => Attack();
         
@@ -71,7 +68,6 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // float speed = moveDir.sqrMagnitude * moveFactor;
         float speed = moveDir.sqrMagnitude;
         animator.SetFloat("Speed", speed);
     }

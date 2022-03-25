@@ -13,16 +13,16 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Player
+  - Slime
+  - SlimeSword
+  - Ghost
+  - Zombie
+  - GroundBase
+  - GroundWalkable
+  - GroundNotWalkable
+  - Wall
+  - Door
   - 
   - 
   - 
