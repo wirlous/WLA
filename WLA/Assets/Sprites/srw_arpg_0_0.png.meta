@@ -1,0 +1,512 @@
+fileFormatVersion: 2
+guid: 79d88a39ddb7df744a2c57c561f33fe5
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1881728124677147361
+    second: srw_arpg_0_0_0
+  - first:
+      213: 1233376685975168888
+    second: srw_arpg_0_0_1
+  - first:
+      213: 4593675413735474909
+    second: srw_arpg_0_0_2
+  - first:
+      213: -6429196353762354034
+    second: srw_arpg_0_0_3
+  - first:
+      213: 4646034521250447509
+    second: srw_arpg_0_0_4
+  - first:
+      213: -5230889180900385206
+    second: srw_arpg_0_0_5
+  - first:
+      213: -1165168467594612799
+    second: srw_arpg_0_0_6
+  - first:
+      213: 6944141751164418302
+    second: srw_arpg_0_0_7
+  - first:
+      213: -7437963706790996287
+    second: srw_arpg_0_0_8
+  - first:
+      213: 1669373272233268861
+    second: srw_arpg_0_0_9
+  - first:
+      213: 7626781701826208900
+    second: srw_arpg_0_0_10
+  - first:
+      213: -5760673651823557590
+    second: srw_arpg_0_0_11
+  - first:
+      213: -6428701652084190258
+    second: srw_arpg_0_0_12
+  - first:
+      213: 1868779765189234802
+    second: srw_arpg_0_0_13
+  - first:
+      213: -1340804561328532874
+    second: srw_arpg_0_0_14
+  - first:
+      213: 242346415015429248
+    second: srw_arpg_0_0_0
+  - first:
+      213: 8573728894226173830
+    second: srw_arpg_0_0_1
+  - first:
+      213: -2115815913850205832
+    second: srw_arpg_0_0_2
+  - first:
+      213: 1999542149995606466
+    second: srw_arpg_0_0_3
+  - first:
+      213: -1539811939715248434
+    second: srw_arpg_0_0_4
+  - first:
+      213: 2064567666747984592
+    second: srw_arpg_0_0_5
+  - first:
+      213: 6824194353565568472
+    second: srw_arpg_0_0_6
+  - first:
+      213: -8909361859067555212
+    second: srw_arpg_0_0_7
+  - first:
+      213: 4120768706175990497
+    second: srw_arpg_0_0_8
+  - first:
+      213: 2360517983981117217
+    second: srw_arpg_0_0_9
+  - first:
+      213: -7343906736933270678
+    second: srw_arpg_0_0_10
+  - first:
+      213: 16348454967424597
+    second: srw_arpg_0_0_11
+  - first:
+      213: 4751962098893021471
+    second: srw_arpg_0_0_15
+  - first:
+      213: 4489222837558755407
+    second: srw_arpg_0_0_16
+  - first:
+      213: -4478428429355230187
+    second: srw_arpg_0_0_17
+  - first:
+      213: 418057397829453072
+    second: srw_arpg_0_0_18
+  - first:
+      213: 8807551420897665609
+    second: srw_arpg_0_0_19
+  - first:
+      213: -3815616217018182804
+    second: srw_arpg_0_0_20
+  - first:
+      213: 1765625098924182370
+    second: srw_arpg_0_0_21
+  - first:
+      213: -5522775122146183749
+    second: srw_arpg_0_0_22
+  - first:
+      213: 1528957702533528548
+    second: srw_arpg_0_0_23
+  - first:
+      213: 8959959966868064516
+    second: srw_arpg_0_0_24
+  - first:
+      213: 3907049797091793280
+    second: srw_arpg_0_0_25
+  - first:
+      213: -4689413477272036891
+    second: srw_arpg_0_0_26
+  - first:
+      213: -2147461002882307471
+    second: srw_arpg_0_0_27
+  - first:
+      213: -6643578971566711060
+    second: srw_arpg_0_0_28
+  - first:
+      213: -3079070530477536245
+    second: srw_arpg_0_0_29
+  - first:
+      213: -8726743452192629366
+    second: srw_arpg_0_0_30
+  - first:
+      213: -2140903725717719450
+    second: srw_arpg_0_0_31
+  - first:
+      213: 5893577467504336598
+    second: srw_arpg_0_0_32
+  - first:
+      213: -379445085666515688
+    second: srw_arpg_0_0_33
+  - first:
+      213: -6518883666101144261
+    second: srw_arpg_0_0_34
+  - first:
+      213: -450028695427848557
+    second: srw_arpg_0_0_35
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: srw_arpg_0_0_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 96
+        width: 32
+        height: 32
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3425}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 084859bc7ccfc5300800000000000000
+      internalID: 242346415015429248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: srw_arpg_0_0_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 96
+        width: 32
+        height: 32
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3425}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68f8ad4f0010cf670800000000000000
+      internalID: 8573728894226173830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: srw_arpg_0_0_2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 96
+        width: 32
+        height: 32
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3425}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87907dce2ac13a2e0800000000000000
+      internalID: -2115815913850205832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: srw_arpg_0_0_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 32
+        height: 32
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3425}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c1b8ebcdfccfbb10800000000000000
+      internalID: 1999542149995606466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: srw_arpg_0_0_4
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 64
+        width: 32
+        height: 32
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3425}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ece0e58f23d71aae0800000000000000
+      internalID: -1539811939715248434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: srw_arpg_0_0_5
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 64
+        width: 32
+        height: 32
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3425}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0da4547ba51d6ac10800000000000000
+      internalID: 2064567666747984592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: srw_arpg_0_0_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 32
+        width: 32
+        height: 32
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3425}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8dd8082cb9864be50800000000000000
+      internalID: 6824194353565568472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: srw_arpg_0_0_7
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 32
+        width: 32
+        height: 32
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3425}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4725ddec7969b5480800000000000000
+      internalID: -8909361859067555212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: srw_arpg_0_0_8
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 32
+        width: 32
+        height: 32
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3425}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ea7a253e49ef2930800000000000000
+      internalID: 4120768706175990497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: srw_arpg_0_0_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 32
+        height: 32
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3425}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12f9d11999e32c020800000000000000
+      internalID: 2360517983981117217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: srw_arpg_0_0_10
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 32
+        height: 32
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3425}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6b8e718bb3351a90800000000000000
+      internalID: -7343906736933270678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: srw_arpg_0_0_11
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 32
+        height: 32
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3425}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 556b5fa45d41a3000800000000000000
+      internalID: 16348454967424597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

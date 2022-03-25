@@ -4,8 +4,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+
 [RequireComponent(typeof(Rigidbody2D))]
-[RequireComponent(typeof(Animator))]
 [RequireComponent(typeof(Timer))]
 public class PlayerController : MonoBehaviour
 {
@@ -18,7 +18,8 @@ public class PlayerController : MonoBehaviour
     
     // Private
     [SerializeField]
-    Vector2 moveDir;
+    public Vector2 facingDirection;
+    public Vector2 movement;
     [SerializeField]
     float moveFactor;
 
@@ -32,8 +33,10 @@ public class PlayerController : MonoBehaviour
     {
         GameReferences.player = this;
 
+        facingDirection = new Vector2(0,-1);
+
         rb = GetComponent<Rigidbody2D>();
-        animator = GetComponent<Animator>();
+        animator = GetComponentInChildren<Animator>();
         
         moveTimer = GetComponent<Timer>();
         moveTimer.Init(moveSpeedUpTime);
@@ -44,14 +47,14 @@ public class PlayerController : MonoBehaviour
         playerInput.Gameplay.Attack.performed += ctx => Attack();
         
         // Register Move
-        playerInput.Gameplay.Move.performed += ctx => moveDir = ctx.ReadValue<Vector2>();
+        playerInput.Gameplay.Move.performed += ctx => movement = ctx.ReadValue<Vector2>();
         playerInput.Gameplay.Move.performed += ctx => StartMove();
         playerInput.Gameplay.Move.canceled += ctx => StopMove();
     }
 
     void StopMove()
     {
-        moveDir = Vector2.zero;
+        movement = Vector2.zero;
         moveTimer.SetDown(moveSpeedDownTime);
     }
 
@@ -68,8 +71,16 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float speed = moveDir.sqrMagnitude;
-        animator.SetFloat("Speed", speed);
+        float speed = movement.sqrMagnitude;
+        if (speed > 0.1f)
+        {
+            facingDirection = movement;
+        }
+        animator?.SetFloat("Speed", movement.sqrMagnitude);
+        animator?.SetFloat("Horizontal", movement.x);
+        animator?.SetFloat("Vertical", movement.y);
+        animator?.SetFloat("FacingHorizontal", facingDirection.x);
+        animator?.SetFloat("FacingVertical", facingDirection.y);
     }
 
     void FixedUpdate()
@@ -79,7 +90,7 @@ public class PlayerController : MonoBehaviour
         moveFactor = moveSpeedLerp.Evaluate(t);
 
         // Movement
-        rb.MovePosition(rb.position + moveDir * moveSpeed * moveFactor * Time.fixedDeltaTime);
+        rb.MovePosition(rb.position + movement * moveSpeed * moveFactor * Time.fixedDeltaTime);
 
     }
 
