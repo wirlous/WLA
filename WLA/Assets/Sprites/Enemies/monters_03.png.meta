@@ -1,0 +1,2708 @@
+fileFormatVersion: 2
+guid: 311625a471e0a7c49869ed28dced66b5
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6034329793980978509
+    second: monters_03_0
+  - first:
+      213: 6487933546139778722
+    second: monters_03_1
+  - first:
+      213: 3085395097340991348
+    second: monters_03_2
+  - first:
+      213: 4606418591866814601
+    second: monters_03_3
+  - first:
+      213: 639673214527315713
+    second: monters_03_4
+  - first:
+      213: -8785724123762647193
+    second: monters_03_5
+  - first:
+      213: -6281664732142936932
+    second: monters_03_6
+  - first:
+      213: 8494993964182747382
+    second: monters_03_7
+  - first:
+      213: -1250673973247228923
+    second: monters_03_8
+  - first:
+      213: 7437891726313507081
+    second: monters_03_9
+  - first:
+      213: 3691682631477648528
+    second: monters_03_10
+  - first:
+      213: 5214190944159170828
+    second: monters_03_11
+  - first:
+      213: 4373306874095554372
+    second: monters_03_12
+  - first:
+      213: -2638174239361564953
+    second: monters_03_13
+  - first:
+      213: 1349162989275050197
+    second: monters_03_14
+  - first:
+      213: 2340840807509993120
+    second: monters_03_15
+  - first:
+      213: -4744021191665763172
+    second: monters_03_16
+  - first:
+      213: -34105513832912672
+    second: monters_03_17
+  - first:
+      213: -2118145847788712270
+    second: monters_03_18
+  - first:
+      213: 9060044710054226445
+    second: monters_03_19
+  - first:
+      213: 5995729503597180181
+    second: monters_03_20
+  - first:
+      213: 2990068619736185492
+    second: monters_03_21
+  - first:
+      213: -285404446209099659
+    second: monters_03_22
+  - first:
+      213: -7660912712949468012
+    second: monters_03_23
+  - first:
+      213: -6338860655750249027
+    second: monters_03_24
+  - first:
+      213: 3567564494829400497
+    second: monters_03_25
+  - first:
+      213: 5384172334027364096
+    second: monters_03_26
+  - first:
+      213: -9147511703837640104
+    second: monters_03_27
+  - first:
+      213: 4402223625104166715
+    second: monters_03_28
+  - first:
+      213: 8002932537888526022
+    second: monters_03_29
+  - first:
+      213: -8186404201171576378
+    second: monters_03_30
+  - first:
+      213: -9072520032894057721
+    second: monters_03_31
+  - first:
+      213: -8379029517334794999
+    second: monters_03_32
+  - first:
+      213: -7650648849948268629
+    second: monters_03_33
+  - first:
+      213: -8820417584261135282
+    second: monters_03_34
+  - first:
+      213: -1496568513770344384
+    second: monters_03_35
+  - first:
+      213: -221623091328566478
+    second: monters_03_36
+  - first:
+      213: 8776680010968849353
+    second: monters_03_37
+  - first:
+      213: -3342114068169593434
+    second: monters_03_38
+  - first:
+      213: -401096637722954939
+    second: monters_03_39
+  - first:
+      213: -5297246521056269233
+    second: monters_03_40
+  - first:
+      213: -4727523987104948568
+    second: monters_03_41
+  - first:
+      213: -5558505793369227934
+    second: monters_03_42
+  - first:
+      213: -5915958480842041768
+    second: monters_03_43
+  - first:
+      213: 7135605393006863553
+    second: monters_03_44
+  - first:
+      213: -8142414311661417617
+    second: monters_03_45
+  - first:
+      213: 7668340939217811496
+    second: monters_03_46
+  - first:
+      213: 7717885215632962003
+    second: monters_03_47
+  - first:
+      213: 4951076214801949995
+    second: monters_03_48
+  - first:
+      213: -781340436404295103
+    second: monters_03_49
+  - first:
+      213: -4068586824200414916
+    second: monters_03_50
+  - first:
+      213: 2739598994473415856
+    second: monters_03_51
+  - first:
+      213: -2039668255318390667
+    second: monters_03_52
+  - first:
+      213: 7121919064841093249
+    second: monters_03_53
+  - first:
+      213: 9019326171493544316
+    second: monters_03_54
+  - first:
+      213: 2076732054557971256
+    second: monters_03_55
+  - first:
+      213: 1996299636559108060
+    second: monters_03_56
+  - first:
+      213: -8959529915555459111
+    second: monters_03_57
+  - first:
+      213: -3135081967807758358
+    second: monters_03_58
+  - first:
+      213: -549555716784404973
+    second: monters_03_59
+  - first:
+      213: 2191251045123404729
+    second: monters_03_60
+  - first:
+      213: -8918595500751415808
+    second: monters_03_61
+  - first:
+      213: 9090750533712431814
+    second: monters_03_62
+  - first:
+      213: -8326741398637511411
+    second: monters_03_63
+  - first:
+      213: 4397121101236607319
+    second: monters_03_64
+  - first:
+      213: 6381137926964888413
+    second: monters_03_65
+  - first:
+      213: 3361920309399866432
+    second: monters_03_66
+  - first:
+      213: 7313726973286270
+    second: monters_03_67
+  - first:
+      213: -6630460726609039951
+    second: monters_03_68
+  - first:
+      213: -4170058472263933147
+    second: monters_03_69
+  - first:
+      213: 7546035930552389158
+    second: monters_03_70
+  - first:
+      213: -4147822952776055209
+    second: monters_03_71
+  - first:
+      213: -2387176672057510372
+    second: monters_03_72
+  - first:
+      213: 1632550482466903891
+    second: monters_03_73
+  - first:
+      213: 38749941782086805
+    second: monters_03_74
+  - first:
+      213: 8501296911147135689
+    second: monters_03_75
+  - first:
+      213: -1080008246666907672
+    second: monters_03_76
+  - first:
+      213: 2229057593496353937
+    second: monters_03_77
+  - first:
+      213: 4731770015986179660
+    second: monters_03_78
+  - first:
+      213: -8336827781747470672
+    second: monters_03_79
+  - first:
+      213: 609862498120892822
+    second: monters_03_80
+  - first:
+      213: 3629246401851867456
+    second: monters_03_81
+  - first:
+      213: -10821823874295502
+    second: monters_03_82
+  - first:
+      213: 4765163930058288949
+    second: monters_03_83
+  - first:
+      213: -7966293264382500284
+    second: monters_03_84
+  - first:
+      213: 5920769717478779314
+    second: monters_03_85
+  - first:
+      213: 3513261492731436918
+    second: monters_03_86
+  - first:
+      213: 2064801575115270205
+    second: monters_03_87
+  - first:
+      213: 7356502342671782620
+    second: monters_03_88
+  - first:
+      213: -8149045537841858462
+    second: monters_03_89
+  - first:
+      213: -8186234228018039825
+    second: monters_03_90
+  - first:
+      213: 1684130769429065917
+    second: monters_03_91
+  - first:
+      213: 9166272067530176762
+    second: monters_03_92
+  - first:
+      213: 4184098058051890032
+    second: monters_03_93
+  - first:
+      213: 8735730783643554125
+    second: monters_03_94
+  - first:
+      213: -5303033502077444608
+    second: monters_03_95
+  - first:
+      213: 9059658440549564811
+    second: monters_03_0
+  - first:
+      213: 3272924859831855320
+    second: monters_03_1
+  - first:
+      213: -6853143278321576049
+    second: monters_03_2
+  - first:
+      213: -2219827262050990509
+    second: monters_03_3
+  - first:
+      213: 3796892161855588328
+    second: monters_03_4
+  - first:
+      213: 4186312896923851268
+    second: monters_03_5
+  - first:
+      213: -7696672864262244629
+    second: monters_03_6
+  - first:
+      213: 3837379857428094323
+    second: monters_03_7
+  - first:
+      213: -1299901199986687048
+    second: monters_03_8
+  - first:
+      213: 5985285215626623838
+    second: monters_03_9
+  - first:
+      213: -3728023646470903207
+    second: monters_03_10
+  - first:
+      213: -6577041692617823231
+    second: monters_03_11
+  - first:
+      213: 5380038715164402761
+    second: monters_03_12
+  - first:
+      213: -595403867409495370
+    second: monters_03_13
+  - first:
+      213: 2566404255417968411
+    second: monters_03_14
+  - first:
+      213: -8521479053880709590
+    second: monters_03_15
+  - first:
+      213: -781576198609828774
+    second: monters_03_16
+  - first:
+      213: 323416910558447078
+    second: monters_03_17
+  - first:
+      213: 5990054973958621032
+    second: monters_03_18
+  - first:
+      213: -2430827106837420689
+    second: monters_03_19
+  - first:
+      213: 4669045762917147188
+    second: monters_03_20
+  - first:
+      213: 5831814692698266316
+    second: monters_03_21
+  - first:
+      213: -6029092930171774865
+    second: monters_03_22
+  - first:
+      213: -9104133648902802391
+    second: monters_03_23
+  - first:
+      213: -1468363196896904489
+    second: monters_03_24
+  - first:
+      213: -1717663384755685688
+    second: monters_03_25
+  - first:
+      213: 4263404343772785263
+    second: monters_03_26
+  - first:
+      213: -4175791744962516993
+    second: monters_03_27
+  - first:
+      213: -6152432593973674291
+    second: monters_03_28
+  - first:
+      213: 3739307455143439991
+    second: monters_03_29
+  - first:
+      213: -2646615070930792638
+    second: monters_03_30
+  - first:
+      213: -8645601203508102704
+    second: monters_03_31
+  - first:
+      213: 3704257600788516634
+    second: monters_03_32
+  - first:
+      213: 8519135390541857032
+    second: monters_03_33
+  - first:
+      213: -655636575788355066
+    second: monters_03_34
+  - first:
+      213: 4791703270526049087
+    second: monters_03_35
+  - first:
+      213: 7665976975065472341
+    second: monters_03_36
+  - first:
+      213: -2593892346296610392
+    second: monters_03_37
+  - first:
+      213: 1744412078272394309
+    second: monters_03_38
+  - first:
+      213: -8584128872387426166
+    second: monters_03_39
+  - first:
+      213: -8845470678062889601
+    second: monters_03_40
+  - first:
+      213: 6851387478751816495
+    second: monters_03_41
+  - first:
+      213: 2304002763502223920
+    second: monters_03_42
+  - first:
+      213: -3913353285020708477
+    second: monters_03_43
+  - first:
+      213: -849646302417724399
+    second: monters_03_44
+  - first:
+      213: -2786817924243114291
+    second: monters_03_45
+  - first:
+      213: 7333473281383386830
+    second: monters_03_46
+  - first:
+      213: -6977548886645343218
+    second: monters_03_47
+  - first:
+      213: -5746744661299771544
+    second: monters_03_48
+  - first:
+      213: 8831588739381197632
+    second: monters_03_49
+  - first:
+      213: 6941687460932269394
+    second: monters_03_50
+  - first:
+      213: 5167764128153200418
+    second: monters_03_51
+  - first:
+      213: 7217697367321927068
+    second: monters_03_52
+  - first:
+      213: -3581763797444782914
+    second: monters_03_53
+  - first:
+      213: 8456286935412398245
+    second: monters_03_54
+  - first:
+      213: 2691383031430870077
+    second: monters_03_55
+  - first:
+      213: -7296501046115047824
+    second: monters_03_56
+  - first:
+      213: 3323102661019258803
+    second: monters_03_57
+  - first:
+      213: 2218504053831287801
+    second: monters_03_58
+  - first:
+      213: 8748758947376455996
+    second: monters_03_59
+  - first:
+      213: 2739559023432799511
+    second: monters_03_60
+  - first:
+      213: 2748472469054975588
+    second: monters_03_61
+  - first:
+      213: 2606719793580813308
+    second: monters_03_62
+  - first:
+      213: 6901310002961091001
+    second: monters_03_63
+  - first:
+      213: 4430822069507713091
+    second: monters_03_64
+  - first:
+      213: -7095616111264100751
+    second: monters_03_65
+  - first:
+      213: 3955252920019929606
+    second: monters_03_66
+  - first:
+      213: -8744962147926191723
+    second: monters_03_67
+  - first:
+      213: 5042112285234041079
+    second: monters_03_68
+  - first:
+      213: 6033508895739717865
+    second: monters_03_69
+  - first:
+      213: 2574764034159275484
+    second: monters_03_70
+  - first:
+      213: 75283157393268242
+    second: monters_03_71
+  - first:
+      213: -3359664301342044791
+    second: monters_03_72
+  - first:
+      213: -4452019149156221507
+    second: monters_03_73
+  - first:
+      213: -4354280716925650615
+    second: monters_03_74
+  - first:
+      213: -2472682727335820749
+    second: monters_03_75
+  - first:
+      213: -6080858963500525501
+    second: monters_03_76
+  - first:
+      213: -6573797935126181063
+    second: monters_03_77
+  - first:
+      213: 7838531238506749825
+    second: monters_03_78
+  - first:
+      213: -3052502393089717378
+    second: monters_03_79
+  - first:
+      213: 2171974579474250844
+    second: monters_03_80
+  - first:
+      213: -4302683265859026177
+    second: monters_03_81
+  - first:
+      213: 2326373642299251376
+    second: monters_03_82
+  - first:
+      213: -8141163794770652659
+    second: monters_03_83
+  - first:
+      213: -440041660679980858
+    second: monters_03_84
+  - first:
+      213: 4746192241010503316
+    second: monters_03_85
+  - first:
+      213: -1168136920424431195
+    second: monters_03_86
+  - first:
+      213: -565846341411780556
+    second: monters_03_87
+  - first:
+      213: 1453387954761798241
+    second: monters_03_88
+  - first:
+      213: 3099371203584648281
+    second: monters_03_89
+  - first:
+      213: -5464906468347409938
+    second: monters_03_90
+  - first:
+      213: -5946115994339135213
+    second: monters_03_91
+  - first:
+      213: -3664025709868647994
+    second: monters_03_92
+  - first:
+      213: 7833175140594374955
+    second: monters_03_93
+  - first:
+      213: 8107616617370169279
+    second: monters_03_94
+  - first:
+      213: 7956612421046703218
+    second: monters_03_95
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: monters_03_0
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 336
+        width: 15
+        height: 26
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b81835ff95f5abd70800000000000000
+      internalID: 9059658440549564811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monters_03_1
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 336
+        width: 17
+        height: 24
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d8a2deb1d3cb6d20800000000000000
+      internalID: 3272924859831855320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monters_03_2
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 336
+        width: 19
+        height: 22
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8759c47f7eb4e0a0800000000000000
+      internalID: -6853143278321576049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monters_03_3
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 336
+        width: 15
+        height: 26
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35609b6cdd69131e0800000000000000
+      internalID: -2219827262050990509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monters_03_4
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 336
+        width: 17
+        height: 24
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e70edded4541b430800000000000000
+      internalID: 3796892161855588328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monters_03_5
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 336
+        width: 19
+        height: 22
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40a58c35665c81a30800000000000000
+      internalID: 4186312896923851268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monters_03_6
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 336
+        width: 15
+        height: 26
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be6b2450fccef2590800000000000000
+      internalID: -7696672864262244629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monters_03_7
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 336
+        width: 17
+        height: 24
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37d9d3626ac114530800000000000000
+      internalID: 3837379857428094323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monters_03_8
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 336
+        width: 19
+        height: 22
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b380bbeeb2d5fde0800000000000000
+      internalID: -1299901199986687048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monters_03_9
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 336
+        width: 15
+        height: 26
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5b72d43131001350800000000000000
+      internalID: 5985285215626623838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monters_03_10
+      rect:
+        serializedVersion: 2
+        x: 495
+        y: 336
+        width: 17
+        height: 24
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95a68d5de36634cc0800000000000000
+      internalID: -3728023646470903207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monters_03_11
+      rect:
+        serializedVersion: 2
+        x: 542
+        y: 336
+        width: 19
+        height: 22
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10ca49e5d67a9b4a0800000000000000
+      internalID: -6577041692617823231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monters_03_12
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 288
+        width: 17
+        height: 25
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 944293fe4bcb9aa40800000000000000
+      internalID: 5380038715164402761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monters_03_13
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 288
+        width: 17
+        height: 24
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bac9215653bcb7f0800000000000000
+      internalID: -595403867409495370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monters_03_14
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 288
+        width: 18
+        height: 22
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b172d3aa213bd9320800000000000000
+      internalID: 2566404255417968411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monters_03_15
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 288
+        width: 17
+        height: 25
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2e228003ff9db980800000000000000
+      internalID: -8521479053880709590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monters_03_16
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 288
+        width: 17
+        height: 24
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5406fc96984725f0800000000000000
+      internalID: -781576198609828774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monters_03_17
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 288
+        width: 18
+        height: 22
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e5c03477f10d7400800000000000000
+      internalID: 323416910558447078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monters_03_18
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 288
+        width: 17
+        height: 25
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8678ddb1343f02350800000000000000
+      internalID: 5990054973958621032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monters_03_19
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 288
+        width: 17
+        height: 24
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f65a09a10a7f34ed0800000000000000
+      internalID: -2430827106837420689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monters_03_20
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 288
+        width: 18
+        height: 22
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43228ba3268cbc040800000000000000
+      internalID: 4669045762917147188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monters_03_21
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 288
+        width: 17
+        height: 25
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cca1f229094cee050800000000000000
+      internalID: 5831814692698266316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monters_03_22
+      rect:
+        serializedVersion: 2
+        x: 496
+        y: 288
+        width: 17
+        height: 24
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f68da4b6ceb545ca0800000000000000
+      internalID: -6029092930171774865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monters_03_23
+      rect:
+        serializedVersion: 2
+        x: 543
+        y: 288
+        width: 18
+        height: 22
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 924b77d9eae97a180800000000000000
+      internalID: -9104133648902802391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monters_03_24
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 240
+        width: 18
+        height: 22
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7daf3bfb3735f9be0800000000000000
+      internalID: -1468363196896904489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monters_03_25
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 240
+        width: 17
+        height: 24
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c631fb8042a928e0800000000000000
+      internalID: -1717663384755685688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monters_03_26
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 240
+        width: 17
+        height: 25
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6a2f6489a7aa2b30800000000000000
+      internalID: 4263404343772785263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monters_03_27
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 240
+        width: 18
+        height: 22
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff72081488b9c06c0800000000000000
+      internalID: -4175791744962516993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monters_03_28
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 240
+        width: 17
+        height: 24
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dcef9ab172b2e9aa0800000000000000
+      internalID: -6152432593973674291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monters_03_29
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 240
+        width: 17
+        height: 25
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77e6bc99150b4e330800000000000000
+      internalID: 3739307455143439991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monters_03_30
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 240
+        width: 18
+        height: 22
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24f89f78d95554bd0800000000000000
+      internalID: -2646615070930792638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monters_03_31
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 240
+        width: 17
+        height: 24
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d9b5330387a40880800000000000000
+      internalID: -8645601203508102704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monters_03_32
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 240
+        width: 17
+        height: 25
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1f4a8379aa286330800000000000000
+      internalID: 3704257600788516634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monters_03_33
+      rect:
+        serializedVersion: 2
+        x: 447
+        y: 240
+        width: 18
+        height: 22
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 801c4ba508c0a3670800000000000000
+      internalID: 8519135390541857032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monters_03_34
+      rect:
+        serializedVersion: 2
+        x: 495
+        y: 240
+        width: 17
+        height: 24
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 602b16e0206b6e6f0800000000000000
+      internalID: -655636575788355066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monters_03_35
+      rect:
+        serializedVersion: 2
+        x: 543
+        y: 240
+        width: 17
+        height: 25
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3b58ccacbc8f7240800000000000000
+      internalID: 4791703270526049087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monters_03_36
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 192
+        width: 15
+        height: 26
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55dd9175175036a60800000000000000
+      internalID: 7665976975065472341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monters_03_37
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 192
+        width: 17
+        height: 24
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a1d26177a4a00cd0800000000000000
+      internalID: -2593892346296610392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monters_03_38
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 192
+        width: 19
+        height: 22
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 544b35bfa85653810800000000000000
+      internalID: 1744412078272394309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monters_03_39
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 192
+        width: 15
+        height: 26
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a884c2f654c0fd880800000000000000
+      internalID: -8584128872387426166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monters_03_40
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 192
+        width: 17
+        height: 24
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f758dea98439e3580800000000000000
+      internalID: -8845470678062889601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monters_03_41
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 192
+        width: 19
+        height: 22
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2baf899c94051f50800000000000000
+      internalID: 6851387478751816495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monters_03_42
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 192
+        width: 15
+        height: 26
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03281186e4679ff10800000000000000
+      internalID: 2304002763502223920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monters_03_43
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 192
+        width: 17
+        height: 24
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3819bbdcbe9f0b9c0800000000000000
+      internalID: -3913353285020708477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monters_03_44
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 192
+        width: 19
+        height: 22
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11cdaa780337534f0800000000000000
+      internalID: -849646302417724399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monters_03_45
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 192
+        width: 15
+        height: 26
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc63cc3fcdb3359d0800000000000000
+      internalID: -2786817924243114291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monters_03_46
+      rect:
+        serializedVersion: 2
+        x: 495
+        y: 192
+        width: 17
+        height: 24
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ececca2581bb5c560800000000000000
+      internalID: 7333473281383386830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monters_03_47
+      rect:
+        serializedVersion: 2
+        x: 542
+        y: 192
+        width: 19
+        height: 22
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0cf4989144ca2f90800000000000000
+      internalID: -6977548886645343218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monters_03_48
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 144
+        width: 15
+        height: 26
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 867ca589d267f30b0800000000000000
+      internalID: -5746744661299771544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monters_03_49
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 144
+        width: 17
+        height: 24
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04bf72daa2b109a70800000000000000
+      internalID: 8831588739381197632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monters_03_50
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 144
+        width: 19
+        height: 22
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 255b6a297f3d55060800000000000000
+      internalID: 6941687460932269394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monters_03_51
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 144
+        width: 15
+        height: 26
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 227e395381697b740800000000000000
+      internalID: 5167764128153200418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monters_03_52
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 144
+        width: 17
+        height: 24
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9dde7bb3896a2460800000000000000
+      internalID: 7217697367321927068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monters_03_53
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 144
+        width: 19
+        height: 22
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb413ff9dc40b4ec0800000000000000
+      internalID: -3581763797444782914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monters_03_54
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 144
+        width: 15
+        height: 26
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a858081a24ca5570800000000000000
+      internalID: 8456286935412398245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monters_03_55
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 144
+        width: 17
+        height: 24
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3473f68b96b95520800000000000000
+      internalID: 2691383031430870077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monters_03_56
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 144
+        width: 19
+        height: 22
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 076eb0305fe9dba90800000000000000
+      internalID: -7296501046115047824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monters_03_57
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 144
+        width: 15
+        height: 26
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bf453e73480e1e20800000000000000
+      internalID: 3323102661019258803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monters_03_58
+      rect:
+        serializedVersion: 2
+        x: 495
+        y: 144
+        width: 17
+        height: 24
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f3c06dcea5b9ce10800000000000000
+      internalID: 2218504053831287801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monters_03_59
+      rect:
+        serializedVersion: 2
+        x: 542
+        y: 144
+        width: 19
+        height: 22
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c31e4e3e8e5d96970800000000000000
+      internalID: 8748758947376455996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monters_03_60
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 96
+        width: 17
+        height: 25
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7159de0ca6ed40620800000000000000
+      internalID: 2739559023432799511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monters_03_61
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 96
+        width: 17
+        height: 24
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46e66f80629842620800000000000000
+      internalID: 2748472469054975588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monters_03_62
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 96
+        width: 18
+        height: 22
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfb2d5d57ddec2420800000000000000
+      internalID: 2606719793580813308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monters_03_63
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 96
+        width: 17
+        height: 25
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b9885b02e066cf50800000000000000
+      internalID: 6901310002961091001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monters_03_64
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 96
+        width: 17
+        height: 24
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 348e7fb52317d7d30800000000000000
+      internalID: 4430822069507713091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monters_03_65
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 96
+        width: 18
+        height: 22
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17e8091bdbe478d90800000000000000
+      internalID: -7095616111264100751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monters_03_66
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 96
+        width: 17
+        height: 25
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60a4d9e2391e3e630800000000000000
+      internalID: 3955252920019929606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monters_03_67
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 96
+        width: 17
+        height: 24
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5915f9e5247a3a680800000000000000
+      internalID: -8744962147926191723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monters_03_68
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 96
+        width: 18
+        height: 22
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f0120fb86e29f540800000000000000
+      internalID: 5042112285234041079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monters_03_69
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 96
+        width: 17
+        height: 25
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e8a9bfaf545bb350800000000000000
+      internalID: 6033508895739717865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monters_03_70
+      rect:
+        serializedVersion: 2
+        x: 496
+        y: 96
+        width: 17
+        height: 24
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdde3845f366bb320800000000000000
+      internalID: 2574764034159275484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monters_03_71
+      rect:
+        serializedVersion: 2
+        x: 543
+        y: 96
+        width: 18
+        height: 22
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21edefdf1a57b0100800000000000000
+      internalID: 75283157393268242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monters_03_72
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 48
+        width: 18
+        height: 22
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98d42f14e131061d0800000000000000
+      internalID: -3359664301342044791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monters_03_73
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 48
+        width: 17
+        height: 24
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbd7e41fb204732c0800000000000000
+      internalID: -4452019149156221507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monters_03_74
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 48
+        width: 17
+        height: 25
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 949305702cc7293c0800000000000000
+      internalID: -4354280716925650615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monters_03_75
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 48
+        width: 18
+        height: 22
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33287ea09244fadd0800000000000000
+      internalID: -2472682727335820749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monters_03_76
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 48
+        width: 17
+        height: 24
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3481d4f8df27c9ba0800000000000000
+      internalID: -6080858963500525501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monters_03_77
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 48
+        width: 17
+        height: 25
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93b8b938b9d25c4a0800000000000000
+      internalID: -6573797935126181063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monters_03_78
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 48
+        width: 18
+        height: 22
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18f5fff81ae08cc60800000000000000
+      internalID: 7838531238506749825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monters_03_79
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 48
+        width: 17
+        height: 24
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7b8bdf0f3553a5d0800000000000000
+      internalID: -3052502393089717378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monters_03_80
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 48
+        width: 17
+        height: 25
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5cbdb65f57642e10800000000000000
+      internalID: 2171974579474250844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monters_03_81
+      rect:
+        serializedVersion: 2
+        x: 447
+        y: 48
+        width: 18
+        height: 22
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff28475cd5cc944c0800000000000000
+      internalID: -4302683265859026177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monters_03_82
+      rect:
+        serializedVersion: 2
+        x: 495
+        y: 48
+        width: 17
+        height: 24
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ba14148080f84020800000000000000
+      internalID: 2326373642299251376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monters_03_83
+      rect:
+        serializedVersion: 2
+        x: 543
+        y: 48
+        width: 17
+        height: 25
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d029c6299a6c40f80800000000000000
+      internalID: -8141163794770652659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monters_03_84
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 0
+        width: 15
+        height: 26
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c8fbc8e078a4e9f0800000000000000
+      internalID: -440041660679980858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monters_03_85
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 0
+        width: 17
+        height: 24
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49e652162bcddd140800000000000000
+      internalID: 4746192241010503316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monters_03_86
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 0
+        width: 19
+        height: 22
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a14511f8a1f9cfe0800000000000000
+      internalID: -1168136920424431195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monters_03_87
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 0
+        width: 15
+        height: 26
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43842be10c5b528f0800000000000000
+      internalID: -565846341411780556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monters_03_88
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 0
+        width: 17
+        height: 24
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 162986cf4a87b2410800000000000000
+      internalID: 1453387954761798241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monters_03_89
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 0
+        width: 19
+        height: 22
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 954ecb040bd230b20800000000000000
+      internalID: 3099371203584648281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monters_03_90
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 0
+        width: 15
+        height: 26
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee90b677580c824b0800000000000000
+      internalID: -5464906468347409938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monters_03_91
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 0
+        width: 17
+        height: 24
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 311b52cc1072b7da0800000000000000
+      internalID: -5946115994339135213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monters_03_92
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 0
+        width: 19
+        height: 22
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c9716b9704c62dc0800000000000000
+      internalID: -3664025709868647994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monters_03_93
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 0
+        width: 15
+        height: 26
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b295c86d94705bc60800000000000000
+      internalID: 7833175140594374955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monters_03_94
+      rect:
+        serializedVersion: 2
+        x: 495
+        y: 0
+        width: 17
+        height: 24
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbf27658b5a048070800000000000000
+      internalID: 8107616617370169279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monters_03_95
+      rect:
+        serializedVersion: 2
+        x: 542
+        y: 0
+        width: 19
+        height: 22
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27413fb47d09b6e60800000000000000
+      internalID: 7956612421046703218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
