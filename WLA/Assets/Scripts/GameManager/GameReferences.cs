@@ -2,6 +2,22 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum Direction
+{
+    UP,
+    DOWN,
+    RIGHT,
+    LEFT
+};
+
+public enum WeaponType
+{
+    NONE,
+    SWORD,
+    ARC,
+    MAGIC
+};
+
 public static class GameReferences
 {
     public static PlayerController player;

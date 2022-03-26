@@ -43,9 +43,9 @@ public class EnemyAI : MonoBehaviour
     {
         movement = GetMovement();
 
+        animator?.SetFloat("Speed", movement.sqrMagnitude);
         animator?.SetFloat("Horizontal", movement.x);
         animator?.SetFloat("Vertical", movement.y);
-        animator?.SetFloat("Speed", movement.sqrMagnitude);
     }
 
     protected void FixedUpdate()

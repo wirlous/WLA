@@ -4,6 +4,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+[Serializable]
+public struct DirectionBoxCollider2D
+{
+     public Direction direction;
+     public BoxCollider2D boxCollider;
+ }
+
 
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(Timer))]
@@ -14,33 +21,39 @@ public class PlayerController : MonoBehaviour
     public float moveSpeed = 5f;
     public float moveSpeedUpTime = 2f;
     public float moveSpeedDownTime = 1f;
+
     public AnimationCurve moveSpeedLerp;
+    public Animator playerAnimator;
+    public Animator atttackAnimator;
+
+    public List<DirectionBoxCollider2D> swordCollider = new List<DirectionBoxCollider2D>();
+    [SerializeField]
+    private Dictionary<Direction, BoxCollider2D> swordColliderDict = new Dictionary<Direction, BoxCollider2D>();
     
     // Private
     [SerializeField]
-    public Vector2 facingDirection;
-    public Vector2 movement;
+    Vector2 facingDirection;
     [SerializeField]
+    Vector2 movement;
+    [SerializeField]
+    WeaponType weapon = WeaponType.SWORD;
     float moveFactor;
 
     // Internal
     PlayerInput playerInput;
-    Animator animator;
     Rigidbody2D rb;
     Timer moveTimer;
 
     void Awake()
     {
+        // Save reference
         GameReferences.player = this;
 
-        facingDirection = new Vector2(0,-1);
-
+        // Cache components
         rb = GetComponent<Rigidbody2D>();
-        animator = GetComponentInChildren<Animator>();
-        
         moveTimer = GetComponent<Timer>();
-        moveTimer.Init(moveSpeedUpTime);
-    
+
+        // Player Input
         playerInput = new PlayerInput();
         
         // Register Attack
@@ -50,6 +63,25 @@ public class PlayerController : MonoBehaviour
         playerInput.Gameplay.Move.performed += ctx => movement = ctx.ReadValue<Vector2>();
         playerInput.Gameplay.Move.performed += ctx => StartMove();
         playerInput.Gameplay.Move.canceled += ctx => StopMove();
+    }
+
+    void Start()
+    {
+        facingDirection = new Vector2(0,-1);
+
+        SwordColliderArrayToDictionary();
+        DisableAllSwordColliders();
+
+        moveTimer.Init(moveSpeedUpTime);
+    }
+
+    void SwordColliderArrayToDictionary()
+    {
+        foreach (DirectionBoxCollider2D dbc in swordCollider)
+        {
+            dbc.boxCollider.isTrigger = true;
+            swordColliderDict.Add(dbc.direction, dbc.boxCollider);
+        }
     }
 
     void StopMove()
@@ -65,22 +97,26 @@ public class PlayerController : MonoBehaviour
 
     void Attack()
     {
-        Debug.Log("Attack");
+        if (weapon == WeaponType.SWORD)
+            atttackAnimator?.SetTrigger("AttackSword");
     }
 
     // Update is called once per frame
     void Update()
     {
         float speed = movement.sqrMagnitude;
-        if (speed > 0.1f)
+        if (speed > 0.2f)
         {
             facingDirection = movement;
         }
-        animator?.SetFloat("Speed", movement.sqrMagnitude);
-        animator?.SetFloat("Horizontal", movement.x);
-        animator?.SetFloat("Vertical", movement.y);
-        animator?.SetFloat("FacingHorizontal", facingDirection.x);
-        animator?.SetFloat("FacingVertical", facingDirection.y);
+        playerAnimator?.SetFloat("Speed", movement.sqrMagnitude);
+        playerAnimator?.SetFloat("Horizontal", movement.x);
+        playerAnimator?.SetFloat("Vertical", movement.y);
+        playerAnimator?.SetFloat("FacingHorizontal", facingDirection.x);
+        playerAnimator?.SetFloat("FacingVertical", facingDirection.y);
+
+        atttackAnimator?.SetFloat("FacingHorizontal", facingDirection.x);
+        atttackAnimator?.SetFloat("FacingVertical", facingDirection.y);
     }
 
     void FixedUpdate()
@@ -103,4 +139,65 @@ public class PlayerController : MonoBehaviour
     {
         playerInput.Gameplay.Disable();
     }
+
+    public void DoDamage(WeaponType weaponType, Direction dir)
+    {
+        DisableAllSwordColliders();
+        EnableSwordCollider(dir);
+        // Debug.LogFormat("Do damage player. Weapon: {0}, Direction: {1}", weaponType, dir);
+    }
+
+    public void EndDamageSword()
+    {
+        DisableAllSwordColliders();
+    }
+
+    void DisableAllSwordColliders()
+    {
+        foreach (var kvp in swordColliderDict)
+        {
+            kvp.Value.enabled = false;
+        }
+    }
+
+    void EnableSwordCollider(Direction direction)
+    {
+        swordColliderDict[direction].enabled = true;
+    }
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        EnemyAI enemy = collision.gameObject.GetComponent<EnemyAI>();
+        if (enemy != null)
+            Debug.LogFormat("Receive damage from {0}", enemy.gameObject.name);
+    }
+
+    void OnCollisionExit2D(Collision2D collision)
+    {
+        // Debug.LogFormat("Collision exit detected: {0}", collision.gameObject.name);
+    }
+
+    void OnCollisionStay2D(Collision2D collision)
+    {
+        // Debug.LogFormat("Collision stay detected: {0}", collision.gameObject.name);
+    }
+
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        EnemyAI enemy = other.gameObject.GetComponent<EnemyAI>();
+        if (enemy != null)
+            Debug.LogFormat("Attack {0}", enemy.gameObject.name);
+    }
+
+    void OnTriggerExit2D(Collider2D other)
+    {
+        // Debug.LogFormat("Trigger exit detected: {0}", other.gameObject.name);
+    }
+
+    void OnTriggerStay2D(Collider2D other)
+    {
+        // Debug.LogFormat("Trigger stay detected: {0}", other.gameObject.name);
+    }
 }
+  
