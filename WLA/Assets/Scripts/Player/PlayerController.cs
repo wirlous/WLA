@@ -13,7 +13,7 @@ public struct DirectionBoxCollider2D
 
 
 [RequireComponent(typeof(Rigidbody2D))]
-[RequireComponent(typeof(Timer))]
+[RequireComponent(typeof(TimeCounter))]
 public class PlayerController : MonoBehaviour
 {
     // Public
@@ -42,7 +42,7 @@ public class PlayerController : MonoBehaviour
     // Internal
     PlayerInput playerInput;
     Rigidbody2D rb;
-    Timer moveTimer;
+    TimeCounter moveTimeCounter;
 
     void Awake()
     {
@@ -51,7 +51,7 @@ public class PlayerController : MonoBehaviour
 
         // Cache components
         rb = GetComponent<Rigidbody2D>();
-        moveTimer = GetComponent<Timer>();
+        moveTimeCounter = GetComponent<TimeCounter>();
 
         // Player Input
         playerInput = new PlayerInput();
@@ -72,7 +72,7 @@ public class PlayerController : MonoBehaviour
         SwordColliderArrayToDictionary();
         DisableAllSwordColliders();
 
-        moveTimer.Init(moveSpeedUpTime);
+        moveTimeCounter.Init(moveSpeedUpTime);
     }
 
     void SwordColliderArrayToDictionary()
@@ -87,12 +87,12 @@ public class PlayerController : MonoBehaviour
     void StopMove()
     {
         movement = Vector2.zero;
-        moveTimer.SetDown(moveSpeedDownTime);
+        moveTimeCounter.SetDown(moveSpeedDownTime);
     }
 
     void StartMove()
     {
-        moveTimer.SetUp(moveSpeedUpTime);
+        moveTimeCounter.SetUp(moveSpeedUpTime);
     }
 
     void Attack()
@@ -122,7 +122,7 @@ public class PlayerController : MonoBehaviour
     void FixedUpdate()
     {
 
-        float t = moveTimer.GetTimeNormalize();
+        float t = moveTimeCounter.GetT();
         moveFactor = moveSpeedLerp.Evaluate(t);
 
         // Movement
@@ -147,6 +147,18 @@ public class PlayerController : MonoBehaviour
         // Debug.LogFormat("Do damage player. Weapon: {0}, Direction: {1}", weaponType, dir);
     }
 
+    public void ReceiveDamage(int damage, Transform tOrigin)
+    {
+        Debug.LogFormat("Player receive damage {0}", damage);
+        DoPush(transform.position - tOrigin.position);
+    }
+
+    void DoPush(Vector3 pushDir)
+    {
+        Vector3 knockback = pushDir.normalized * GameReferences.knockbackFactor;
+        transform.position = transform.position + knockback;
+    }
+
     public void EndDamageSword()
     {
         DisableAllSwordColliders();
@@ -169,7 +181,10 @@ public class PlayerController : MonoBehaviour
     {
         EnemyAI enemy = collision.gameObject.GetComponent<EnemyAI>();
         if (enemy != null)
+        {
             Debug.LogFormat("Receive damage from {0}", enemy.gameObject.name);
+            ReceiveDamage(enemy.GetDamage(), enemy.transform);
+        }
     }
 
     void OnCollisionExit2D(Collision2D collision)
@@ -187,7 +202,9 @@ public class PlayerController : MonoBehaviour
     {
         EnemyAI enemy = other.gameObject.GetComponent<EnemyAI>();
         if (enemy != null)
-            Debug.LogFormat("Attack {0}", enemy.gameObject.name);
+        {
+            enemy.DoDamage(1, transform);
+        }
     }
 
     void OnTriggerExit2D(Collider2D other)

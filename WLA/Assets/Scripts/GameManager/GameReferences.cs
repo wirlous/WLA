@@ -23,6 +23,9 @@ public static class GameReferences
     public static PlayerController player;
     public static List<EnemyAI> enemies = new List<EnemyAI>();
 
+    public static float stunTime = 0.5f;
+    public static float knockbackFactor = 0.25f;
+
 
     public static void AddEnemy(EnemyAI obj)
     {

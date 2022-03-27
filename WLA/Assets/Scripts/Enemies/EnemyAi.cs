@@ -7,18 +7,24 @@ public class EnemyAI : MonoBehaviour
 {
     // Public
     [Range(1f, 20f)]
-    public float moveSpeed = 2f;
-    [Range(1.5f, 5f)]
-    public float minDistanceToPlayer = 1.5f;
+    public float moveSpeed = 1f;
+    [Range(0f, 5f)]
+    public float minDistanceToPlayer = 2f;
     [Range(5f, 10f)]
-    public float maxDistanceToPlayer = 5.5f;
+    public float maxDistanceToPlayer = 5f;
+    [Range(1, 10)]
+    public int damage = 1;
+    public float receiveDamageFactor = 1f;
 
-    public Vector2 movement;
+    Vector2 movement;
+    public float moveSpeedStore;
+
+    public float stunTime = 0;
 
     // Internal
-    public PlayerController player;
-    public Animator animator;
-    public Rigidbody2D rb;
+    private PlayerController player;
+    private Animator animator;
+    private Rigidbody2D rb;
 
     protected void Awake()
     {
@@ -29,6 +35,8 @@ public class EnemyAI : MonoBehaviour
         rb.freezeRotation = true;
 
         animator = GetComponentInChildren<Animator>();
+
+        moveSpeedStore = moveSpeed;
     }
 
     // Start is called before the first frame update
@@ -48,13 +56,35 @@ public class EnemyAI : MonoBehaviour
         animator?.SetFloat("Vertical", movement.y);
     }
 
+    public int GetDamage()
+    {
+        return damage;
+    }
+
     protected void FixedUpdate()
     {
         rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
     }
 
+    public void DoDamage(int damage, Transform tOrigin)
+    {
+        Debug.LogFormat("{0} receive damge {1}", name, damage);
+        DoPush(transform.position - tOrigin.position);
+        stunTime += GameReferences.stunTime;
+        animator?.SetTrigger("Hit");
+    }
+
+    void DoPush(Vector3 pushDir)
+    {
+        Vector3 knockback = pushDir.normalized * GameReferences.knockbackFactor;
+        transform.position = transform.position + knockback;
+    }
+
     private Vector2 GetMovement()
     {
+        if (moveSpeed == 0)
+            return Vector2.zero;
+
         float distance = Vector2.Distance (transform.position, player.transform.position);
         if (distance > minDistanceToPlayer && distance < maxDistanceToPlayer)
         {
@@ -64,6 +94,20 @@ public class EnemyAI : MonoBehaviour
         {
             return Vector2.zero;
         }
+    }
+
+    public void StartStun()
+    {
+        Debug.Log("StartStun");
+        moveSpeed = 0;
+        receiveDamageFactor = 0.5f;
+    }
+
+    public void StopStun()
+    {
+        Debug.Log("StopStun");
+        moveSpeed = moveSpeedStore;
+        receiveDamageFactor = 1f;
     }
 
     private void OnDrawGizmos()
