@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[System.Serializable]
 public enum Direction
 {
     UP,
@@ -10,6 +11,7 @@ public enum Direction
     LEFT
 };
 
+[System.Serializable]
 public enum WeaponType
 {
     NONE,
@@ -20,11 +22,12 @@ public enum WeaponType
 
 public static class GameReferences
 {
+    public static GameManager gameManager;
     public static PlayerController player;
     public static List<EnemyAI> enemies = new List<EnemyAI>();
 
-    public static float stunTime = 0.5f;
-    public static float knockbackFactor = 0.25f;
+    public static float knockbackSpeed = 10f;
+    public static float knockbackFactor = 1f;
 
 
     public static void AddEnemy(EnemyAI obj)
@@ -35,6 +38,40 @@ public static class GameReferences
     public static void RemoveEnemy(EnemyAI obj)
     {
         enemies.Remove(obj);
+    }
+
+    public static Vector3 GetDirVector(Direction dir)
+    {
+        switch (dir)
+        {
+        case Direction.UP:
+            return Vector3.up;
+        case Direction.DOWN:
+            return Vector3.down;
+        case Direction.LEFT:
+            return Vector3.left;
+        case Direction.RIGHT:
+            return Vector3.right;
+        default:
+            return Vector3.zero;
+        }
+    }
+
+    public static float GetAngleFromDir(Direction dir)
+    {
+        switch (dir)
+        {
+        case Direction.UP:
+            return 0;
+        case Direction.DOWN:
+            return 180;
+        case Direction.LEFT:
+            return 90;
+        case Direction.RIGHT:
+            return -90;
+        default:
+            return 0;
+        }
     }
 
 }

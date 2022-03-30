@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 9088696342237623917}
   - component: {fileID: 5218814778340196456}
   - component: {fileID: -1540560555041721386}
+  - component: {fileID: 1206450183}
   m_Layer: 10
   m_Name: EnemySlimeSword
   m_TagString: Untagged
@@ -86,10 +87,22 @@ MonoBehaviour:
   moveSpeed: 2
   minDistanceToPlayer: 1.5
   maxDistanceToPlayer: 5.5
-  movement: {x: 0, y: 0}
-  player: {fileID: 0}
-  animator: {fileID: 0}
-  rb: {fileID: 0}
+  damage: 1
+--- !u!114 &1206450183
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 800793862827286004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe7ef37aa1a2a2740823a0b8fa5a2b88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minHealth: 13
+  maxHealth: 31
+  health: 0
 --- !u!1 &800793863823605824
 GameObject:
   m_ObjectHideFlags: 0
@@ -132,6 +145,7 @@ GameObject:
   - component: {fileID: 800793864545359266}
   - component: {fileID: 800793864545359268}
   - component: {fileID: 800793864545359267}
+  - component: {fileID: 373768444}
   m_Layer: 10
   m_Name: Sprite
   m_TagString: Untagged
@@ -223,3 +237,15 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &373768444
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 800793864545359265}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43f5ff3490f342e4ea584f2da6b6911d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

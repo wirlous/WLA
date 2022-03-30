@@ -4,45 +4,42 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-[Serializable]
-public struct DirectionBoxCollider2D
-{
-     public Direction direction;
-     public BoxCollider2D boxCollider;
- }
-
-
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(TimeCounter))]
+[RequireComponent(typeof(HealthSystem))]
 public class PlayerController : MonoBehaviour
 {
     // Public
-    [Range(1f, 20f)]
-    public float moveSpeed = 5f;
+    [Range(1f, 20f)] public float moveSpeed = 5f;
     public float moveSpeedUpTime = 2f;
     public float moveSpeedDownTime = 1f;
-
+    [Range(1, 10)] public float invincibilityTime = 2f;
+    [Range(1, 10)] public int damage = 2;
     public AnimationCurve moveSpeedLerp;
     public Animator playerAnimator;
     public Animator atttackAnimator;
 
-    public List<DirectionBoxCollider2D> swordCollider = new List<DirectionBoxCollider2D>();
-    [SerializeField]
-    private Dictionary<Direction, BoxCollider2D> swordColliderDict = new Dictionary<Direction, BoxCollider2D>();
-    
+    public int swordIndex = 0;
+    public int arcIndex = 0;
+
     // Private
-    [SerializeField]
-    Vector2 facingDirection;
-    [SerializeField]
-    Vector2 movement;
-    [SerializeField]
-    WeaponType weapon = WeaponType.SWORD;
+    [SerializeField] Vector2 facingDirection;
+    [SerializeField] Vector2 movement;
+    [SerializeField] Vector2 knockbackDistance;
+    [SerializeField] bool isKnockback;
+    [SerializeField] WeaponType weapon = WeaponType.SWORD;
     float moveFactor;
+    bool isHitable;
+    int invincibilityFlashes = 5;
 
     // Internal
     PlayerInput playerInput;
     Rigidbody2D rb;
+    SwordController swordController;
+    ArcController arcController;
+    HealthSystem health;
     TimeCounter moveTimeCounter;
+    SpriteRenderer[] sprites;
 
     void Awake()
     {
@@ -52,6 +49,9 @@ public class PlayerController : MonoBehaviour
         // Cache components
         rb = GetComponent<Rigidbody2D>();
         moveTimeCounter = GetComponent<TimeCounter>();
+        health = GetComponent<HealthSystem>();
+        swordController = GetComponent<SwordController>();
+        arcController = GetComponent<ArcController>();
 
         // Player Input
         playerInput = new PlayerInput();
@@ -63,25 +63,31 @@ public class PlayerController : MonoBehaviour
         playerInput.Gameplay.Move.performed += ctx => movement = ctx.ReadValue<Vector2>();
         playerInput.Gameplay.Move.performed += ctx => StartMove();
         playerInput.Gameplay.Move.canceled += ctx => StopMove();
+
+        // Register TogleWeapon
+        playerInput.Gameplay.ChangeWeaponType.performed += ctx => TogleWeapon();
+        
+        // Register WeaponUp
+        playerInput.Gameplay.ChangeWeaponUp.performed += ctx => WeaponUp();
+        
     }
 
     void Start()
     {
         facingDirection = new Vector2(0,-1);
 
-        SwordColliderArrayToDictionary();
-        DisableAllSwordColliders();
-
         moveTimeCounter.Init(moveSpeedUpTime);
-    }
 
-    void SwordColliderArrayToDictionary()
-    {
-        foreach (DirectionBoxCollider2D dbc in swordCollider)
-        {
-            dbc.boxCollider.isTrigger = true;
-            swordColliderDict.Add(dbc.direction, dbc.boxCollider);
-        }
+        health.SetMinMaxHealth(20, 20);
+        health.ResetHealth();
+
+        sprites = GetComponentsInChildren<SpriteRenderer>();
+
+        isHitable = true;
+        
+        knockbackDistance = Vector2.zero;
+        isKnockback = false;
+
     }
 
     void StopMove()
@@ -97,8 +103,49 @@ public class PlayerController : MonoBehaviour
 
     void Attack()
     {
-        if (weapon == WeaponType.SWORD)
+        switch (weapon)
+        {
+        case WeaponType.SWORD:
             atttackAnimator?.SetTrigger("AttackSword");
+            break;
+        case WeaponType.ARC:
+            atttackAnimator?.SetTrigger("AttackSword");
+            break;
+        default:
+            break;
+        }
+    }
+
+    void TogleWeapon()
+    {
+        switch (weapon)
+        {
+        case WeaponType.SWORD:
+            weapon = WeaponType.ARC;
+            break;
+        case WeaponType.ARC:
+            weapon = WeaponType.SWORD;
+            break;
+        default:
+            break;
+        }
+    }
+
+    void WeaponUp()
+    {
+        switch (weapon)
+        {
+        case WeaponType.SWORD:
+            swordIndex++;
+            swordController?.ChangeWeapon(swordIndex);
+            break;
+        case WeaponType.ARC:
+            arcIndex++;
+            arcController?.ChangeWeapon(arcIndex);
+            break;
+        default:
+            break;
+        }
     }
 
     // Update is called once per frame
@@ -121,69 +168,145 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
-
         float t = moveTimeCounter.GetT();
         moveFactor = moveSpeedLerp.Evaluate(t);
 
         // Movement
-        rb.MovePosition(rb.position + movement * moveSpeed * moveFactor * Time.fixedDeltaTime);
+        if (isKnockback)
+        {
+            Vector2 partialKnockback = knockbackDistance.normalized * GameReferences.knockbackSpeed * Time.fixedDeltaTime;
+            Vector2 originalKnockback = knockbackDistance;
+            rb.MovePosition(rb.position + partialKnockback);
+            knockbackDistance -= partialKnockback;
+            float dotProduct = Vector2.Dot(knockbackDistance, originalKnockback);
+            if (dotProduct < 0.01f)
+            {
+                knockbackDistance = Vector2.zero;
+                isKnockback = false;
+            }
+        }
+        else
+        {
+            rb.MovePosition(rb.position + movement * moveSpeed * moveFactor * Time.fixedDeltaTime);
+        }
 
     }
 
     void OnEnable()
     {
         playerInput.Gameplay.Enable();
+        health.OnDeath += Die;
+
     }
 
     void OnDisable()
     {
         playerInput.Gameplay.Disable();
+        health.OnDeath -= Die;
+    }
+
+    void Die()
+    {
+        Debug.Log("Player dies");
     }
 
     public void DoDamage(WeaponType weaponType, Direction dir)
     {
-        DisableAllSwordColliders();
-        EnableSwordCollider(dir);
-        // Debug.LogFormat("Do damage player. Weapon: {0}, Direction: {1}", weaponType, dir);
+        switch (weapon)
+        {
+        case WeaponType.SWORD:
+            swordController.Attack(dir);
+            break;
+        case WeaponType.ARC:
+            arcController.Attack(dir);
+            break;
+        default:
+            Debug.Log("Don't have any weapon");
+            break;
+        }
     }
 
-    public void ReceiveDamage(int damage, Transform tOrigin)
+    public int GetDamage()
+    {
+        if (weapon == WeaponType.SWORD)
+        {
+            return swordController.GetDamage();
+        }
+
+        return 0;
+    }
+
+    public void ReceiveDamage(int damage, Vector3 pOrigin)
     {
         Debug.LogFormat("Player receive damage {0}", damage);
-        DoPush(transform.position - tOrigin.position);
+        Knockback2D(Freya.Mathfs.Dir(pOrigin, transform.position));
+        health.ReceiveDamage(damage);
+        StartCoroutine(FlashSprites(invincibilityFlashes, invincibilityTime/(2*invincibilityFlashes)));
     }
 
-    void DoPush(Vector3 pushDir)
+
+    void Knockback2D(Vector2 pushDir)
     {
-        Vector3 knockback = pushDir.normalized * GameReferences.knockbackFactor;
-        transform.position = transform.position + knockback;
+        knockbackDistance = pushDir * GameReferences.knockbackFactor;
+        isKnockback = true;
     }
 
     public void EndDamageSword()
     {
-        DisableAllSwordColliders();
+        swordController.EndAttack();
     }
 
-    void DisableAllSwordColliders()
+    IEnumerator FlashSprites(int numTimes, float delay, bool disable = false)
     {
-        foreach (var kvp in swordColliderDict)
+        isHitable = false;
+        for (int loop = 0; loop < numTimes; loop++)
         {
-            kvp.Value.enabled = false;
+            // Cycle through all sprites
+            for (int i = 0; i < sprites.Length; i++)
+            {
+                if (disable)
+                {
+                    // For disabling
+                    sprites[i].enabled = false;
+                }
+                else
+                {
+                    // For changing the alpha
+                    sprites[i].color = new Color(sprites[i].color.r, sprites[i].color.g, sprites[i].color.b, 0.25f);
+                }
+            }
+ 
+            // Delay specified amount
+            yield return new WaitForSeconds(delay);
+ 
+            // Cycle through all sprites
+            for (int i = 0; i < sprites.Length; i++)
+            {
+                if (disable)
+                {
+                    // For disabling
+                    sprites[i].enabled = true;
+                }
+                else
+                {
+                    // For changing the alpha
+                    sprites[i].color = new Color(sprites[i].color.r, sprites[i].color.g, sprites[i].color.b, 1);
+                }
+            }
+ 
+            // Delay specified amount
+            yield return new WaitForSeconds(delay);
         }
-    }
-
-    void EnableSwordCollider(Direction direction)
-    {
-        swordColliderDict[direction].enabled = true;
+        isHitable = true;
     }
 
     void OnCollisionEnter2D(Collision2D collision)
     {
         EnemyAI enemy = collision.gameObject.GetComponent<EnemyAI>();
-        if (enemy != null)
+        if ((enemy != null) && isHitable)
         {
             Debug.LogFormat("Receive damage from {0}", enemy.gameObject.name);
-            ReceiveDamage(enemy.GetDamage(), enemy.transform);
+            ReceiveDamage(enemy.GetDamage(), enemy.transform.position);
         }
     }
 
@@ -194,17 +317,25 @@ public class PlayerController : MonoBehaviour
 
     void OnCollisionStay2D(Collision2D collision)
     {
-        // Debug.LogFormat("Collision stay detected: {0}", collision.gameObject.name);
+        EnemyAI enemy = collision.gameObject.GetComponent<EnemyAI>();
+        if ((enemy != null) && isHitable)
+        {
+            Debug.LogFormat("Receive damage from {0}", enemy.gameObject.name);
+            ReceiveDamage(enemy.GetDamage(), enemy.transform.position);
+        }
     }
 
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        EnemyAI enemy = other.gameObject.GetComponent<EnemyAI>();
-        if (enemy != null)
-        {
-            enemy.DoDamage(1, transform);
-        }
+        // EnemyAI enemy = other.gameObject.GetComponent<EnemyAI>();
+        // enemy?.ReceiveHit(transform.position);
+
+        // HealthSystem otherHealth = other.gameObject.GetComponent<HealthSystem>();
+        // otherHealth?.ReceiveDamage(damage);
+        
+        // Debug.LogFormat("Trigger enter detected: {0}", other.gameObject.name);
+
     }
 
     void OnTriggerExit2D(Collider2D other)

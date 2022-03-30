@@ -1,0 +1,108 @@
+{
+    "version" : "0.0.0", 
+    "swords" : 
+    [
+        {
+            "name"      : "Sword 1",
+            "code"      : 0,
+            "damage"    : 5,
+            
+            "upCollider" : 
+            {
+                "offsetX"   : 0,
+                "offsetY"   : 1,
+                "width"     : 1.7,
+                "height"    : 0.6
+            },
+            "downCollider" : 
+            {
+                "offsetX"   : 0,
+                "offsetY"   : -0.15,
+                "width"     : 1.7,
+                "height"    : 0.6
+            },
+            "rightCollider" : 
+            {
+                "offsetX"   : 0.55,
+                "offsetY"   : 0.425,
+                "width"     : 0.6,
+                "height"    : 1.7
+            },
+            "leftCollider" : 
+            {
+                "offsetX"   : -0.55,
+                "offsetY"   : 0.425,
+                "width"     : 0.6,
+                "height"    : 1.7
+            }
+        },
+        {
+            "name"      : "Sword 2",
+            "code"      : 1,
+            "damage"    : 10,
+
+            "upCollider" : 
+            {
+                "offsetX"   : 0,
+                "offsetY"   : 1,
+                "width"     : 1.7,
+                "height"    : 0.6
+            },
+            "downCollider" : 
+            {
+                "offsetX"   : 0,
+                "offsetY"   : -0.15,
+                "width"     : 1.7,
+                "height"    : 0.6
+            },
+            "rightCollider" : 
+            {
+                "offsetX"   : 0.55,
+                "offsetY"   : 0.425,
+                "width"     : 0.6,
+                "height"    : 1.7
+            },
+            "leftCollider" : 
+            {
+                "offsetX"   : -0.55,
+                "offsetY"   : 0.425,
+                "width"     : 0.6,
+                "height"    : 1.7
+            }
+        },
+        {
+            "name"      : "Sword 3",
+            "code"      : 2,
+            "damage"    : 15,
+
+            "upCollider" : 
+            {
+                "offsetX"   : 0,
+                "offsetY"   : 1,
+                "width"     : 1.7,
+                "height"    : 0.6
+            },
+            "downCollider" : 
+            {
+                "offsetX"   : 0,
+                "offsetY"   : -0.15,
+                "width"     : 1.7,
+                "height"    : 0.6
+            },
+            "rightCollider" : 
+            {
+                "offsetX"   : 0.55,
+                "offsetY"   : 0.425,
+                "width"     : 0.6,
+                "height"    : 1.7
+            },
+            "leftCollider" : 
+            {
+                "offsetX"   : -0.55,
+                "offsetY"   : 0.425,
+                "width"     : 0.6,
+                "height"    : 1.7
+            }
+        }
+    ]
+}

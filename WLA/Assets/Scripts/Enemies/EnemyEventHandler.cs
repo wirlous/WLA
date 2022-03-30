@@ -19,4 +19,9 @@ public class EnemyEventHandler : MonoBehaviour
     {
         enemy?.StopStun();
     }
+
+    public void Die()
+    {
+        enemy?.Delete();
+    }
 }

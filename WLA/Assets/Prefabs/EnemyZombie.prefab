@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7601202929715418756}
   - component: {fileID: 2098201967963442138}
   - component: {fileID: 7783374907926526877}
+  - component: {fileID: 1843810725}
   m_Layer: 12
   m_Name: EnemyZombie
   m_TagString: Untagged
@@ -86,10 +87,22 @@ MonoBehaviour:
   moveSpeed: 2
   minDistanceToPlayer: 1.5
   maxDistanceToPlayer: 5.5
-  movement: {x: 0, y: 0}
-  player: {fileID: 0}
-  animator: {fileID: 0}
-  rb: {fileID: 0}
+  damage: 1
+--- !u!114 &1843810725
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 375900472903972619}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe7ef37aa1a2a2740823a0b8fa5a2b88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minHealth: 13
+  maxHealth: 31
+  health: 0
 --- !u!1 &375900474581910388
 GameObject:
   m_ObjectHideFlags: 0
@@ -132,6 +145,7 @@ GameObject:
   - component: {fileID: 375900474593327947}
   - component: {fileID: 375900474593327957}
   - component: {fileID: 375900474593327956}
+  - component: {fileID: 705236179}
   m_Layer: 12
   m_Name: Sprite
   m_TagString: Untagged
@@ -223,3 +237,15 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &705236179
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 375900474593327946}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43f5ff3490f342e4ea584f2da6b6911d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

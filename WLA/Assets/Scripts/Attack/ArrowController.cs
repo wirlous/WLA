@@ -1,0 +1,61 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class ArrowController : MonoBehaviour
+{
+
+    [SerializeField] private float maxDistance;
+    [SerializeField] private int damage;
+
+    private Vector3 originPosition;
+
+    void Start()
+    {
+        originPosition = transform.position;
+    }
+
+    void Update()
+    {
+        float distance = Vector3.Distance(originPosition, transform.position);
+        if (distance >= maxDistance)
+        {
+            Delete();
+        }
+    }
+
+    public void SetMaxDistance(float distance)
+    {
+        maxDistance = distance;
+    }
+    
+    public void SetDamage(int d)
+    {
+        damage = d;
+    }
+
+    public int GetDamage()
+    {
+        return damage;
+    }
+
+    public void Hit()
+    {
+        Destroy(gameObject);
+    }
+
+    public void Delete()
+    {
+        Destroy(gameObject);
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        var tag = other.tag;
+        if (tag.Equals("Terrain"))
+        {
+            Delete();
+        }
+    }
+
+}

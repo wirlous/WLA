@@ -10,12 +10,9 @@ public enum CounterMode
 
 public class TimeCounter : MonoBehaviour
 {
-    [SerializeField]
-    private float targetCounter;
-    [SerializeField]
-    private float internalCounter;
-    [SerializeField]
-    private CounterMode mode;
+    [SerializeField] private float targetCounter;
+    [SerializeField] private float internalCounter;
+    [SerializeField] private CounterMode mode;
 
     public void Init(float target = 0)
     {

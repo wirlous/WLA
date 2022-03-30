@@ -1,0 +1,51 @@
+{
+    "version" : "0.0.0", 
+    "arcs" : 
+    [
+        {
+            "name"          : "Arc 1",
+            "code"          : 0,
+            "damage"        : 5,
+            "maxAmmunition" : 20,
+            "rateOfFire"    : 2,
+
+            "proyectile" :
+            {
+                "radius"        : 0.2,
+                "height"        : 0.8,
+                "speed"         : 10,
+                "maxDistance"   : 10
+            }
+        },
+        {
+            "name"          : "Arc 2",
+            "code"          : 1,
+            "damage"        : 10,
+            "maxAmmunition" : 30,
+            "rateOfFire"    : 3,
+
+            "proyectile" :
+            {
+                "radius"        : 0.5,
+                "height"        : 1.2,
+                "speed"         : 8,
+                "maxDistance"   : 15
+            }
+        },
+        {
+            "name"          : "Arc 2",
+            "code"          : 2,
+            "damage"        : 15,
+            "maxAmmunition" : 40,
+            "rateOfFire"    : 4,
+
+            "proyectile" :
+            {
+                "radius"        : 0.4,
+                "height"        : 1,
+                "speed"         : 20,
+                "maxDistance"   : 8
+            }
+        }
+    ]
+}

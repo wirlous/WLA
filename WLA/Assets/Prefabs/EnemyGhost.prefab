@@ -43,6 +43,7 @@ GameObject:
   - component: {fileID: 3788127913169789242}
   - component: {fileID: 5998107401802536714}
   - component: {fileID: 6508182450475816104}
+  - component: {fileID: 736000747}
   m_Layer: 11
   m_Name: EnemyGhost
   m_TagString: Untagged
@@ -117,10 +118,22 @@ MonoBehaviour:
   moveSpeed: 2
   minDistanceToPlayer: 1.5
   maxDistanceToPlayer: 5.5
-  movement: {x: 0, y: 0}
-  player: {fileID: 0}
-  animator: {fileID: 0}
-  rb: {fileID: 0}
+  damage: 1
+--- !u!114 &736000747
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6875492974354390754}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe7ef37aa1a2a2740823a0b8fa5a2b88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minHealth: 13
+  maxHealth: 31
+  health: 0
 --- !u!1 &6875492974853812054
 GameObject:
   m_ObjectHideFlags: 0
@@ -132,6 +145,7 @@ GameObject:
   - component: {fileID: 6875492974853812049}
   - component: {fileID: 6875492974853812051}
   - component: {fileID: 6875492974853812048}
+  - component: {fileID: 1858214976}
   m_Layer: 11
   m_Name: Sprite
   m_TagString: Untagged
@@ -223,3 +237,15 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1858214976
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6875492974853812054}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43f5ff3490f342e4ea584f2da6b6911d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

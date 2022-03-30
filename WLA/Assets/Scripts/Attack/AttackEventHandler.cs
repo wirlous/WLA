@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class AttackEventHandler : MonoBehaviour
 {
-
     public Animator animator;
 
     void Awake()

@@ -141,12 +141,12 @@ PrefabInstance:
     - target: {fileID: 800793862827286005, guid: 683e5b55b041aad488a19d91f42e11db,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.15
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 800793862827286005, guid: 683e5b55b041aad488a19d91f42e11db,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -6.03
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 800793862827286005, guid: 683e5b55b041aad488a19d91f42e11db,
         type: 3}
@@ -215,12 +215,12 @@ PrefabInstance:
     - target: {fileID: 6875492974354390765, guid: db58e52da8c79c04c920d645f3c1fcd1,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.7958968
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6875492974354390765, guid: db58e52da8c79c04c920d645f3c1fcd1,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.17
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6875492974354390765, guid: db58e52da8c79c04c920d645f3c1fcd1,
         type: 3}
@@ -289,12 +289,12 @@ PrefabInstance:
     - target: {fileID: 375900472903972628, guid: 76ef3434e0d484c48950f575ece019f5,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 10.43
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 375900472903972628, guid: 76ef3434e0d484c48950f575ece019f5,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.9042508
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 375900472903972628, guid: 76ef3434e0d484c48950f575ece019f5,
         type: 3}
@@ -404,7 +404,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 308332543}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.44, y: -3.14, z: -10}
+  m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 748984145}
@@ -444,7 +444,7 @@ GameObject:
   - component: {fileID: 358355853}
   m_Layer: 17
   m_Name: Tilemap_Decoration
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -484,57 +484,17 @@ CompositeCollider2D:
   - m_Collider: {fileID: 358355855}
     m_ColliderPaths:
     - - X: 300000000
-        Y: -100
-      - X: 300000041
-        Y: -100
-      - X: 300000100
-        Y: -41
-      - X: 300000100
-        Y: 20000041
-      - X: 300000041
-        Y: 20000100
-      - X: 289999959
-        Y: 20000100
-      - X: 289999900
-        Y: 20000041
-      - X: 289999900
         Y: 20000000
-      - X: 160000100
-        Y: 20000000
-      - X: 160000100
-        Y: 20000041
-      - X: 160000041
-        Y: 20000100
-      - X: 149999959
-        Y: 20000100
-      - X: 149999900
-        Y: 20000041
-      - X: 149999900
-        Y: -41
-      - X: 149999959
-        Y: -100
       - X: 150000000
-        Y: -100
+        Y: 20000000
       - X: 150000000
         Y: -20000000
       - X: 160000000
         Y: -20000000
       - X: 160000000
-        Y: -100
-      - X: 160000041
-        Y: -100
-      - X: 160000100
-        Y: -41
-      - X: 160000100
         Y: 0
-      - X: 289999900
-        Y: 0
-      - X: 289999900
-        Y: -41
-      - X: 289999959
-        Y: -100
       - X: 290000000
-        Y: -100
+        Y: 0
       - X: 290000000
         Y: -50000000
       - X: 230000000
@@ -660,12 +620,12 @@ CompositeCollider2D:
   m_CompositePaths:
     m_Paths:
     - - {x: 29.999971, y: -7}
-      - {x: 29.999975, y: 2.00001}
-      - {x: 14.99999, y: 1.9999748}
+      - {x: 29.999971, y: 2}
+      - {x: 15, y: 1.9999708}
       - {x: 15.000029, y: -2}
       - {x: 16, y: -1.9999708}
-      - {x: 16.00004, y: 0}
-      - {x: 29, y: -0.0000394}
+      - {x: 16.000029, y: 0}
+      - {x: 29, y: -0.0000294}
       - {x: 28.999971, y: -5}
       - {x: 23, y: -5.000029}
       - {x: 23.000029, y: -7}
@@ -1891,7 +1851,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.44, y: -3.14, z: -10}
+  m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2055,7 +2015,7 @@ GameObject:
   - component: {fileID: 900395362}
   m_Layer: 13
   m_Name: Tilemap_Base
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -24925,7 +24885,7 @@ GameObject:
   - component: {fileID: 1585878756}
   m_Layer: 14
   m_Name: Tilemap_Ground_Walkable
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -25666,24 +25626,6 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
---- !u!1 &1638850110 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8625082774524643245, guid: 11a3bb5b20cfc574297aa8374a6add29,
-    type: 3}
-  m_PrefabInstance: {fileID: 1808754874}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1638850114
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1638850110}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 43f5ff3490f342e4ea584f2da6b6911d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1647648050
 GameObject:
   m_ObjectHideFlags: 0
@@ -25700,7 +25642,7 @@ GameObject:
   - component: {fileID: 1647648052}
   m_Layer: 16
   m_Name: Tilemap_Wall
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -25747,32 +25689,24 @@ CompositeCollider2D:
         Y: -70000000
       - X: 110000000
         Y: -70000000
-    - - X: -19999900
-        Y: -190000041
-      - X: -19999900
-        Y: -169999959
-      - X: -19999959
-        Y: -169999900
-      - X: -50000041
-        Y: -169999900
-      - X: -50000100
-        Y: -169999959
-      - X: -50000100
-        Y: -190000041
-      - X: -50000041
-        Y: -190000100
-      - X: -19999959
-        Y: -190000100
+    - - X: -20000000
+        Y: -170000000
+      - X: -50000000
+        Y: -170000000
+      - X: -50000000
+        Y: -190000000
+      - X: -20000000
+        Y: -190000000
   m_CompositePaths:
     m_Paths:
     - - {x: 10.99997, y: -7}
       - {x: 10.99997, y: -5}
       - {x: 4, y: -5.000029}
       - {x: 4.000029, y: -7}
-    - - {x: -2.0000253, y: -19.00001}
-      - {x: -2.0000253, y: -16.99999}
-      - {x: -5.00001, y: -17.000027}
-      - {x: -4.9999747, y: -19.00001}
+    - - {x: -2.0000293, y: -19}
+      - {x: -2.0000293, y: -17}
+      - {x: -5, y: -17.000029}
+      - {x: -4.999971, y: -19}
   m_VertexDistance: 0.0005
   m_OffsetDistance: 0.00005
 --- !u!50 &1647648053
@@ -26162,11 +26096,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 5945852318225517377, guid: 11a3bb5b20cfc574297aa8374a6add29,
-        type: 3}
-      propertyPath: minDistanceToPlayer
-      value: 0.5
-      objectReference: {fileID: 0}
     - target: {fileID: 8625082773963581510, guid: 11a3bb5b20cfc574297aa8374a6add29,
         type: 3}
       propertyPath: m_Name
@@ -26180,12 +26109,12 @@ PrefabInstance:
     - target: {fileID: 8625082773963581625, guid: 11a3bb5b20cfc574297aa8374a6add29,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.5
+      value: 8.86
       objectReference: {fileID: 0}
     - target: {fileID: 8625082773963581625, guid: 11a3bb5b20cfc574297aa8374a6add29,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.86
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8625082773963581625, guid: 11a3bb5b20cfc574297aa8374a6add29,
         type: 3}
@@ -26232,21 +26161,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8625082774524643246, guid: 11a3bb5b20cfc574297aa8374a6add29,
-        type: 3}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8625082774524643246, guid: 11a3bb5b20cfc574297aa8374a6add29,
-        type: 3}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8625082774524643246, guid: 11a3bb5b20cfc574297aa8374a6add29,
-        type: 3}
-      propertyPath: m_Color.b
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 11a3bb5b20cfc574297aa8374a6add29, type: 3}
 --- !u!1 &1846295914
@@ -26278,6 +26192,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de2b994db479a834eb337f75dd0ed040, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  arcJson: {fileID: 4900000, guid: ce6be10bd00523f48ac9a435fa143ade, type: 3}
+  swordJson: {fileID: 4900000, guid: 5b434e0f5365b7941a377e14407c74ca, type: 3}
+  arcData:
+    version: 
+    arcs: []
+  swordData:
+    version: 
+    swords: []
 --- !u!4 &1846295916
 Transform:
   m_ObjectHideFlags: 0
@@ -26314,7 +26236,7 @@ GameObject:
   - component: {fileID: 2120599593}
   m_Layer: 4
   m_Name: Tilemap_Ground_Water
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26361,56 +26283,42 @@ CompositeCollider2D:
         Y: -70000000
       - X: 30000000
         Y: -70000000
-    - - X: 180000100
-        Y: -220000041
-      - X: 180000100
-        Y: -159999959
-      - X: 180000041
-        Y: -159999900
-      - X: 170000100
-        Y: -159999900
-      - X: 170000100
-        Y: -139999959
-      - X: 170000041
-        Y: -139999900
-      - X: 140000100
-        Y: -139999900
-      - X: 140000100
-        Y: -109999959
-      - X: 140000041
-        Y: -109999900
-      - X: 49999959
-        Y: -109999900
-      - X: 49999900
-        Y: -109999959
-      - X: 49999900
-        Y: -180000041
-      - X: 49999959
-        Y: -180000100
-      - X: 69999900
-        Y: -180000100
-      - X: 69999900
-        Y: -220000041
-      - X: 69999959
-        Y: -220000100
-      - X: 180000041
-        Y: -220000100
+    - - X: 180000000
+        Y: -160000000
+      - X: 170000000
+        Y: -160000000
+      - X: 170000000
+        Y: -140000000
+      - X: 140000000
+        Y: -140000000
+      - X: 140000000
+        Y: -110000000
+      - X: 50000000
+        Y: -110000000
+      - X: 50000000
+        Y: -180000000
+      - X: 70000000
+        Y: -180000000
+      - X: 70000000
+        Y: -220000000
+      - X: 180000000
+        Y: -220000000
   m_CompositePaths:
     m_Paths:
     - - {x: 2.999971, y: -7}
       - {x: 2.999971, y: -4}
       - {x: 0, y: -4.000029}
       - {x: 0.000029300001, y: -7}
-    - - {x: 17.999975, y: -22.00001}
-      - {x: 17.999975, y: -15.99999}
-      - {x: 17.00001, y: -15.99996}
-      - {x: 16.999975, y: -13.99999}
-      - {x: 14.00001, y: -13.99996}
-      - {x: 13.999974, y: -10.99999}
-      - {x: 4.99999, y: -11.000026}
-      - {x: 5.0000253, y: -18.00001}
-      - {x: 6.9999905, y: -18.00004}
-      - {x: 7.0000257, y: -22.00001}
+    - - {x: 17.999971, y: -22}
+      - {x: 17.999971, y: -16}
+      - {x: 17, y: -15.999971}
+      - {x: 16.999971, y: -14}
+      - {x: 14, y: -13.999971}
+      - {x: 13.999971, y: -11}
+      - {x: 5, y: -11.00003}
+      - {x: 5.000029, y: -18}
+      - {x: 7, y: -18.000029}
+      - {x: 7.0000296, y: -22}
   m_VertexDistance: 0.0005
   m_OffsetDistance: 0.00005
 --- !u!50 &2120599594
@@ -27849,12 +27757,12 @@ PrefabInstance:
     - target: {fileID: 1758042902799446679, guid: f5ddcbc8fc8060f488b919c112cad83b,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.44
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1758042902799446679, guid: f5ddcbc8fc8060f488b919c112cad83b,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.14
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1758042902799446679, guid: f5ddcbc8fc8060f488b919c112cad83b,
         type: 3}
@@ -27906,6 +27814,5 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 1758042902799446677, guid: f5ddcbc8fc8060f488b919c112cad83b, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f5ddcbc8fc8060f488b919c112cad83b, type: 3}

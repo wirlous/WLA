@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -6,25 +7,24 @@ using UnityEngine;
 public class EnemyAI : MonoBehaviour
 {
     // Public
-    [Range(1f, 20f)]
-    public float moveSpeed = 1f;
-    [Range(0f, 5f)]
-    public float minDistanceToPlayer = 2f;
-    [Range(5f, 10f)]
-    public float maxDistanceToPlayer = 5f;
-    [Range(1, 10)]
-    public int damage = 1;
-    public float receiveDamageFactor = 1f;
+    [Range(0f, 20f)] public float moveSpeed = 1f;
+    [Range(0f, 5f)] public float minDistanceToPlayer = 2f;
+    [Range(5f, 10f)] public float maxDistanceToPlayer = 5f;
+    [Range(1, 10)] public int damage = 1;
 
     Vector2 movement;
-    public float moveSpeedStore;
-
-    public float stunTime = 0;
+    float moveSpeedStore;
+    Vector2 knockbackDistance;
+    bool isKnockback;
 
     // Internal
     private PlayerController player;
     private Animator animator;
     private Rigidbody2D rb;
+    private Collider2D col2D;
+    private HealthSystem health;
+
+
 
     protected void Awake()
     {
@@ -34,8 +34,11 @@ public class EnemyAI : MonoBehaviour
         rb.gravityScale = 0;
         rb.freezeRotation = true;
 
+        col2D = GetComponent<Collider2D>();
+
         animator = GetComponentInChildren<Animator>();
 
+        health = GetComponent<HealthSystem>();
         moveSpeedStore = moveSpeed;
     }
 
@@ -44,6 +47,9 @@ public class EnemyAI : MonoBehaviour
     {
         player = GameReferences.player;
         movement = Vector2.zero;
+
+        knockbackDistance = Vector2.zero;
+        isKnockback = false;
     }
 
     // Update is called once per frame
@@ -56,6 +62,17 @@ public class EnemyAI : MonoBehaviour
         animator?.SetFloat("Vertical", movement.y);
     }
 
+    private void OnEnable()
+    {
+        health.OnDeath += Die;
+    }
+
+    private void OnDisable()
+    {
+        health.OnDeath -= Die;
+    }
+
+
     public int GetDamage()
     {
         return damage;
@@ -63,21 +80,35 @@ public class EnemyAI : MonoBehaviour
 
     protected void FixedUpdate()
     {
-        rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
+        if (isKnockback)
+        {
+            Vector2 partialKnockback = knockbackDistance.normalized * GameReferences.knockbackSpeed * Time.fixedDeltaTime;
+            Vector2 originalKnockback = knockbackDistance;
+            rb.MovePosition(rb.position + partialKnockback);
+            knockbackDistance -= partialKnockback;
+            float dotProduct = Vector2.Dot(knockbackDistance, originalKnockback);
+            if (dotProduct < 0.01f)
+            {
+                knockbackDistance = Vector2.zero;
+                isKnockback = false;
+            }
+        }
+        else
+        {
+            rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
+        }
     }
 
-    public void DoDamage(int damage, Transform tOrigin)
+    public void ReceiveHit(Vector3 pOrigin)
     {
-        Debug.LogFormat("{0} receive damge {1}", name, damage);
-        DoPush(transform.position - tOrigin.position);
-        stunTime += GameReferences.stunTime;
+        Knockback2D(Freya.Mathfs.Dir(pOrigin, transform.position));
         animator?.SetTrigger("Hit");
     }
 
-    void DoPush(Vector3 pushDir)
+    void Knockback2D(Vector2 pushDir)
     {
-        Vector3 knockback = pushDir.normalized * GameReferences.knockbackFactor;
-        transform.position = transform.position + knockback;
+        knockbackDistance = pushDir * GameReferences.knockbackFactor;
+        isKnockback = true;
     }
 
     private Vector2 GetMovement()
@@ -88,7 +119,7 @@ public class EnemyAI : MonoBehaviour
         float distance = Vector2.Distance (transform.position, player.transform.position);
         if (distance > minDistanceToPlayer && distance < maxDistanceToPlayer)
         {
-            return (Vector2)(player.transform.position - transform.position).normalized;
+            return Freya.Mathfs.Dir(transform.position, player.transform.position);
         }
         else
         {
@@ -98,22 +129,40 @@ public class EnemyAI : MonoBehaviour
 
     public void StartStun()
     {
-        Debug.Log("StartStun");
         moveSpeed = 0;
-        receiveDamageFactor = 0.5f;
     }
 
     public void StopStun()
     {
-        Debug.Log("StopStun");
         moveSpeed = moveSpeedStore;
-        receiveDamageFactor = 1f;
     }
 
     private void OnDrawGizmos()
     {
         DrawCircleSphere(minDistanceToPlayer, Color.blue);
         DrawCircleSphere(maxDistanceToPlayer, Color.red);
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        var tag = other.tag;
+        if (tag.Equals("Player"))
+        {
+            ReceiveHit(other.transform.position);
+
+            health.ReceiveDamage(GameReferences.player.GetDamage());
+        }
+        else if (tag.Equals("Arrow"))
+        {
+            ReceiveHit(other.transform.position);
+            ArrowController arrowController = other.gameObject.GetComponent<ArrowController>();
+            if (arrowController != null)
+            {
+                health.ReceiveDamage(arrowController.GetDamage());
+                arrowController.Hit();
+
+            }
+        }
     }
 
     protected void DrawCircleSphere(float radius, Color color, float deltaTheta = 0.1f)
@@ -141,6 +190,19 @@ public class EnemyAI : MonoBehaviour
             pos = newPos;
         }
         Gizmos.DrawLine(pos, lastPos);
+    }
+
+    private void Die()
+    {
+        Debug.LogFormat("Enemy {0} dies", name);
+        moveSpeed = 0;
+        col2D.enabled = false;
+        animator?.SetTrigger("Die");
+    }
+
+    public void Delete()
+    {
+        Destroy(gameObject);
     }
 
 }

@@ -43,6 +43,7 @@ GameObject:
   - component: {fileID: 6962649928502834443}
   - component: {fileID: 4747861692605247727}
   - component: {fileID: 5945852318225517377}
+  - component: {fileID: 186041884}
   m_Layer: 9
   m_Name: EnemySlime
   m_TagString: Untagged
@@ -114,13 +115,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 065b75ab985479844b484943dd7268b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 2
-  minDistanceToPlayer: 1.5
+  moveSpeed: 1
+  minDistanceToPlayer: 0.5
   maxDistanceToPlayer: 5.5
-  movement: {x: 0, y: 0}
-  player: {fileID: 0}
-  animator: {fileID: 0}
-  rb: {fileID: 0}
+  damage: 4
+--- !u!114 &186041884
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8625082773963581510}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe7ef37aa1a2a2740823a0b8fa5a2b88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minHealth: 10
+  maxHealth: 20
+  health: 0
 --- !u!1 &8625082774524643245
 GameObject:
   m_ObjectHideFlags: 0
@@ -132,6 +145,7 @@ GameObject:
   - component: {fileID: 8625082774524643244}
   - component: {fileID: 8625082774524643246}
   - component: {fileID: 8625082774524643247}
+  - component: {fileID: 1638850114}
   m_Layer: 9
   m_Name: Sprite
   m_TagString: Untagged
@@ -223,3 +237,15 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1638850114
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8625082774524643245}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43f5ff3490f342e4ea584f2da6b6911d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
