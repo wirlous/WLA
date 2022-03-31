@@ -20,6 +20,15 @@ public enum WeaponType
     MAGIC
 };
 
+#if (UNITY_EDITOR)
+[System.Serializable]
+public class KeyValuePair<K,V>
+{
+    public K key;
+    public V value;
+}
+#endif
+
 public static class GameReferences
 {
     public static GameManager gameManager;

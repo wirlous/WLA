@@ -27754,6 +27754,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 175015698, guid: f5ddcbc8fc8060f488b919c112cad83b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 175015699, guid: f5ddcbc8fc8060f488b919c112cad83b, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 175015699, guid: f5ddcbc8fc8060f488b919c112cad83b, type: 3}
+      propertyPath: m_Size.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 175015699, guid: f5ddcbc8fc8060f488b919c112cad83b, type: 3}
+      propertyPath: m_Size.y
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1758042902799446679, guid: f5ddcbc8fc8060f488b919c112cad83b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -27809,10 +27825,51 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1758042902799446696, guid: f5ddcbc8fc8060f488b919c112cad83b,
+        type: 3}
+      propertyPath: moveSpeedLerp.m_Curve.Array.data[1].time
+      value: 0.55217844
+      objectReference: {fileID: 0}
+    - target: {fileID: 1758042902799446696, guid: f5ddcbc8fc8060f488b919c112cad83b,
+        type: 3}
+      propertyPath: moveSpeedLerp.m_Curve.Array.data[1].value
+      value: 0.82070905
+      objectReference: {fileID: 0}
+    - target: {fileID: 1758042902799446696, guid: f5ddcbc8fc8060f488b919c112cad83b,
+        type: 3}
+      propertyPath: moveSpeedLerp.m_Curve.Array.data[0].inSlope
+      value: -0.0073338426
+      objectReference: {fileID: 0}
+    - target: {fileID: 1758042902799446696, guid: f5ddcbc8fc8060f488b919c112cad83b,
+        type: 3}
+      propertyPath: moveSpeedLerp.m_Curve.Array.data[0].outSlope
+      value: -0.0073338426
+      objectReference: {fileID: 0}
+    - target: {fileID: 1758042902799446696, guid: f5ddcbc8fc8060f488b919c112cad83b,
+        type: 3}
+      propertyPath: moveSpeedLerp.m_Curve.Array.data[0].outWeight
+      value: 0.9682694
+      objectReference: {fileID: 0}
+    - target: {fileID: 1758042902799446696, guid: f5ddcbc8fc8060f488b919c112cad83b,
+        type: 3}
+      propertyPath: moveSpeedLerp.m_Curve.Array.data[1].inSlope
+      value: 1.0427654
+      objectReference: {fileID: 0}
+    - target: {fileID: 1758042902799446696, guid: f5ddcbc8fc8060f488b919c112cad83b,
+        type: 3}
+      propertyPath: moveSpeedLerp.m_Curve.Array.data[1].outSlope
+      value: 1.0427654
+      objectReference: {fileID: 0}
+    - target: {fileID: 1758042902799446696, guid: f5ddcbc8fc8060f488b919c112cad83b,
+        type: 3}
+      propertyPath: moveSpeedLerp.m_Curve.Array.data[1].outWeight
+      value: 0.19051765
+      objectReference: {fileID: 0}
     - target: {fileID: 1758042902799446697, guid: f5ddcbc8fc8060f488b919c112cad83b,
         type: 3}
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 821284031263465950, guid: f5ddcbc8fc8060f488b919c112cad83b, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: f5ddcbc8fc8060f488b919c112cad83b, type: 3}

@@ -8,13 +8,13 @@ public enum CounterMode
     DOWN
 };
 
-public class TimeCounter : MonoBehaviour
+public class TimeCounter
 {
-    [SerializeField] private float targetCounter;
-    [SerializeField] private float internalCounter;
-    [SerializeField] private CounterMode mode;
+    private float targetCounter;
+    private float internalCounter;
+    private CounterMode mode;
 
-    public void Init(float target = 0)
+    public TimeCounter(float target = 0)
     {
         targetCounter = (target <= 0) ? 0 : target;
         internalCounter = 0;
@@ -43,10 +43,10 @@ public class TimeCounter : MonoBehaviour
         mode = CounterMode.DOWN;
     }
 
-    public void FixedUpdate()
+    public void Tick(float deltaTime)
     {
         int factor = (mode == CounterMode.UP) ? 1 : -1;
-        internalCounter += Time.fixedDeltaTime * factor;
+        internalCounter += deltaTime * factor;
         internalCounter = Mathf.Max(Mathf.Min(targetCounter, internalCounter), 0);
     }
 

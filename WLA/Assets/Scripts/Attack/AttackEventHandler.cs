@@ -11,9 +11,9 @@ public class AttackEventHandler : MonoBehaviour
         animator = GetComponent<Animator>();
     }
 
-    public void FinishDamageSwordHandler()
+    public void FinishDamageHandler()
     {
-        GameReferences.player.EndDamageSword();
+        GameReferences.player.EndDamage();
     }
 
     public void DoDamageSwordUpHandler()
@@ -42,6 +42,34 @@ public class AttackEventHandler : MonoBehaviour
         Direction direction = GetDirection();
         if (direction != Direction.LEFT) return;
         GameReferences.player.DoDamage(WeaponType.SWORD, Direction.LEFT);
+    }
+
+    public void DoDamageArcUpHandler()
+    {
+        Direction direction = GetDirection();
+        if (direction != Direction.UP) return;
+        GameReferences.player.DoDamage(WeaponType.ARC, Direction.UP);
+    }
+
+    public void DoDamageArcDownHandler()
+    {
+        Direction direction = GetDirection();
+        if (direction != Direction.DOWN) return;
+        GameReferences.player.DoDamage(WeaponType.ARC, Direction.DOWN);
+    }
+
+    public void DoDamageArcRightHandler()
+    {
+        Direction direction = GetDirection();
+        if (direction != Direction.RIGHT) return;
+        GameReferences.player.DoDamage(WeaponType.ARC, Direction.RIGHT);
+    }
+
+    public void DoDamageArcLeftHandler()
+    {
+        Direction direction = GetDirection();
+        if (direction != Direction.LEFT) return;
+        GameReferences.player.DoDamage(WeaponType.ARC, Direction.LEFT);
     }
 
 

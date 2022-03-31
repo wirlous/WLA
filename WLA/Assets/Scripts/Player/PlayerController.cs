@@ -5,22 +5,28 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 
 [RequireComponent(typeof(Rigidbody2D))]
-[RequireComponent(typeof(TimeCounter))]
 [RequireComponent(typeof(HealthSystem))]
+[RequireComponent(typeof(SwordController))]
+[RequireComponent(typeof(ArcController))]
 public class PlayerController : MonoBehaviour
 {
     // Public
+    [Header("Movement")]
     [Range(1f, 20f)] public float moveSpeed = 5f;
     public float moveSpeedUpTime = 2f;
     public float moveSpeedDownTime = 1f;
-    [Range(1, 10)] public float invincibilityTime = 2f;
-    [Range(1, 10)] public int damage = 2;
     public AnimationCurve moveSpeedLerp;
+
+    [Header("Invincibility")]
+    [Range(1, 10)] public float invincibilityTime = 2f;
+
+    [Header("Animation")]
     public Animator playerAnimator;
     public Animator atttackAnimator;
 
-    public int swordIndex = 0;
-    public int arcIndex = 0;
+    [Header("Debug")]
+    [SerializeField] int swordIndex = 0;
+    [SerializeField] int arcIndex = 0;
 
     // Private
     [SerializeField] Vector2 facingDirection;
@@ -48,10 +54,12 @@ public class PlayerController : MonoBehaviour
 
         // Cache components
         rb = GetComponent<Rigidbody2D>();
-        moveTimeCounter = GetComponent<TimeCounter>();
         health = GetComponent<HealthSystem>();
         swordController = GetComponent<SwordController>();
         arcController = GetComponent<ArcController>();
+
+        // Timer for movement
+        moveTimeCounter = new TimeCounter(moveSpeedUpTime);
 
         // Player Input
         playerInput = new PlayerInput();
@@ -75,8 +83,6 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         facingDirection = new Vector2(0,-1);
-
-        moveTimeCounter.Init(moveSpeedUpTime);
 
         health.SetMinMaxHealth(20, 20);
         health.ResetHealth();
@@ -109,7 +115,7 @@ public class PlayerController : MonoBehaviour
             atttackAnimator?.SetTrigger("AttackSword");
             break;
         case WeaponType.ARC:
-            atttackAnimator?.SetTrigger("AttackSword");
+            atttackAnimator?.SetTrigger("AttackBow");
             break;
         default:
             break;
@@ -137,11 +143,11 @@ public class PlayerController : MonoBehaviour
         {
         case WeaponType.SWORD:
             swordIndex++;
-            swordController?.ChangeWeapon(swordIndex);
+            swordController?.ChangeWeapon(ref swordIndex);
             break;
         case WeaponType.ARC:
             arcIndex++;
-            arcController?.ChangeWeapon(arcIndex);
+            arcController?.ChangeWeapon(ref arcIndex);
             break;
         default:
             break;
@@ -168,6 +174,7 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
+        moveTimeCounter.Tick(Time.fixedDeltaTime);
         float t = moveTimeCounter.GetT();
         moveFactor = moveSpeedLerp.Evaluate(t);
 
@@ -226,13 +233,27 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    public void EndDamage()
+    {
+        switch (weapon)
+        {
+        case WeaponType.SWORD:
+            swordController.EndAttack();
+            break;
+        case WeaponType.ARC:
+            break;
+        default:
+            Debug.Log("Don't have any weapon");
+            break;
+        }
+    }
+
     public int GetDamage()
     {
         if (weapon == WeaponType.SWORD)
         {
             return swordController.GetDamage();
         }
-
         return 0;
     }
 
@@ -244,17 +265,13 @@ public class PlayerController : MonoBehaviour
         StartCoroutine(FlashSprites(invincibilityFlashes, invincibilityTime/(2*invincibilityFlashes)));
     }
 
-
     void Knockback2D(Vector2 pushDir)
     {
         knockbackDistance = pushDir * GameReferences.knockbackFactor;
         isKnockback = true;
     }
 
-    public void EndDamageSword()
-    {
-        swordController.EndAttack();
-    }
+    
 
     IEnumerator FlashSprites(int numTimes, float delay, bool disable = false)
     {

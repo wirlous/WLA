@@ -7,15 +7,19 @@ using UnityEngine;
 public class EnemyAI : MonoBehaviour
 {
     // Public
+    [Header("Movement")]
     [Range(0f, 20f)] public float moveSpeed = 1f;
+    [Header("Damage")]
+    [Range(1, 10)] public int damage = 1;
+    [Header("AI")]
     [Range(0f, 5f)] public float minDistanceToPlayer = 2f;
     [Range(5f, 10f)] public float maxDistanceToPlayer = 5f;
-    [Range(1, 10)] public int damage = 1;
 
-    Vector2 movement;
-    float moveSpeedStore;
-    Vector2 knockbackDistance;
-    bool isKnockback;
+    [Header("Debug")]
+    [SerializeField] Vector2 movement;
+    [SerializeField] float moveSpeedStore;
+    [SerializeField] Vector2 knockbackDistance;
+    [SerializeField] bool isKnockback;
 
     // Internal
     private PlayerController player;
@@ -137,12 +141,6 @@ public class EnemyAI : MonoBehaviour
         moveSpeed = moveSpeedStore;
     }
 
-    private void OnDrawGizmos()
-    {
-        DrawCircleSphere(minDistanceToPlayer, Color.blue);
-        DrawCircleSphere(maxDistanceToPlayer, Color.red);
-    }
-
     void OnTriggerEnter2D(Collider2D other)
     {
         var tag = other.tag;
@@ -163,6 +161,12 @@ public class EnemyAI : MonoBehaviour
 
             }
         }
+    }
+
+    private void OnDrawGizmos()
+    {
+        DrawCircleSphere(minDistanceToPlayer, Color.blue);
+        DrawCircleSphere(maxDistanceToPlayer, Color.red);
     }
 
     protected void DrawCircleSphere(float radius, Color color, float deltaTheta = 0.1f)

@@ -28,19 +28,19 @@ public class GameManager : MonoBehaviour
         
     }
 
-    public SwordDataStructure GetSwordData(int index)
+    public SwordDataStructure GetSwordData(ref int index)
     {
         int size = swordData.swords.Length;
         index = Freya.Mathfs.Mod(index, size);
-        Debug.LogFormat("Size = {0}, index = {1}", size, index);
+        // Debug.LogFormat("Size = {0}, index = {1}", size, index);
         return swordData.swords[index];
     }
 
-    public ArcDataStructure GetArcData(int index)
+    public ArcDataStructure GetArcData(ref int index)
     {
         int size = arcData.arcs.Length;
         index = Freya.Mathfs.Mod(index, size);
-        Debug.LogFormat("Size = {0}, index = {1}", size, index);
+        // Debug.LogFormat("Size = {0}, index = {1}", size, index);
         return arcData.arcs[index];
     }
 }

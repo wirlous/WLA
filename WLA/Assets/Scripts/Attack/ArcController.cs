@@ -8,8 +8,11 @@ using WLA;
 
 public class ArcController : MonoBehaviour
 {
+    [Header("Arrow")]
     public GameObject arrowPrefab;
     public Transform centerPlayer;
+    
+    [Header("Debug")]
     [SerializeField] ArcDataStructure arcData;
     [SerializeField] int ammunition; 
 
@@ -21,7 +24,8 @@ public class ArcController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        ChangeWeapon(0);
+        int initialIndex = 0;
+        ChangeWeapon(ref initialIndex);
     }
 
     // Update is called once per frame
@@ -30,9 +34,9 @@ public class ArcController : MonoBehaviour
 
     }
 
-    public void ChangeWeapon(int index)
+    public void ChangeWeapon(ref int index)
     {
-        arcData = GameReferences.gameManager.GetArcData(index);
+        arcData = GameReferences.gameManager.GetArcData(ref index);
         ammunition = arcData.maxAmmunition;
     }
 
@@ -64,7 +68,7 @@ public class ArcController : MonoBehaviour
 
     public void EndAttack()
     {
-
+        
     }
 
     public void IncreaseAmmo(int ammo)
