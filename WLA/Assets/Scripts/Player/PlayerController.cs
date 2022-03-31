@@ -7,7 +7,7 @@ using UnityEngine.InputSystem;
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(HealthSystem))]
 [RequireComponent(typeof(SwordController))]
-[RequireComponent(typeof(ArcController))]
+[RequireComponent(typeof(BowController))]
 public class PlayerController : MonoBehaviour
 {
     // Public
@@ -26,14 +26,15 @@ public class PlayerController : MonoBehaviour
 
     [Header("Debug")]
     [SerializeField] int swordIndex = 0;
-    [SerializeField] int arcIndex = 0;
+    [SerializeField] int bowIndex = 0;
+    [SerializeField] int spellIndex = 0;
 
     // Private
     [SerializeField] Vector2 facingDirection;
     [SerializeField] Vector2 movement;
     [SerializeField] Vector2 knockbackDistance;
     [SerializeField] bool isKnockback;
-    [SerializeField] WeaponType weapon = WeaponType.SWORD;
+    [SerializeField] WeaponType weapon = WeaponType.NONE;
     float moveFactor;
     bool isHitable;
     int invincibilityFlashes = 5;
@@ -42,7 +43,8 @@ public class PlayerController : MonoBehaviour
     PlayerInput playerInput;
     Rigidbody2D rb;
     SwordController swordController;
-    ArcController arcController;
+    BowController bowController;
+    MagicController magicController;
     HealthSystem health;
     TimeCounter moveTimeCounter;
     SpriteRenderer[] sprites;
@@ -56,7 +58,8 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         health = GetComponent<HealthSystem>();
         swordController = GetComponent<SwordController>();
-        arcController = GetComponent<ArcController>();
+        bowController = GetComponent<BowController>();
+        magicController = GetComponent<MagicController>();
 
         // Timer for movement
         moveTimeCounter = new TimeCounter(moveSpeedUpTime);
@@ -76,8 +79,7 @@ public class PlayerController : MonoBehaviour
         playerInput.Gameplay.ChangeWeaponType.performed += ctx => TogleWeapon();
         
         // Register WeaponUp
-        playerInput.Gameplay.ChangeWeaponUp.performed += ctx => WeaponUp();
-        
+        playerInput.Gameplay.ChangeWeaponUp.performed += ctx => WeaponUp();   
     }
 
     void Start()
@@ -94,6 +96,7 @@ public class PlayerController : MonoBehaviour
         knockbackDistance = Vector2.zero;
         isKnockback = false;
 
+        weapon = GameReferences.inventoryManager.GetNextWeapon();
     }
 
     void StopMove()
@@ -114,7 +117,11 @@ public class PlayerController : MonoBehaviour
         case WeaponType.SWORD:
             atttackAnimator?.SetTrigger("AttackSword");
             break;
-        case WeaponType.ARC:
+        case WeaponType.BOW:
+            atttackAnimator?.SetTrigger("AttackBow");
+            break;
+        case WeaponType.MAGIC:
+            // TODO: Add AttackMagic trigger
             atttackAnimator?.SetTrigger("AttackBow");
             break;
         default:
@@ -124,17 +131,21 @@ public class PlayerController : MonoBehaviour
 
     void TogleWeapon()
     {
-        switch (weapon)
-        {
-        case WeaponType.SWORD:
-            weapon = WeaponType.ARC;
-            break;
-        case WeaponType.ARC:
-            weapon = WeaponType.SWORD;
-            break;
-        default:
-            break;
-        }
+        weapon = GameReferences.inventoryManager.GetNextWeapon(weapon);
+        // switch (weapon)
+        // {
+        // case WeaponType.SWORD:
+        //     weapon = WeaponType.BOW;
+        //     break;
+        // case WeaponType.BOW:
+        //     weapon = WeaponType.MAGIC;
+        //     break;
+        // case WeaponType.MAGIC:
+        //     weapon = WeaponType.SWORD;
+        //     break;
+        // default:
+        //     break;
+        // }
     }
 
     void WeaponUp()
@@ -145,13 +156,43 @@ public class PlayerController : MonoBehaviour
             swordIndex++;
             swordController?.ChangeWeapon(ref swordIndex);
             break;
-        case WeaponType.ARC:
-            arcIndex++;
-            arcController?.ChangeWeapon(ref arcIndex);
+        case WeaponType.BOW:
+            bowIndex++;
+            bowController?.ChangeWeapon(ref bowIndex);
+            break;
+        case WeaponType.MAGIC:
+            spellIndex++;
+            bowController?.ChangeWeapon(ref bowIndex);
             break;
         default:
             break;
         }
+    }
+
+    public bool ChangeWeapon(WeaponType weaponType, int index)
+    {
+        bool hasWeapon = GameReferences.inventoryManager.HasWeapon(weaponType);
+        if (!hasWeapon)
+            return false;
+            
+        switch (weaponType)
+        {
+        case WeaponType.SWORD:
+            swordController?.ChangeWeapon(ref index);
+            swordIndex = index;
+            return true;
+        case WeaponType.BOW:
+            bowController?.ChangeWeapon(ref index);
+            bowIndex = index;
+            return true;
+        case WeaponType.MAGIC:
+            bowController?.ChangeWeapon(ref index);
+            spellIndex = index;
+            return true;
+        default:
+            break;
+        }
+        return false;
     }
 
     // Update is called once per frame
@@ -224,8 +265,11 @@ public class PlayerController : MonoBehaviour
         case WeaponType.SWORD:
             swordController.Attack(dir);
             break;
-        case WeaponType.ARC:
-            arcController.Attack(dir);
+        case WeaponType.BOW:
+            bowController.Attack(dir);
+            break;
+        case WeaponType.MAGIC:
+            magicController.Attack(dir);
             break;
         default:
             Debug.Log("Don't have any weapon");
@@ -240,7 +284,9 @@ public class PlayerController : MonoBehaviour
         case WeaponType.SWORD:
             swordController.EndAttack();
             break;
-        case WeaponType.ARC:
+        case WeaponType.BOW:
+            break;
+        case WeaponType.MAGIC:
             break;
         default:
             Debug.Log("Don't have any weapon");

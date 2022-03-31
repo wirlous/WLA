@@ -1,0 +1,48 @@
+{
+    "version" : "0.0.0", 
+    "bows" : 
+    [
+        {
+            "name"          : "Bow 1",
+            "code"          : 0,
+            "damage"        : 5,
+            "maxAmmunition" : 20,
+
+            "arrow" :
+            {
+                "radius"        : 0.2,
+                "height"        : 0.8,
+                "speed"         : 10,
+                "maxDistance"   : 10
+            }
+        },
+        {
+            "name"          : "Bow 2",
+            "code"          : 1,
+            "damage"        : 10,
+            "maxAmmunition" : 30,
+
+            "arrow" :
+            {
+                "radius"        : 0.5,
+                "height"        : 1.2,
+                "speed"         : 8,
+                "maxDistance"   : 15
+            }
+        },
+        {
+            "name"          : "Bow 2",
+            "code"          : 2,
+            "damage"        : 15,
+            "maxAmmunition" : 40,
+
+            "arrow" :
+            {
+                "radius"        : 0.4,
+                "height"        : 1,
+                "speed"         : 20,
+                "maxDistance"   : 8
+            }
+        }
+    ]
+}

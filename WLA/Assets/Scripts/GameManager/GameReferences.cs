@@ -16,7 +16,7 @@ public enum WeaponType
 {
     NONE,
     SWORD,
-    ARC,
+    BOW,
     MAGIC
 };
 
@@ -32,12 +32,13 @@ public class KeyValuePair<K,V>
 public static class GameReferences
 {
     public static GameManager gameManager;
+    public static InventoryManager inventoryManager;
     public static PlayerController player;
     public static List<EnemyAI> enemies = new List<EnemyAI>();
 
     public static float knockbackSpeed = 10f;
     public static float knockbackFactor = 1f;
-    public static float arrowOffset = 0.5f;
+    public static float shootOffset = 0.5f;
 
 
     public static void AddEnemy(EnemyAI obj)

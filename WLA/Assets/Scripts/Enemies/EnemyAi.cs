@@ -153,11 +153,22 @@ public class EnemyAI : MonoBehaviour
         else if (tag.Equals("Arrow"))
         {
             ReceiveHit(other.transform.position);
-            ArrowController arrowController = other.gameObject.GetComponent<ArrowController>();
-            if (arrowController != null)
+            ProyectileController proyectileController = other.gameObject.GetComponent<ProyectileController>();
+            if (proyectileController != null)
             {
-                health.ReceiveDamage(arrowController.GetDamage());
-                arrowController.Hit();
+                health.ReceiveDamage(proyectileController.GetDamage());
+                proyectileController.Hit();
+
+            }
+        }
+        else if (tag.Equals("Magic"))
+        {
+            ReceiveHit(other.transform.position);
+            ProyectileController proyectileController = other.gameObject.GetComponent<ProyectileController>();
+            if (proyectileController != null)
+            {
+                health.ReceiveDamage(proyectileController.GetDamage());
+                proyectileController.Hit();
 
             }
         }

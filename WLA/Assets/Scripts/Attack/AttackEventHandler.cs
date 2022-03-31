@@ -44,32 +44,32 @@ public class AttackEventHandler : MonoBehaviour
         GameReferences.player.DoDamage(WeaponType.SWORD, Direction.LEFT);
     }
 
-    public void DoDamageArcUpHandler()
+    public void DoDamageBowUpHandler()
     {
         Direction direction = GetDirection();
         if (direction != Direction.UP) return;
-        GameReferences.player.DoDamage(WeaponType.ARC, Direction.UP);
+        GameReferences.player.DoDamage(WeaponType.BOW, Direction.UP);
     }
 
-    public void DoDamageArcDownHandler()
+    public void DoDamageBowDownHandler()
     {
         Direction direction = GetDirection();
         if (direction != Direction.DOWN) return;
-        GameReferences.player.DoDamage(WeaponType.ARC, Direction.DOWN);
+        GameReferences.player.DoDamage(WeaponType.BOW, Direction.DOWN);
     }
 
-    public void DoDamageArcRightHandler()
+    public void DoDamageBowRightHandler()
     {
         Direction direction = GetDirection();
         if (direction != Direction.RIGHT) return;
-        GameReferences.player.DoDamage(WeaponType.ARC, Direction.RIGHT);
+        GameReferences.player.DoDamage(WeaponType.BOW, Direction.RIGHT);
     }
 
-    public void DoDamageArcLeftHandler()
+    public void DoDamageBowLeftHandler()
     {
         Direction direction = GetDirection();
         if (direction != Direction.LEFT) return;
-        GameReferences.player.DoDamage(WeaponType.ARC, Direction.LEFT);
+        GameReferences.player.DoDamage(WeaponType.BOW, Direction.LEFT);
     }
 
 

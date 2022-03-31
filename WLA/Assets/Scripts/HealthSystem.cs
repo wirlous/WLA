@@ -30,6 +30,15 @@ public class HealthSystem : MonoBehaviour
         health = Random.Range(minHealth, maxHealth);
     }
 
+    public bool Heal(int heal)
+    {
+        if (health == maxHealth)
+            return false;
+        
+        health = Mathf.Min(maxHealth, health + heal);
+        return true;
+    }
+
     public void ReceiveDamage(int damage)
     {
         health -= damage;

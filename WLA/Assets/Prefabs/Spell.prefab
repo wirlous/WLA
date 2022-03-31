@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 4309481810137195422}
   - component: {fileID: 3327453291499525357}
   - component: {fileID: -4105640309869487593}
-  m_Layer: 18
-  m_Name: Arrow
-  m_TagString: Arrow
+  m_Layer: 19
+  m_Name: Spell
+  m_TagString: Magic
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -95,8 +95,8 @@ GameObject:
   m_Component:
   - component: {fileID: 3501526811489255603}
   - component: {fileID: 3501526811489255602}
-  m_Layer: 18
-  m_Name: ArrowSprite
+  m_Layer: 19
+  m_Name: SpellSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -155,7 +155,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 30
-  m_Sprite: {fileID: 21300000, guid: d0c1f05616d9a4148bd1cf5e71189d6b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 90c6a2a6e9368fd41ba25185c94bef5d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -175,7 +175,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3501526811767365165}
-  m_Layer: 18
+  m_Layer: 19
   m_Name: SpriteBase
   m_TagString: Untagged
   m_Icon: {fileID: 0}

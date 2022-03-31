@@ -5,21 +5,32 @@ using WLA;
 
 public class GameManager : MonoBehaviour
 {
-    public TextAsset arcJson;
+    [Header("Json data")]
     public TextAsset swordJson;
+    public TextAsset bowJson;
+    public TextAsset magicJson;
+    public TextAsset pickUpJson;
 
-    [SerializeField] private ArcData arcData;
+    public int points;
+    public float time;
+
     [SerializeField] private SwordData swordData;
+    [SerializeField] private BowData bowData;
+    [SerializeField] private MagicData magicData;
+    [SerializeField] private PickUpData pickUpData;
 
     void Awake()
     {
         GameReferences.gameManager = this;
 
-        string arcString = arcJson.text;
-        arcData = JsonUtility.FromJson<ArcData>(arcString);
-
         string swordString = swordJson.text;
         swordData = JsonUtility.FromJson<SwordData>(swordString);
+
+        string bowString = bowJson.text;
+        bowData = JsonUtility.FromJson<BowData>(bowString);
+
+        string magicString = magicJson.text;
+        magicData = JsonUtility.FromJson<MagicData>(magicString);
     }
 
     // Update is called once per frame
@@ -36,11 +47,19 @@ public class GameManager : MonoBehaviour
         return swordData.swords[index];
     }
 
-    public ArcDataStructure GetArcData(ref int index)
+    public BowDataStructure GetBowData(ref int index)
     {
-        int size = arcData.arcs.Length;
+        int size = bowData.bows.Length;
         index = Freya.Mathfs.Mod(index, size);
         // Debug.LogFormat("Size = {0}, index = {1}", size, index);
-        return arcData.arcs[index];
+        return bowData.bows[index];
+    }
+
+    public MagicDataStructure GetMagicData(ref int index)
+    {
+        int size = magicData.spells.Length;
+        index = Freya.Mathfs.Mod(index, size);
+        // Debug.LogFormat("Size = {0}, index = {1}", size, index);
+        return magicData.spells[index];
     }
 }

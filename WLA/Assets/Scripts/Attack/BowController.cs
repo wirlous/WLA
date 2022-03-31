@@ -2,24 +2,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Freya;
 using WLA;
 
 
-public class ArcController : MonoBehaviour
+public class BowController : MonoBehaviour
 {
     [Header("Arrow")]
     public GameObject arrowPrefab;
     public Transform centerPlayer;
     
     [Header("Debug")]
-    [SerializeField] ArcDataStructure arcData;
-    [SerializeField] int ammunition; 
-
-    void Awake()
-    {
-
-    }
+    [SerializeField] BowDataStructure bowData;
+    [SerializeField] int ammunition;
 
     // Start is called before the first frame update
     void Start()
@@ -36,28 +30,28 @@ public class ArcController : MonoBehaviour
 
     public void ChangeWeapon(ref int index)
     {
-        arcData = GameReferences.gameManager.GetArcData(ref index);
-        ammunition = arcData.maxAmmunition;
+        bowData = GameReferences.gameManager.GetBowData(ref index);
+        ammunition = bowData.maxAmmunition;
     }
 
     public void Attack(Direction dir)
     {
         if (ammunition > 0)
         {
-            // Debug.Log("Attacking with " + arcData.name + " in direction " + dir);
+            // Debug.Log("Attacking with " + bowData.name + " in direction " + dir);
             float arrowAngle = GameReferences.GetAngleFromDir(dir);
             Vector3 arrowDir = GameReferences.GetDirVector(dir);
-            Vector3 arrowPos = centerPlayer.position + arrowDir * GameReferences.arrowOffset;
+            Vector3 arrowPos = centerPlayer.position + arrowDir * GameReferences.shootOffset;
             
             GameObject arrow = Instantiate(arrowPrefab, arrowPos, Quaternion.Euler(0, 0, arrowAngle));
             arrow.transform.parent = null;
 
             Rigidbody2D arrowRb = arrow.GetComponent<Rigidbody2D>();
-            arrowRb.velocity = arrowDir * arcData.proyectile.speed;
+            arrowRb.velocity = arrowDir * bowData.arrow.speed;
 
-            ArrowController arrowController = arrow.GetComponent<ArrowController>();
-            arrowController.SetDamage(arcData.damage);
-            arrowController.SetMaxDistance(arcData.proyectile.maxDistance);
+            ProyectileController proyectileController = arrow.GetComponent<ProyectileController>();
+            proyectileController.SetDamage(bowData.damage);
+            proyectileController.SetMaxDistance(bowData.arrow.maxDistance);
             
             arrow.tag = "Arrow";
             arrow.layer = LayerMask.NameToLayer("Arrow");
@@ -71,20 +65,21 @@ public class ArcController : MonoBehaviour
 
     }
 
-    public void IncreaseAmmo(int ammo)
+    public bool IncreaseAmmo(int ammo)
     {
-        ammunition = Mathf.Max(ammunition+ammo, arcData.maxAmmunition);
+        ammunition = Mathf.Max(ammunition+ammo, bowData.maxAmmunition);
+        return true;
     }
 
     
     public int GetDamage()
     {
-        return arcData.damage;
+        return bowData.damage;
     }
 
     private void OnDrawGizmos()
     {
-        DrawCircleSphere(arcData.proyectile.maxDistance + GameReferences.arrowOffset, Color.blue);
+        DrawCircleSphere(bowData.arrow.maxDistance + GameReferences.shootOffset, Color.red);
     }
 
     protected void DrawCircleSphere(float radius, Color color, float deltaTheta = 0.1f)

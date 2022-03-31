@@ -130,6 +130,8 @@ GameObject:
   - component: {fileID: 1855658695}
   - component: {fileID: 1855658696}
   - component: {fileID: 864398768787229863}
+  - component: {fileID: 5066984980607160833}
+  - component: {fileID: 1885450975}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -210,21 +212,21 @@ MonoBehaviour:
     - serializedVersion: 3
       time: 0
       value: 0
-      inSlope: 2
-      outSlope: 2
+      inSlope: -0.0073338426
+      outSlope: -0.0073338426
       tangentMode: 0
       weightedMode: 0
       inWeight: 0
-      outWeight: 0
+      outWeight: 0.9682694
     - serializedVersion: 3
-      time: 0.123011276
-      value: 0.61600006
-      inSlope: 1.4623108
-      outSlope: 1.4623108
+      time: 0.55217844
+      value: 0.82070905
+      inSlope: 1.0427654
+      outSlope: 1.0427654
       tangentMode: 0
       weightedMode: 0
       inWeight: 0.33333334
-      outWeight: 0.33333334
+      outWeight: 0.19051765
     - serializedVersion: 3
       time: 1
       value: 1
@@ -241,7 +243,8 @@ MonoBehaviour:
   playerAnimator: {fileID: 1758042903684701113}
   atttackAnimator: {fileID: 4469016852623429327}
   swordIndex: 0
-  arcIndex: 0
+  bowIndex: 0
+  spellIndex: 0
   facingDirection: {x: 0, y: 0}
   movement: {x: 0, y: 0}
   knockbackDistance: {x: 0, y: 0}
@@ -276,7 +279,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   swordData:
     name: Initial Sword
-    code: 1
+    code: -1
     damage: 10
     upCollider:
       offsetX: 0
@@ -322,17 +325,63 @@ MonoBehaviour:
   arrowPrefab: {fileID: 3501526811478605572, guid: b5be2ac2f51cc0e4a9f4e9e45800db8c,
     type: 3}
   centerPlayer: {fileID: 982917125287288013}
-  arcData:
-    name: Initial Arc
+  bowData:
+    name: Initial Bow
     code: -1
-    damage: 0
-    maxAmmunition: 0
-    proyectile:
-      radius: 1
-      height: 0
+    damage: 10
+    maxAmmunition: 20
+    arrow:
+      radius: 0.5
+      height: 1
       speed: 1
       maxDistance: 1
   ammunition: 0
+--- !u!114 &5066984980607160833
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1758042902799446697}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66205f06557eeba44bb0768a3fbe8cd2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  magicPrefab: {fileID: 3501526811478605572, guid: dd47bcc5072a1f44784083e5c79081ba,
+    type: 3}
+  centerPlayer: {fileID: 982917125287288013}
+  magicData:
+    name: 
+    code: -1
+    damage: 0
+    maxMana: 0
+    manaCost: 0
+    spell:
+      radius: 0.5
+      height: 1
+      speed: 1
+      maxDistance: 1
+  mana: 0
+  maxMana: 0
+  manaCost: 0
+--- !u!114 &1885450975
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1758042902799446697}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d7a32fe416b20a4e92e52439850e804, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healtPotions: 0
+  manaPotions: 0
+  hasSword: 1
+  hasBow: 1
+  hasMagic: 1
 --- !u!1 &1758042903526256513
 GameObject:
   m_ObjectHideFlags: 0

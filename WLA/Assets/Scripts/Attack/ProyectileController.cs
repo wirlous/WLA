@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ArrowController : MonoBehaviour
+public class ProyectileController : MonoBehaviour
 {
 
     [SerializeField] private float maxDistance;
