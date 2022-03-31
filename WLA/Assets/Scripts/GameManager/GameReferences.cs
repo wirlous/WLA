@@ -37,6 +37,7 @@ public static class GameReferences
 
     public static float knockbackSpeed = 10f;
     public static float knockbackFactor = 1f;
+    public static float arrowOffset = 0.5f;
 
 
     public static void AddEnemy(EnemyAI obj)

@@ -47,7 +47,7 @@ public class ArcController : MonoBehaviour
             // Debug.Log("Attacking with " + arcData.name + " in direction " + dir);
             float arrowAngle = GameReferences.GetAngleFromDir(dir);
             Vector3 arrowDir = GameReferences.GetDirVector(dir);
-            Vector3 arrowPos = centerPlayer.position + arrowDir * 0.5f;
+            Vector3 arrowPos = centerPlayer.position + arrowDir * GameReferences.arrowOffset;
             
             GameObject arrow = Instantiate(arrowPrefab, arrowPos, Quaternion.Euler(0, 0, arrowAngle));
             arrow.transform.parent = null;
@@ -68,7 +68,7 @@ public class ArcController : MonoBehaviour
 
     public void EndAttack()
     {
-        
+
     }
 
     public void IncreaseAmmo(int ammo)
@@ -80,6 +80,38 @@ public class ArcController : MonoBehaviour
     public int GetDamage()
     {
         return arcData.damage;
+    }
+
+    private void OnDrawGizmos()
+    {
+        DrawCircleSphere(arcData.proyectile.maxDistance + GameReferences.arrowOffset, Color.blue);
+    }
+
+    protected void DrawCircleSphere(float radius, Color color, float deltaTheta = 0.1f)
+    {
+        Gizmos.color = color;
+
+        float theta = 0f;
+        float x = radius * Mathf.Cos(theta);
+        float y = radius * Mathf.Sin(theta);
+
+        Vector3 center = transform.position;
+
+        Vector3 offsetCircle = new Vector3(x, y, 0);
+        Vector3 pos = center + offsetCircle;
+        Vector3 newPos;
+        Vector3 lastPos = pos;
+
+        for (theta = deltaTheta; theta < Mathf.PI * 2; theta += deltaTheta)
+        {
+            x = radius * Mathf.Cos(theta);
+            y = radius * Mathf.Sin(theta);
+            offsetCircle = new Vector3(x, y, 0);
+            newPos = center + offsetCircle;
+            Gizmos.DrawLine(pos, newPos);
+            pos = newPos;
+        }
+        Gizmos.DrawLine(pos, lastPos);
     }
 
     // void OnTriggerEnter2D(Collider2D other)
