@@ -180,14 +180,17 @@ public class PlayerController : MonoBehaviour
         case WeaponType.SWORD:
             swordController?.ChangeWeapon(ref index);
             swordIndex = index;
+            weapon = WeaponType.SWORD;
             return true;
         case WeaponType.BOW:
             bowController?.ChangeWeapon(ref index);
             bowIndex = index;
+            weapon = WeaponType.BOW;
             return true;
         case WeaponType.MAGIC:
             bowController?.ChangeWeapon(ref index);
             spellIndex = index;
+            weapon = WeaponType.MAGIC;
             return true;
         default:
             break;

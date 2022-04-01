@@ -7,13 +7,16 @@ public class InventoryManager : MonoBehaviour
     [Header("Potions")] // TODO: Don't auto use potions in ground
     public int healtPotions;
     public int manaPotions;
+    
+    [Header("Debug")]
+    [SerializeField] int keys;
 
     [Header("Weapons")]
-    public bool hasSword;
-    public bool hasBow;
-    public bool hasMagic;
+    [SerializeField] bool hasSword;
+    [SerializeField] bool hasBow;
+    [SerializeField] bool hasMagic;
 
-    [SerializeField] private SortedSet<int> keys = new SortedSet<int>();
+    SwordController swordController;
     BowController bowController;
     MagicController magicController;
     HealthSystem playerHealth;
@@ -28,9 +31,29 @@ public class InventoryManager : MonoBehaviour
     void Start()
     {
         playerHealth = GameReferences.player.GetComponent<HealthSystem>();
+        swordController = GameReferences.player.GetComponent<SwordController>();
         bowController = GameReferences.player.GetComponent<BowController>();
         magicController = GameReferences.player.GetComponent<MagicController>();
     }
+
+    public int GetKeys()
+    {
+        return keys;
+    }
+
+    public bool UseKeys(int useKeys)
+    {
+        if (keys >= useKeys)
+        {
+            keys -= useKeys;
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
 
     public bool PickUp(PickUpType type, int value)
     {
@@ -43,7 +66,23 @@ public class InventoryManager : MonoBehaviour
         case PickUpType.ARROW:
             return bowController.IncreaseAmmo(value);
         case PickUpType.KEY:
-            return keys.Add(value);
+            keys++;
+            return true;
+        case PickUpType.SWORD:
+            hasSword = true;
+            PickUpWeapon(WeaponType.SWORD, value);
+            // swordController.ChangeWeapon(ref value);
+            return true;
+        case PickUpType.BOW:
+            hasBow = true;
+            PickUpWeapon(WeaponType.BOW, value);
+            // bowController.ChangeWeapon(ref value);
+            return true;
+        case PickUpType.MAGIC:
+            hasMagic = true;
+            PickUpWeapon(WeaponType.MAGIC, value);
+            // magicController.ChangeWeapon(ref value);
+            return true;
         default:
             break;
         }

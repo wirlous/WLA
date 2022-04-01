@@ -1,0 +1,2804 @@
+fileFormatVersion: 2
+guid: 6e7fb39908d99364e887f4d121d61a2d
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6095532820944677007
+    second: Scribble tiles_0
+  - first:
+      213: 7965468256121792153
+    second: Scribble tiles_1
+  - first:
+      213: -6518792511611960330
+    second: Scribble tiles_2
+  - first:
+      213: -1145334408797295677
+    second: Scribble tiles_3
+  - first:
+      213: 9052914023685220449
+    second: Scribble tiles_4
+  - first:
+      213: 697296519832220951
+    second: Scribble tiles_5
+  - first:
+      213: 6797867586912467186
+    second: Scribble tiles_6
+  - first:
+      213: -5425261060429836269
+    second: Scribble tiles_7
+  - first:
+      213: -1414022395638904779
+    second: Scribble tiles_8
+  - first:
+      213: 3200551065652665055
+    second: Scribble tiles_9
+  - first:
+      213: 2596018415520114365
+    second: Scribble tiles_10
+  - first:
+      213: 6518201187071611286
+    second: Scribble tiles_11
+  - first:
+      213: -7258165094597592345
+    second: Scribble tiles_12
+  - first:
+      213: 9199080159504933373
+    second: Scribble tiles_13
+  - first:
+      213: -5197017917574785127
+    second: Scribble tiles_14
+  - first:
+      213: 9111801813486893740
+    second: Scribble tiles_15
+  - first:
+      213: -3812941145644292437
+    second: Scribble tiles_16
+  - first:
+      213: -4344594655569478355
+    second: Scribble tiles_17
+  - first:
+      213: 8086176425709095561
+    second: Scribble tiles_18
+  - first:
+      213: 3964910553623507744
+    second: Scribble tiles_19
+  - first:
+      213: 1315811126599583505
+    second: Scribble tiles_20
+  - first:
+      213: 3652602805329568064
+    second: Scribble tiles_21
+  - first:
+      213: 3219239947053320892
+    second: Scribble tiles_22
+  - first:
+      213: 2619511280443170656
+    second: Scribble tiles_23
+  - first:
+      213: -8480902445081353838
+    second: Scribble tiles_24
+  - first:
+      213: -305144709547427272
+    second: Scribble tiles_25
+  - first:
+      213: 2812395822314385792
+    second: Scribble tiles_26
+  - first:
+      213: 4046257680483372043
+    second: Scribble tiles_27
+  - first:
+      213: 3845351428135169180
+    second: Scribble tiles_28
+  - first:
+      213: -187633096811070540
+    second: Scribble tiles_29
+  - first:
+      213: -3452623539709940545
+    second: Scribble tiles_30
+  - first:
+      213: 1834498725322575528
+    second: Scribble tiles_31
+  - first:
+      213: -5023271137951823139
+    second: Scribble tiles_32
+  - first:
+      213: 7011775858221203227
+    second: Scribble tiles_33
+  - first:
+      213: 1190718697084779004
+    second: Scribble tiles_34
+  - first:
+      213: -6173271578031336532
+    second: Scribble tiles_35
+  - first:
+      213: -1125609321710762914
+    second: Scribble tiles_36
+  - first:
+      213: -6860917881441697093
+    second: Scribble tiles_37
+  - first:
+      213: -7530839261742916797
+    second: Scribble tiles_38
+  - first:
+      213: 348680926598942896
+    second: Scribble tiles_39
+  - first:
+      213: 823008229239507645
+    second: Scribble tiles_40
+  - first:
+      213: 7701822168182980108
+    second: Scribble tiles_41
+  - first:
+      213: -4532586849385637233
+    second: Scribble tiles_42
+  - first:
+      213: -6692208059711733195
+    second: Scribble tiles_43
+  - first:
+      213: -4459158527163054161
+    second: Scribble tiles_44
+  - first:
+      213: -5330837195744571524
+    second: Scribble tiles_45
+  - first:
+      213: -3288541458479884311
+    second: Scribble tiles_46
+  - first:
+      213: 6247130330998351208
+    second: Scribble tiles_47
+  - first:
+      213: 115801973174671218
+    second: Scribble tiles_48
+  - first:
+      213: 3586264138444457019
+    second: Scribble tiles_49
+  - first:
+      213: 771244896382403809
+    second: Scribble tiles_50
+  - first:
+      213: -2582438018070947900
+    second: Scribble tiles_51
+  - first:
+      213: 2938255101982137243
+    second: Scribble tiles_52
+  - first:
+      213: 4503543704707155755
+    second: Scribble tiles_53
+  - first:
+      213: -5497696902098108346
+    second: Scribble tiles_54
+  - first:
+      213: 4332834899057452488
+    second: Scribble tiles_55
+  - first:
+      213: 8302633476222179301
+    second: Scribble tiles_56
+  - first:
+      213: -6543252858740039900
+    second: Scribble tiles_57
+  - first:
+      213: 7005650384658433219
+    second: Scribble tiles_58
+  - first:
+      213: -6051455099380919029
+    second: Scribble tiles_59
+  - first:
+      213: -3473058519195136054
+    second: Scribble tiles_60
+  - first:
+      213: 5363838617467583721
+    second: Scribble tiles_61
+  - first:
+      213: -8012642948702464558
+    second: Scribble tiles_62
+  - first:
+      213: 1343390682570798039
+    second: Scribble tiles_63
+  - first:
+      213: 1825271990883346447
+    second: Scribble tiles_64
+  - first:
+      213: 2776343803722722911
+    second: Scribble tiles_65
+  - first:
+      213: 4702353063545007868
+    second: Scribble tiles_66
+  - first:
+      213: 1686511702773138389
+    second: Scribble tiles_67
+  - first:
+      213: -3179309076667415771
+    second: Scribble tiles_68
+  - first:
+      213: -7226099814545912860
+    second: Scribble tiles_69
+  - first:
+      213: -6298740539775272708
+    second: Scribble tiles_70
+  - first:
+      213: 2460003079388382744
+    second: Scribble tiles_71
+  - first:
+      213: -856787864676655815
+    second: Scribble tiles_72
+  - first:
+      213: -1141295127988971292
+    second: Scribble tiles_73
+  - first:
+      213: 4247445869601587174
+    second: Scribble tiles_74
+  - first:
+      213: 6393313994489948816
+    second: Scribble tiles_75
+  - first:
+      213: 8066975208561060093
+    second: Scribble tiles_76
+  - first:
+      213: -4672404555000220677
+    second: Scribble tiles_77
+  - first:
+      213: -835743010325391591
+    second: Scribble tiles_78
+  - first:
+      213: 4565909611885772290
+    second: Scribble tiles_79
+  - first:
+      213: -9207661216547228822
+    second: Scribble tiles_80
+  - first:
+      213: -2234534432064388111
+    second: Scribble tiles_81
+  - first:
+      213: -3251807325520462089
+    second: Scribble tiles_82
+  - first:
+      213: 5318423984407594438
+    second: Scribble tiles_83
+  - first:
+      213: 7038498750417619544
+    second: Scribble tiles_84
+  - first:
+      213: 8815893926002986646
+    second: Scribble tiles_85
+  - first:
+      213: 750928755651118874
+    second: Scribble tiles_86
+  - first:
+      213: 3504175808974887672
+    second: Scribble tiles_87
+  - first:
+      213: 4284763838800262355
+    second: Scribble tiles_88
+  - first:
+      213: -2369973731561837821
+    second: Scribble tiles_89
+  - first:
+      213: -1506659307755493645
+    second: Scribble tiles_90
+  - first:
+      213: -8573907557331147617
+    second: Scribble tiles_91
+  - first:
+      213: -4419280805062193662
+    second: Scribble tiles_92
+  - first:
+      213: 8100979901439653824
+    second: Scribble tiles_93
+  - first:
+      213: -7383829136493197654
+    second: Scribble tiles_94
+  - first:
+      213: 8636981602188982888
+    second: Scribble tiles_95
+  - first:
+      213: 310084916152841565
+    second: Scribble tiles_96
+  - first:
+      213: 2500516127141976654
+    second: Scribble tiles_97
+  - first:
+      213: -7309713033000568681
+    second: Scribble tiles_98
+  - first:
+      213: 271341378036607095
+    second: Scribble tiles_99
+  - first:
+      213: 8171815862480278522
+    second: Scribble tiles_100
+  - first:
+      213: -1951381964581937548
+    second: Scribble tiles_101
+  - first:
+      213: 4278375717841941148
+    second: Scribble tiles_102
+  - first:
+      213: 9010051941708302419
+    second: Scribble tiles_103
+  - first:
+      213: 621196350151853820
+    second: Scribble tiles_104
+  - first:
+      213: 1694782092635652743
+    second: Scribble tiles_105
+  - first:
+      213: 7954194784977531291
+    second: Scribble tiles_106
+  - first:
+      213: 6080467469002972708
+    second: Scribble tiles_107
+  - first:
+      213: 2264131987805378406
+    second: Scribble tiles_108
+  - first:
+      213: -4260881095558564884
+    second: Scribble tiles_109
+  - first:
+      213: 1493494317630239207
+    second: Scribble tiles_110
+  - first:
+      213: 1195531308708019355
+    second: Scribble tiles_111
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 122
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Scribble tiles_0
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 899
+        width: 122
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f88642d1ecea79450800000000000000
+      internalID: 6095532820944677007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scribble tiles_1
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 899
+        width: 122
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9962ac31d270b8e60800000000000000
+      internalID: 7965468256121792153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scribble tiles_2
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 899
+        width: 122
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f384ecafb89885a0800000000000000
+      internalID: -6518792511611960330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scribble tiles_3
+      rect:
+        serializedVersion: 2
+        x: 387
+        y: 899
+        width: 122
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cbea966c64fa10f0800000000000000
+      internalID: -1145334408797295677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scribble tiles_4
+      rect:
+        serializedVersion: 2
+        x: 515
+        y: 899
+        width: 122
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 168e8e3175962ad70800000000000000
+      internalID: 9052914023685220449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scribble tiles_5
+      rect:
+        serializedVersion: 2
+        x: 643
+        y: 899
+        width: 122
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71537b78d7b4da900800000000000000
+      internalID: 697296519832220951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scribble tiles_6
+      rect:
+        serializedVersion: 2
+        x: 771
+        y: 899
+        width: 122
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f83f0cbd80e65e50800000000000000
+      internalID: 6797867586912467186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scribble tiles_7
+      rect:
+        serializedVersion: 2
+        x: 899
+        y: 899
+        width: 122
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 310125f4fc995b4b0800000000000000
+      internalID: -5425261060429836269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scribble tiles_8
+      rect:
+        serializedVersion: 2
+        x: 1027
+        y: 899
+        width: 122
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5380f7b7f12606ce0800000000000000
+      internalID: -1414022395638904779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scribble tiles_9
+      rect:
+        serializedVersion: 2
+        x: 1155
+        y: 899
+        width: 122
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fda99b9ac34aa6c20800000000000000
+      internalID: 3200551065652665055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scribble tiles_10
+      rect:
+        serializedVersion: 2
+        x: 1283
+        y: 899
+        width: 122
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db6e27f9ef8e60420800000000000000
+      internalID: 2596018415520114365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scribble tiles_11
+      rect:
+        serializedVersion: 2
+        x: 1411
+        y: 899
+        width: 122
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 691dee9d17d457a50800000000000000
+      internalID: 6518201187071611286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scribble tiles_12
+      rect:
+        serializedVersion: 2
+        x: 1539
+        y: 899
+        width: 122
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7eafe574d41d54b90800000000000000
+      internalID: -7258165094597592345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scribble tiles_13
+      rect:
+        serializedVersion: 2
+        x: 1667
+        y: 899
+        width: 122
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df1a2af8aa2b9af70800000000000000
+      internalID: 9199080159504933373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scribble tiles_14
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 771
+        width: 122
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9975d9b2dbb70e7b0800000000000000
+      internalID: -5197017917574785127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scribble tiles_15
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 771
+        width: 122
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: caa75a4197f937e70800000000000000
+      internalID: 9111801813486893740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scribble tiles_16
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 771
+        width: 122
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba6a668da36b51bc0800000000000000
+      internalID: -3812941145644292437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scribble tiles_17
+      rect:
+        serializedVersion: 2
+        x: 387
+        y: 771
+        width: 122
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2d78bded26e4b3c0800000000000000
+      internalID: -4344594655569478355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scribble tiles_18
+      rect:
+        serializedVersion: 2
+        x: 515
+        y: 771
+        width: 122
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98a4785ed9ed73070800000000000000
+      internalID: 8086176425709095561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scribble tiles_19
+      rect:
+        serializedVersion: 2
+        x: 643
+        y: 771
+        width: 122
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0233dea3421360730800000000000000
+      internalID: 3964910553623507744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scribble tiles_20
+      rect:
+        serializedVersion: 2
+        x: 771
+        y: 771
+        width: 122
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11789788f33b24210800000000000000
+      internalID: 1315811126599583505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scribble tiles_21
+      rect:
+        serializedVersion: 2
+        x: 899
+        y: 771
+        width: 122
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 041a34d26e6a0b230800000000000000
+      internalID: 3652602805329568064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scribble tiles_22
+      rect:
+        serializedVersion: 2
+        x: 1027
+        y: 771
+        width: 122
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cba4cd2fca90dac20800000000000000
+      internalID: 3219239947053320892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scribble tiles_23
+      rect:
+        serializedVersion: 2
+        x: 1155
+        y: 771
+        width: 122
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06f91fb71af5a5420800000000000000
+      internalID: 2619511280443170656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scribble tiles_24
+      rect:
+        serializedVersion: 2
+        x: 1283
+        y: 771
+        width: 122
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2912f22f828cd4a80800000000000000
+      internalID: -8480902445081353838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scribble tiles_25
+      rect:
+        serializedVersion: 2
+        x: 1411
+        y: 771
+        width: 122
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83af55ed088e3cbf0800000000000000
+      internalID: -305144709547427272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scribble tiles_26
+      rect:
+        serializedVersion: 2
+        x: 1539
+        y: 771
+        width: 122
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08177d48913a70720800000000000000
+      internalID: 2812395822314385792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scribble tiles_27
+      rect:
+        serializedVersion: 2
+        x: 1667
+        y: 771
+        width: 122
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0c48e22ce1372830800000000000000
+      internalID: 4046257680483372043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scribble tiles_28
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 643
+        width: 122
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9ca98610ce6d5530800000000000000
+      internalID: 3845351428135169180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scribble tiles_29
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 643
+        width: 122
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4bb387c41b4656df0800000000000000
+      internalID: -187633096811070540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scribble tiles_30
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 643
+        width: 122
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbcef64fe21d510d0800000000000000
+      internalID: -3452623539709940545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scribble tiles_31
+      rect:
+        serializedVersion: 2
+        x: 387
+        y: 643
+        width: 122
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ae42cffed2757910800000000000000
+      internalID: 1834498725322575528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scribble tiles_32
+      rect:
+        serializedVersion: 2
+        x: 515
+        y: 643
+        width: 122
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ddac8e3b381c94ab0800000000000000
+      internalID: -5023271137951823139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scribble tiles_33
+      rect:
+        serializedVersion: 2
+        x: 643
+        y: 643
+        width: 122
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1f3fe93ef4de4160800000000000000
+      internalID: 7011775858221203227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scribble tiles_34
+      rect:
+        serializedVersion: 2
+        x: 771
+        y: 643
+        width: 122
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf97727a858468010800000000000000
+      internalID: 1190718697084779004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scribble tiles_35
+      rect:
+        serializedVersion: 2
+        x: 899
+        y: 643
+        width: 122
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca35d690532245aa0800000000000000
+      internalID: -6173271578031336532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scribble tiles_36
+      rect:
+        serializedVersion: 2
+        x: 1027
+        y: 643
+        width: 122
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e54cf8f19480160f0800000000000000
+      internalID: -1125609321710762914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scribble tiles_37
+      rect:
+        serializedVersion: 2
+        x: 1155
+        y: 643
+        width: 122
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb2ca8b998f19c0a0800000000000000
+      internalID: -6860917881441697093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scribble tiles_38
+      rect:
+        serializedVersion: 2
+        x: 1283
+        y: 643
+        width: 122
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34b9f3f67951d7790800000000000000
+      internalID: -7530839261742916797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scribble tiles_39
+      rect:
+        serializedVersion: 2
+        x: 1411
+        y: 643
+        width: 122
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b052e19473c6d400800000000000000
+      internalID: 348680926598942896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scribble tiles_40
+      rect:
+        serializedVersion: 2
+        x: 1539
+        y: 643
+        width: 122
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dba4b0fbf99eb6b00800000000000000
+      internalID: 823008229239507645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scribble tiles_41
+      rect:
+        serializedVersion: 2
+        x: 1667
+        y: 643
+        width: 122
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0e76c9b47e52ea60800000000000000
+      internalID: 7701822168182980108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scribble tiles_42
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 515
+        width: 122
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8a13c076440911c0800000000000000
+      internalID: -4532586849385637233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scribble tiles_43
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 515
+        width: 122
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53240edf9308023a0800000000000000
+      internalID: -6692208059711733195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scribble tiles_44
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 515
+        width: 122
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa7ca47f1f2ed12c0800000000000000
+      internalID: -4459158527163054161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scribble tiles_45
+      rect:
+        serializedVersion: 2
+        x: 387
+        y: 515
+        width: 122
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7f843080df0506b0800000000000000
+      internalID: -5330837195744571524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scribble tiles_46
+      rect:
+        serializedVersion: 2
+        x: 515
+        y: 515
+        width: 122
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e7592a87f0cc52d0800000000000000
+      internalID: -3288541458479884311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scribble tiles_47
+      rect:
+        serializedVersion: 2
+        x: 643
+        y: 515
+        width: 122
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 865a9b4ffe342b650800000000000000
+      internalID: 6247130330998351208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scribble tiles_48
+      rect:
+        serializedVersion: 2
+        x: 771
+        y: 515
+        width: 122
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2779d53f7496b9100800000000000000
+      internalID: 115801973174671218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scribble tiles_49
+      rect:
+        serializedVersion: 2
+        x: 899
+        y: 515
+        width: 122
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3444baab38f4c130800000000000000
+      internalID: 3586264138444457019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scribble tiles_50
+      rect:
+        serializedVersion: 2
+        x: 1027
+        y: 515
+        width: 122
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e4c4b3a52304ba00800000000000000
+      internalID: 771244896382403809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scribble tiles_51
+      rect:
+        serializedVersion: 2
+        x: 1155
+        y: 515
+        width: 122
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c7da6e0e46592cd0800000000000000
+      internalID: -2582438018070947900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scribble tiles_52
+      rect:
+        serializedVersion: 2
+        x: 1283
+        y: 515
+        width: 122
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9bdf1d9277c6c820800000000000000
+      internalID: 2938255101982137243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scribble tiles_53
+      rect:
+        serializedVersion: 2
+        x: 1411
+        y: 515
+        width: 122
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b27448d732dcf7e30800000000000000
+      internalID: 4503543704707155755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scribble tiles_54
+      rect:
+        serializedVersion: 2
+        x: 1539
+        y: 515
+        width: 122
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6404dababc144b3b0800000000000000
+      internalID: -5497696902098108346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scribble tiles_55
+      rect:
+        serializedVersion: 2
+        x: 1667
+        y: 515
+        width: 122
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c52cb46262512c30800000000000000
+      internalID: 4332834899057452488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scribble tiles_56
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 387
+        width: 122
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e75d7a4821e83370800000000000000
+      internalID: 8302633476222179301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scribble tiles_57
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 387
+        width: 122
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42f9d3f4132b135a0800000000000000
+      internalID: -6543252858740039900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scribble tiles_58
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 387
+        width: 122
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c4052648e1193160800000000000000
+      internalID: 7005650384658433219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scribble tiles_59
+      rect:
+        serializedVersion: 2
+        x: 387
+        y: 387
+        width: 122
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b059c2b26a9e40ca0800000000000000
+      internalID: -6051455099380919029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scribble tiles_60
+      rect:
+        serializedVersion: 2
+        x: 515
+        y: 387
+        width: 122
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acfca378da73dcfc0800000000000000
+      internalID: -3473058519195136054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scribble tiles_61
+      rect:
+        serializedVersion: 2
+        x: 643
+        y: 387
+        width: 122
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ec7da2cdce207a40800000000000000
+      internalID: 5363838617467583721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scribble tiles_62
+      rect:
+        serializedVersion: 2
+        x: 771
+        y: 387
+        width: 122
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d51d82e0bf5dc090800000000000000
+      internalID: -8012642948702464558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scribble tiles_63
+      rect:
+        serializedVersion: 2
+        x: 899
+        y: 387
+        width: 122
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d3b33d45bea4a210800000000000000
+      internalID: 1343390682570798039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scribble tiles_64
+      rect:
+        serializedVersion: 2
+        x: 1027
+        y: 387
+        width: 122
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f08621b743ba45910800000000000000
+      internalID: 1825271990883346447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scribble tiles_65
+      rect:
+        serializedVersion: 2
+        x: 1155
+        y: 387
+        width: 122
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5eef33dafd878620800000000000000
+      internalID: 2776343803722722911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scribble tiles_66
+      rect:
+        serializedVersion: 2
+        x: 1283
+        y: 387
+        width: 122
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfee119723d124140800000000000000
+      internalID: 4702353063545007868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scribble tiles_67
+      rect:
+        serializedVersion: 2
+        x: 1411
+        y: 387
+        width: 122
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d305594571b76710800000000000000
+      internalID: 1686511702773138389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scribble tiles_68
+      rect:
+        serializedVersion: 2
+        x: 1539
+        y: 387
+        width: 122
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 523401e4d33d0e3d0800000000000000
+      internalID: -3179309076667415771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scribble tiles_69
+      rect:
+        serializedVersion: 2
+        x: 1667
+        y: 387
+        width: 122
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4eb8972118cb7bb90800000000000000
+      internalID: -7226099814545912860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scribble tiles_70
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 259
+        width: 122
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf8b75ae9d06698a0800000000000000
+      internalID: -6298740539775272708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scribble tiles_71
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 259
+        width: 122
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 816cf4d54cfa32220800000000000000
+      internalID: 2460003079388382744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scribble tiles_72
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 259
+        width: 122
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93d151ef9f31c14f0800000000000000
+      internalID: -856787864676655815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scribble tiles_73
+      rect:
+        serializedVersion: 2
+        x: 387
+        y: 259
+        width: 122
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e85550c02e4920f0800000000000000
+      internalID: -1141295127988971292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scribble tiles_74
+      rect:
+        serializedVersion: 2
+        x: 515
+        y: 259
+        width: 122
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ef7d44b385f1fa30800000000000000
+      internalID: 4247445869601587174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scribble tiles_75
+      rect:
+        serializedVersion: 2
+        x: 643
+        y: 259
+        width: 122
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09a6b1b643d99b850800000000000000
+      internalID: 6393313994489948816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scribble tiles_76
+      rect:
+        serializedVersion: 2
+        x: 771
+        y: 259
+        width: 122
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df82a262637a3ff60800000000000000
+      internalID: 8066975208561060093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scribble tiles_77
+      rect:
+        serializedVersion: 2
+        x: 899
+        y: 259
+        width: 122
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf37b4c00d8482fb0800000000000000
+      internalID: -4672404555000220677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scribble tiles_78
+      rect:
+        serializedVersion: 2
+        x: 1027
+        y: 259
+        width: 122
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9171a0af828d664f0800000000000000
+      internalID: -835743010325391591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scribble tiles_79
+      rect:
+        serializedVersion: 2
+        x: 1155
+        y: 259
+        width: 122
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20e3efcc99e5d5f30800000000000000
+      internalID: 4565909611885772290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scribble tiles_80
+      rect:
+        serializedVersion: 2
+        x: 1283
+        y: 259
+        width: 122
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a63bf8768e0d73080800000000000000
+      internalID: -9207661216547228822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scribble tiles_81
+      rect:
+        serializedVersion: 2
+        x: 1411
+        y: 259
+        width: 122
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f34c6ae5c65df0e0800000000000000
+      internalID: -2234534432064388111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scribble tiles_82
+      rect:
+        serializedVersion: 2
+        x: 1539
+        y: 259
+        width: 122
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7fef65c57724fd2d0800000000000000
+      internalID: -3251807325520462089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scribble tiles_83
+      rect:
+        serializedVersion: 2
+        x: 1667
+        y: 259
+        width: 122
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c548838f66dec940800000000000000
+      internalID: 5318423984407594438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scribble tiles_84
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 131
+        width: 122
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85a4caa6255cda160800000000000000
+      internalID: 7038498750417619544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scribble tiles_85
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 131
+        width: 122
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69e8eec21d8585a70800000000000000
+      internalID: 8815893926002986646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scribble tiles_86
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 131
+        width: 122
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a17063489b5db6a00800000000000000
+      internalID: 750928755651118874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scribble tiles_87
+      rect:
+        serializedVersion: 2
+        x: 387
+        y: 131
+        width: 122
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fa1774155551a030800000000000000
+      internalID: 3504175808974887672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scribble tiles_88
+      rect:
+        serializedVersion: 2
+        x: 515
+        y: 131
+        width: 122
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d4f02e720a867b30800000000000000
+      internalID: 4284763838800262355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scribble tiles_89
+      rect:
+        serializedVersion: 2
+        x: 643
+        y: 131
+        width: 122
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30bef33a2792c1fd0800000000000000
+      internalID: -2369973731561837821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scribble tiles_90
+      rect:
+        serializedVersion: 2
+        x: 771
+        y: 131
+        width: 122
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f6a2bb9755471be0800000000000000
+      internalID: -1506659307755493645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scribble tiles_91
+      rect:
+        serializedVersion: 2
+        x: 899
+        y: 131
+        width: 122
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f946d3cc08c530980800000000000000
+      internalID: -8573907557331147617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scribble tiles_92
+      rect:
+        serializedVersion: 2
+        x: 1027
+        y: 131
+        width: 122
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20ec09ba58f8ba2c0800000000000000
+      internalID: -4419280805062193662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scribble tiles_93
+      rect:
+        serializedVersion: 2
+        x: 1155
+        y: 131
+        width: 122
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c7b3edac467c6070800000000000000
+      internalID: 8100979901439653824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scribble tiles_94
+      rect:
+        serializedVersion: 2
+        x: 1283
+        y: 131
+        width: 122
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa6c425858e578990800000000000000
+      internalID: -7383829136493197654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scribble tiles_95
+      rect:
+        serializedVersion: 2
+        x: 1411
+        y: 131
+        width: 122
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86afe0aa109bcd770800000000000000
+      internalID: 8636981602188982888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scribble tiles_96
+      rect:
+        serializedVersion: 2
+        x: 1539
+        y: 131
+        width: 122
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d553f7d9694ad4400800000000000000
+      internalID: 310084916152841565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scribble tiles_97
+      rect:
+        serializedVersion: 2
+        x: 1667
+        y: 131
+        width: 122
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4ade695b2e93b220800000000000000
+      internalID: 2500516127141976654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scribble tiles_98
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 3
+        width: 122
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79835f999beae8a90800000000000000
+      internalID: -7309713033000568681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scribble tiles_99
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 3
+        width: 122
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 778acb2bb8ff3c300800000000000000
+      internalID: 271341378036607095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scribble tiles_100
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 3
+        width: 122
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af31a051b3f186170800000000000000
+      internalID: 8171815862480278522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scribble tiles_101
+      rect:
+        serializedVersion: 2
+        x: 387
+        y: 3
+        width: 122
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47e5dfb217c4be4e0800000000000000
+      internalID: -1951381964581937548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scribble tiles_102
+      rect:
+        serializedVersion: 2
+        x: 515
+        y: 3
+        width: 122
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9230ad2c08df5b30800000000000000
+      internalID: 4278375717841941148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scribble tiles_103
+      rect:
+        serializedVersion: 2
+        x: 643
+        y: 3
+        width: 122
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3588751f0822a0d70800000000000000
+      internalID: 9010051941708302419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scribble tiles_104
+      rect:
+        serializedVersion: 2
+        x: 771
+        y: 3
+        width: 122
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf6029a0aceee9800800000000000000
+      internalID: 621196350151853820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scribble tiles_105
+      rect:
+        serializedVersion: 2
+        x: 899
+        y: 3
+        width: 122
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 782cd3b7553158710800000000000000
+      internalID: 1694782092635652743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scribble tiles_106
+      rect:
+        serializedVersion: 2
+        x: 1027
+        y: 3
+        width: 122
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b91b9d8830af26e60800000000000000
+      internalID: 7954194784977531291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scribble tiles_107
+      rect:
+        serializedVersion: 2
+        x: 1155
+        y: 3
+        width: 122
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42e9d3682f8226450800000000000000
+      internalID: 6080467469002972708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scribble tiles_108
+      rect:
+        serializedVersion: 2
+        x: 1283
+        y: 3
+        width: 122
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6671db90c00db6f10800000000000000
+      internalID: 2264131987805378406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scribble tiles_109
+      rect:
+        serializedVersion: 2
+        x: 1411
+        y: 3
+        width: 122
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce3fd0df73f4ed4c0800000000000000
+      internalID: -4260881095558564884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scribble tiles_110
+      rect:
+        serializedVersion: 2
+        x: 1539
+        y: 3
+        width: 122
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e13a644b25f9b410800000000000000
+      internalID: 1493494317630239207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scribble tiles_111
+      rect:
+        serializedVersion: 2
+        x: 1667
+        y: 3
+        width: 122
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9c366d1461679010800000000000000
+      internalID: 1195531308708019355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

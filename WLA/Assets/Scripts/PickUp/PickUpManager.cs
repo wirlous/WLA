@@ -7,7 +7,10 @@ public enum PickUpType
     HEALTH,
     MANA,
     ARROW,
-    KEY
+    KEY,
+    BOW,
+    SWORD,
+    MAGIC
 };
 
 [RequireComponent(typeof(Rigidbody2D))]
@@ -61,6 +64,15 @@ public class PickUpManager : MonoBehaviour
         case PickUpType.KEY:
             animator.SetTrigger("Key");
             break;
+        case PickUpType.SWORD:
+            animator.SetTrigger("Sword");
+            break;
+        case PickUpType.BOW:
+            animator.SetTrigger("Bow");
+            break;
+        case PickUpType.MAGIC:
+            animator.SetTrigger("Magic");
+            break;
         default:
             break;
         }
@@ -77,7 +89,7 @@ public class PickUpManager : MonoBehaviour
         var tag = other.tag;
         if (tag.Equals("Player"))
         {
-            Debug.LogFormat("Pick up {0} with value {1}", type, value);
+            // Debug.LogFormat("Pick up {0} with value {1}", type, value);
             bool gotten = GameReferences.inventoryManager.PickUp(type, value);
             if (gotten)
                 Destroy(gameObject);
