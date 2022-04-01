@@ -62,8 +62,10 @@ public class InventoryManager : MonoBehaviour
         case PickUpType.HEALTH:
             return playerHealth.Heal(value);
         case PickUpType.MANA:
+            if (!hasMagic) return false;
             return magicController.IncreaseMana(value);
         case PickUpType.ARROW:
+            if (!hasBow) return false;
             return bowController.IncreaseAmmo(value);
         case PickUpType.KEY:
             keys++;
