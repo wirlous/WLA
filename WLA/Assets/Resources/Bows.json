@@ -31,7 +31,7 @@
             }
         },
         {
-            "name"          : "Bow 2",
+            "name"          : "Bow 3",
             "code"          : 2,
             "damage"        : 15,
             "maxAmmunition" : 40,

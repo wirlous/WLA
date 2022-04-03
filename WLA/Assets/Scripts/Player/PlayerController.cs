@@ -8,6 +8,7 @@ using UnityEngine.InputSystem;
 [RequireComponent(typeof(HealthSystem))]
 [RequireComponent(typeof(SwordController))]
 [RequireComponent(typeof(BowController))]
+[RequireComponent(typeof(MagicController))]
 public class PlayerController : MonoBehaviour
 {
     // Public
@@ -75,11 +76,36 @@ public class PlayerController : MonoBehaviour
         playerInput.Gameplay.Move.performed += ctx => StartMove();
         playerInput.Gameplay.Move.canceled += ctx => StopMove();
 
-        // Register TogleWeapon
-        playerInput.Gameplay.ChangeWeaponType.performed += ctx => TogleWeapon();
+        // Register ToggleWeapon
+        playerInput.Gameplay.ChangeWeaponType.performed += ctx => ToggleWeapon();
         
         // Register WeaponUp
         playerInput.Gameplay.ChangeWeaponUp.performed += ctx => WeaponUp();   
+    }
+
+    internal WeaponType GetWeapon()
+    {
+        return weapon;
+    }
+
+    internal string GetWeaponName(WeaponType weaponType)
+    {
+        string name = "";
+        switch (weapon)
+        {
+        case WeaponType.SWORD:
+            name = swordController.GetWeaponName();
+            break;
+        case WeaponType.BOW:
+            name = bowController.GetWeaponName();
+            break;
+        case WeaponType.MAGIC:
+            name = magicController.GetWeaponName();
+            break;
+        default:
+            break;
+        }
+        return name;
     }
 
     void Start()
@@ -121,31 +147,17 @@ public class PlayerController : MonoBehaviour
             atttackAnimator?.SetTrigger("AttackBow");
             break;
         case WeaponType.MAGIC:
-            // TODO: Add AttackMagic trigger
-            atttackAnimator?.SetTrigger("AttackBow");
+            atttackAnimator?.SetTrigger("AttackMagic");
             break;
         default:
             break;
         }
     }
 
-    void TogleWeapon()
+    void ToggleWeapon()
     {
         weapon = GameReferences.inventoryManager.GetNextWeapon(weapon);
-        // switch (weapon)
-        // {
-        // case WeaponType.SWORD:
-        //     weapon = WeaponType.BOW;
-        //     break;
-        // case WeaponType.BOW:
-        //     weapon = WeaponType.MAGIC;
-        //     break;
-        // case WeaponType.MAGIC:
-        //     weapon = WeaponType.SWORD;
-        //     break;
-        // default:
-        //     break;
-        // }
+        GameReferences.canvasManager.SetUseWeapon(weapon);
     }
 
     void WeaponUp()
@@ -162,11 +174,12 @@ public class PlayerController : MonoBehaviour
             break;
         case WeaponType.MAGIC:
             spellIndex++;
-            bowController?.ChangeWeapon(ref bowIndex);
+            magicController?.ChangeWeapon(ref spellIndex);
             break;
         default:
             break;
         }
+        GameReferences.canvasManager.SetWeaponName(weapon, GameReferences.player.GetWeaponName(weapon));
     }
 
     public bool ChangeWeapon(WeaponType weaponType, int index)
@@ -188,7 +201,7 @@ public class PlayerController : MonoBehaviour
             weapon = WeaponType.BOW;
             return true;
         case WeaponType.MAGIC:
-            bowController?.ChangeWeapon(ref index);
+            magicController?.ChangeWeapon(ref index);
             spellIndex = index;
             weapon = WeaponType.MAGIC;
             return true;
@@ -212,8 +225,19 @@ public class PlayerController : MonoBehaviour
         playerAnimator?.SetFloat("FacingHorizontal", facingDirection.x);
         playerAnimator?.SetFloat("FacingVertical", facingDirection.y);
 
-        atttackAnimator?.SetFloat("FacingHorizontal", facingDirection.x);
-        atttackAnimator?.SetFloat("FacingVertical", facingDirection.y);
+        // IMPORTANT: Vertical priority over Horizontal
+        if (Mathf.Abs(facingDirection.y) >= Mathf.Abs(facingDirection.x))
+        {
+            // Vertical attack
+            atttackAnimator?.SetFloat("FacingVertical", Freya.Mathfs.Sign(facingDirection.y));
+            atttackAnimator?.SetFloat("FacingHorizontal", 0);
+        }
+        else
+        {
+            // Horizontal attack
+            atttackAnimator?.SetFloat("FacingVertical", 0);
+            atttackAnimator?.SetFloat("FacingHorizontal", Freya.Mathfs.Sign(facingDirection.x));
+        }
     }
 
     void FixedUpdate()
@@ -263,7 +287,7 @@ public class PlayerController : MonoBehaviour
 
     public void DoDamage(WeaponType weaponType, Direction dir)
     {
-        switch (weapon)
+        switch (weaponType)
         {
         case WeaponType.SWORD:
             swordController.Attack(dir);
@@ -308,10 +332,15 @@ public class PlayerController : MonoBehaviour
 
     public void ReceiveDamage(int damage, Vector3 pOrigin)
     {
-        Debug.LogFormat("Player receive damage {0}", damage);
+        // Debug.LogFormat("Player receive damage {0}", damage);
         Knockback2D(Freya.Mathfs.Dir(pOrigin, transform.position));
         health.ReceiveDamage(damage);
         StartCoroutine(FlashSprites(invincibilityFlashes, invincibilityTime/(2*invincibilityFlashes)));
+    }
+
+    public bool Heal(int heal)
+    {
+        return health.Heal(heal);
     }
 
     void Knockback2D(Vector2 pushDir)
@@ -371,7 +400,7 @@ public class PlayerController : MonoBehaviour
         EnemyAI enemy = collision.gameObject.GetComponent<EnemyAI>();
         if ((enemy != null) && isHitable)
         {
-            Debug.LogFormat("Receive damage from {0}", enemy.gameObject.name);
+            // Debug.LogFormat("Receive damage from {0}", enemy.gameObject.name);
             ReceiveDamage(enemy.GetDamage(), enemy.transform.position);
         }
     }
@@ -386,7 +415,7 @@ public class PlayerController : MonoBehaviour
         EnemyAI enemy = collision.gameObject.GetComponent<EnemyAI>();
         if ((enemy != null) && isHitable)
         {
-            Debug.LogFormat("Receive damage from {0}", enemy.gameObject.name);
+            // Debug.LogFormat("Receive damage from {0}", enemy.gameObject.name);
             ReceiveDamage(enemy.GetDamage(), enemy.transform.position);
         }
     }

@@ -32,6 +32,7 @@ public class KeyValuePair<K,V>
 public static class GameReferences
 {
     public static GameManager gameManager;
+    public static CanvasManager canvasManager;
     public static InventoryManager inventoryManager;
     public static PlayerController player;
     public static List<EnemyAI> enemies = new List<EnemyAI>();

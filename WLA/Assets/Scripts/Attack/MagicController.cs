@@ -27,10 +27,15 @@ public class MagicController : MonoBehaviour
 
     }
 
+    public string GetWeaponName()
+    {
+        return magicData.name;
+    }
+
     public void ChangeWeapon(ref int index)
     {
         magicData = GameReferences.gameManager.GetMagicData(ref index);
-        maxMana = magicData.maxMana;
+        maxMana = 1000000;
         manaCost = magicData.manaCost;
         mana = maxMana;
     }

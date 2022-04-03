@@ -33,7 +33,7 @@
             }
         },
         {
-            "name"          : "Spell 2",
+            "name"          : "Spell 3",
             "code"          : 2,
             "damage"        : 15,
             "maxMana"       : 40,

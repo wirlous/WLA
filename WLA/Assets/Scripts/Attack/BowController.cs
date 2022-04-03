@@ -26,6 +26,11 @@ public class BowController : MonoBehaviour
 
     }
 
+    public string GetWeaponName()
+    {
+        return bowData.name;
+    }
+
     public void ChangeWeapon(ref int index)
     {
         bowData = GameReferences.gameManager.GetBowData(ref index);

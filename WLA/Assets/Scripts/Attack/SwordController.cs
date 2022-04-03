@@ -52,6 +52,11 @@ public class SwordController : MonoBehaviour
 
     }
 
+    public string GetWeaponName()
+    {
+        return swordData.name;
+    }
+
     public void ChangeWeapon(ref int index)
     {
         swordData = GameReferences.gameManager.GetSwordData(ref index);

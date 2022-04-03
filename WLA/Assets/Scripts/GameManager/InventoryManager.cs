@@ -19,7 +19,8 @@ public class InventoryManager : MonoBehaviour
     SwordController swordController;
     BowController bowController;
     MagicController magicController;
-    HealthSystem playerHealth;
+    PlayerController playerController;
+    CanvasManager canvasManager;
 
 
     void Awake()
@@ -30,10 +31,20 @@ public class InventoryManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        playerHealth = GameReferences.player.GetComponent<HealthSystem>();
+        playerController = GameReferences.player;
         swordController = GameReferences.player.GetComponent<SwordController>();
         bowController = GameReferences.player.GetComponent<BowController>();
         magicController = GameReferences.player.GetComponent<MagicController>();
+
+        canvasManager = GameReferences.canvasManager;
+        SetCanvasInfo();
+    }
+
+    private void SetCanvasInfo()
+    {
+        if (hasSword) canvasManager.SetWeaponName(WeaponType.SWORD, swordController.GetWeaponName());
+        if (hasBow) canvasManager.SetWeaponName(WeaponType.BOW, bowController.GetWeaponName());
+        if (hasMagic) canvasManager.SetWeaponName(WeaponType.MAGIC, magicController.GetWeaponName());
     }
 
     public int GetKeys()
@@ -60,7 +71,7 @@ public class InventoryManager : MonoBehaviour
         switch (type)
         {
         case PickUpType.HEALTH:
-            return playerHealth.Heal(value);
+            return playerController.Heal(value);
         case PickUpType.MANA:
             if (!hasMagic) return false;
             return magicController.IncreaseMana(value);
@@ -73,17 +84,14 @@ public class InventoryManager : MonoBehaviour
         case PickUpType.SWORD:
             hasSword = true;
             PickUpWeapon(WeaponType.SWORD, value);
-            // swordController.ChangeWeapon(ref value);
             return true;
         case PickUpType.BOW:
             hasBow = true;
             PickUpWeapon(WeaponType.BOW, value);
-            // bowController.ChangeWeapon(ref value);
             return true;
         case PickUpType.MAGIC:
             hasMagic = true;
             PickUpWeapon(WeaponType.MAGIC, value);
-            // magicController.ChangeWeapon(ref value);
             return true;
         default:
             break;
@@ -93,7 +101,10 @@ public class InventoryManager : MonoBehaviour
 
     public bool PickUpWeapon(WeaponType weaponType, int index)
     {
-        return GameReferences.player.ChangeWeapon(weaponType, index);
+        bool pickWeapon = GameReferences.player.ChangeWeapon(weaponType, index);
+        canvasManager.SetWeaponName(weaponType, GameReferences.player.GetWeaponName(weaponType));
+        canvasManager.SetUseWeapon(GameReferences.player.GetWeapon());
+        return pickWeapon;
     }
 
     public bool HasWeapon(WeaponType weaponType)
