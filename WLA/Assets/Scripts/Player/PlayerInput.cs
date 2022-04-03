@@ -295,6 +295,74 @@ public class @PlayerInput : IInputActionCollection, IDisposable
                     ""isPartOfComposite"": false
                 }
             ]
+        },
+        {
+            ""name"": ""Control"",
+            ""id"": ""6cbdd342-9453-4813-b709-409af1619e71"",
+            ""actions"": [
+                {
+                    ""name"": ""GameQuit"",
+                    ""type"": ""Button"",
+                    ""id"": ""c0533962-fd94-4aed-b227-98f326903920"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""ShowDebug"",
+                    ""type"": ""Button"",
+                    ""id"": ""5d6423ab-21e5-415f-824d-3abc0560c5b9"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""4b8a25ff-0b3a-4044-91be-c3cf926e83f4"",
+                    ""path"": ""<Gamepad>/start"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad"",
+                    ""action"": ""GameQuit"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""10450a58-a5ba-4bad-8f93-a8ee171ca791"",
+                    ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""GameQuit"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""7e3770a3-0569-486f-b21b-800447e6f657"",
+                    ""path"": ""<Gamepad>/select"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad"",
+                    ""action"": ""ShowDebug"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""8084a856-0b53-43a6-afb3-9dc38a01267e"",
+                    ""path"": ""<Keyboard>/period"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""ShowDebug"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
         }
     ],
     ""controlSchemes"": [
@@ -328,6 +396,10 @@ public class @PlayerInput : IInputActionCollection, IDisposable
         m_Gameplay_Attack = m_Gameplay.FindAction("Attack", throwIfNotFound: true);
         m_Gameplay_ChangeWeaponType = m_Gameplay.FindAction("ChangeWeaponType", throwIfNotFound: true);
         m_Gameplay_ChangeWeaponUp = m_Gameplay.FindAction("ChangeWeaponUp", throwIfNotFound: true);
+        // Control
+        m_Control = asset.FindActionMap("Control", throwIfNotFound: true);
+        m_Control_GameQuit = m_Control.FindAction("GameQuit", throwIfNotFound: true);
+        m_Control_ShowDebug = m_Control.FindAction("ShowDebug", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -430,6 +502,47 @@ public class @PlayerInput : IInputActionCollection, IDisposable
         }
     }
     public GameplayActions @Gameplay => new GameplayActions(this);
+
+    // Control
+    private readonly InputActionMap m_Control;
+    private IControlActions m_ControlActionsCallbackInterface;
+    private readonly InputAction m_Control_GameQuit;
+    private readonly InputAction m_Control_ShowDebug;
+    public struct ControlActions
+    {
+        private @PlayerInput m_Wrapper;
+        public ControlActions(@PlayerInput wrapper) { m_Wrapper = wrapper; }
+        public InputAction @GameQuit => m_Wrapper.m_Control_GameQuit;
+        public InputAction @ShowDebug => m_Wrapper.m_Control_ShowDebug;
+        public InputActionMap Get() { return m_Wrapper.m_Control; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(ControlActions set) { return set.Get(); }
+        public void SetCallbacks(IControlActions instance)
+        {
+            if (m_Wrapper.m_ControlActionsCallbackInterface != null)
+            {
+                @GameQuit.started -= m_Wrapper.m_ControlActionsCallbackInterface.OnGameQuit;
+                @GameQuit.performed -= m_Wrapper.m_ControlActionsCallbackInterface.OnGameQuit;
+                @GameQuit.canceled -= m_Wrapper.m_ControlActionsCallbackInterface.OnGameQuit;
+                @ShowDebug.started -= m_Wrapper.m_ControlActionsCallbackInterface.OnShowDebug;
+                @ShowDebug.performed -= m_Wrapper.m_ControlActionsCallbackInterface.OnShowDebug;
+                @ShowDebug.canceled -= m_Wrapper.m_ControlActionsCallbackInterface.OnShowDebug;
+            }
+            m_Wrapper.m_ControlActionsCallbackInterface = instance;
+            if (instance != null)
+            {
+                @GameQuit.started += instance.OnGameQuit;
+                @GameQuit.performed += instance.OnGameQuit;
+                @GameQuit.canceled += instance.OnGameQuit;
+                @ShowDebug.started += instance.OnShowDebug;
+                @ShowDebug.performed += instance.OnShowDebug;
+                @ShowDebug.canceled += instance.OnShowDebug;
+            }
+        }
+    }
+    public ControlActions @Control => new ControlActions(this);
     private int m_KeyboardSchemeIndex = -1;
     public InputControlScheme KeyboardScheme
     {
@@ -454,5 +567,10 @@ public class @PlayerInput : IInputActionCollection, IDisposable
         void OnAttack(InputAction.CallbackContext context);
         void OnChangeWeaponType(InputAction.CallbackContext context);
         void OnChangeWeaponUp(InputAction.CallbackContext context);
+    }
+    public interface IControlActions
+    {
+        void OnGameQuit(InputAction.CallbackContext context);
+        void OnShowDebug(InputAction.CallbackContext context);
     }
 }

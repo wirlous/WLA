@@ -285,7 +285,7 @@ public class PlayerController : MonoBehaviour
         HideSprite();
         moveSpeed = 0;
         GameReferences.gameManager.Lose();
-        Debug.Log("Player dies");
+        // Debug.Log("Player dies");
         this.enabled = false;
     }
     

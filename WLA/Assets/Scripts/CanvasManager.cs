@@ -38,18 +38,16 @@ public class CanvasManager : MonoBehaviour
     string message;
 
     // Debug
+    [SerializeField] bool showDebug;
     float deltaTime;
     List<float> fpsList = new List<float>();
     [SerializeField] int fpsIndex = 0;
     const int fpsListSize = 500;
 
-    public string Message { get => message; set => message = value; }
-
     void Awake()
     {
         GameReferences.canvasManager = this;
     }
-
 
     void Start()
     {
@@ -62,10 +60,16 @@ public class CanvasManager : MonoBehaviour
         magicController = GameReferences.player.GetComponent<MagicController>();
 
         inventoryManager = GameReferences.player.GetComponent<InventoryManager>();
-
+        
+        showDebug = false;
         deltaTime = 0;
 
         ShowMessage("");
+    }
+
+    public void ToggleDebug()
+    {
+        showDebug = !showDebug;
     }
 
     // Update is called once per frame
@@ -184,21 +188,24 @@ public class CanvasManager : MonoBehaviour
 
     private void ShowDebug()
     {
-        deltaTime += (Time.deltaTime - deltaTime) * 0.1f;
-        float fps = 1.0f / deltaTime;
-        
-        if (fpsList.Count < fpsListSize)
+        string debugStr = "";
+        if (showDebug)
         {
-            fpsList.Add(fps);
+            deltaTime += (Time.deltaTime - deltaTime) * 0.1f;
+            float fps = 1.0f / deltaTime;
+            
+            if (fpsList.Count < fpsListSize)
+            {
+                fpsList.Add(fps);
+            }
+            else
+            {
+                fpsList[fpsIndex] = fps;
+                fpsIndex = (fpsIndex + 1) % fpsListSize;
+            }
+            
+            debugStr = System.String.Format("FPS: {0}", Mathf.Ceil(fpsList.Average()));
         }
-        else
-        {
-            fpsList[fpsIndex] = fps;
-            fpsIndex = (fpsIndex + 1) % fpsListSize;
-        }
-        
-
-        string debugStr = System.String.Format("FPS: {0}", Mathf.Ceil(fpsList.Average()));
 
         debugTMP.text = debugStr;
     }

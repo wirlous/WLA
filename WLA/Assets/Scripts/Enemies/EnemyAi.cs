@@ -210,7 +210,7 @@ public class EnemyAI : MonoBehaviour
 
     private void Die()
     {
-        Debug.LogFormat("Enemy {0} dies", name);
+        // Debug.LogFormat("Enemy {0} dies", name);
         moveSpeed = 0;
         col2D.enabled = false;
         animator?.SetTrigger("Die");

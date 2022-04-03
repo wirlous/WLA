@@ -19,6 +19,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] private MagicData magicData;
     [SerializeField] private PickUpData pickUpData;
 
+    [SerializeField] PlayerInput playerInput;
+
     void Awake()
     {
         GameReferences.gameManager = this;
@@ -31,6 +33,10 @@ public class GameManager : MonoBehaviour
 
         string magicString = magicJson.text;
         magicData = JsonUtility.FromJson<MagicData>(magicString);
+
+        playerInput = new PlayerInput();
+        playerInput.Control.GameQuit.performed += ctx => QuitApplication();
+        playerInput.Control.ShowDebug.performed += ctx => ToggleDebug();
     }
 
     // Update is called once per frame
@@ -40,6 +46,17 @@ public class GameManager : MonoBehaviour
         {
             Win();
         }
+    }
+
+    void OnEnable()
+    {
+        playerInput.Control.Enable();
+
+    }
+
+    void OnDisable()
+    {
+        playerInput.Control.Disable();
     }
 
     public SwordDataStructure GetSwordData(ref int index)
@@ -97,9 +114,14 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
-    public void QuitApplication()
+    private void QuitApplication()
     {
         Application.Quit();
+    }
+
+    private void ToggleDebug()
+    {
+        GameReferences.canvasManager.ToggleDebug();
     }
 
 }

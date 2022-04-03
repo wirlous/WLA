@@ -282,6 +282,74 @@
                     "isPartOfComposite": false
                 }
             ]
+        },
+        {
+            "name": "Control",
+            "id": "6cbdd342-9453-4813-b709-409af1619e71",
+            "actions": [
+                {
+                    "name": "GameQuit",
+                    "type": "Button",
+                    "id": "c0533962-fd94-4aed-b227-98f326903920",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "ShowDebug",
+                    "type": "Button",
+                    "id": "5d6423ab-21e5-415f-824d-3abc0560c5b9",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "4b8a25ff-0b3a-4044-91be-c3cf926e83f4",
+                    "path": "<Gamepad>/start",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "GameQuit",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "10450a58-a5ba-4bad-8f93-a8ee171ca791",
+                    "path": "<Keyboard>/escape",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "GameQuit",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "7e3770a3-0569-486f-b21b-800447e6f657",
+                    "path": "<Gamepad>/select",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "ShowDebug",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "8084a856-0b53-43a6-afb3-9dc38a01267e",
+                    "path": "<Keyboard>/period",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard",
+                    "action": "ShowDebug",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": [
