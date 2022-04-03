@@ -36,7 +36,10 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (GameReferences.enemies.Count == 0)
+        {
+            Win();
+        }
     }
 
     public SwordDataStructure GetSwordData(ref int index)
@@ -63,7 +66,33 @@ public class GameManager : MonoBehaviour
         return magicData.spells[index];
     }
 
-    public void RestartLevel()
+    public void Lose()
+    {
+        GameReferences.canvasManager.ShowMessage("You lose!");
+        GameReferences.canvasManager.StopTime();
+        foreach (var enemy in GameReferences.enemies)
+        {
+            enemy.StartStun();
+        }
+        GameReferences.player.moveSpeed = 0;
+        StartCoroutine( RestartLevelCorrutine(2) );
+    }
+
+    public void Win()
+    {
+        GameReferences.canvasManager.ShowMessage("You win!");
+        GameReferences.canvasManager.StopTime();
+        StartCoroutine( RestartLevelCorrutine(2) );
+    }
+
+    IEnumerator RestartLevelCorrutine(int seconds)
+    {
+        yield return new WaitForSeconds(seconds);
+        RestartLevel();
+    }
+    
+
+    private void RestartLevel()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
@@ -72,6 +101,5 @@ public class GameManager : MonoBehaviour
     {
         Application.Quit();
     }
-
 
 }

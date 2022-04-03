@@ -282,8 +282,19 @@ public class PlayerController : MonoBehaviour
 
     void Die()
     {
-        GameReferences.gameManager.RestartLevel();
+        HideSprite();
+        moveSpeed = 0;
+        GameReferences.gameManager.Lose();
         Debug.Log("Player dies");
+        this.enabled = false;
+    }
+    
+    void HideSprite()
+    {
+        foreach (var sprite in sprites)
+        {
+            sprite.enabled = false;
+        }
     }
 
     public void DoDamage(WeaponType weaponType, Direction dir)

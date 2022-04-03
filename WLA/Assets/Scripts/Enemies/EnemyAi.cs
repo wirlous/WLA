@@ -10,7 +10,7 @@ public class EnemyAI : MonoBehaviour
     [Header("Movement")]
     [Range(0f, 20f)] public float moveSpeed = 1f;
     [Header("Damage")]
-    [Range(1, 10)] public int damage = 1;
+    [Range(1, 100)] public int damage = 1;
     [Header("AI")]
     [Range(0f, 5f)] public float minDistanceToPlayer = 2f;
     [Range(5f, 10f)] public float maxDistanceToPlayer = 5f;
@@ -28,12 +28,8 @@ public class EnemyAI : MonoBehaviour
     private Collider2D col2D;
     private HealthSystem health;
 
-
-
     protected void Awake()
     {
-        GameReferences.AddEnemy(this);
-
         rb = GetComponent<Rigidbody2D>();
         rb.gravityScale = 0;
         rb.freezeRotation = true;
@@ -68,11 +64,15 @@ public class EnemyAI : MonoBehaviour
 
     private void OnEnable()
     {
+        GameReferences.AddEnemy(this);
+
         health.OnDeath += Die;
     }
 
     private void OnDisable()
     {
+        GameReferences.RemoveEnemy(this);
+
         health.OnDeath -= Die;
     }
 
@@ -206,6 +206,7 @@ public class EnemyAI : MonoBehaviour
         }
         Gizmos.DrawLine(pos, lastPos);
     }
+
 
     private void Die()
     {

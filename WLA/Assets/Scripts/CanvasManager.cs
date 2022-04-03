@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using System.Linq;
 
@@ -13,11 +12,13 @@ public class CanvasManager : MonoBehaviour
     public TextMeshProUGUI weaponsTMP;
     public TextMeshProUGUI statsTMP;
     public TextMeshProUGUI inventoryTMP;
+    public TextMeshProUGUI messageTMP;
     public TextMeshProUGUI debugTMP;
 
     // Time info
     private float timePassed;
     private float initialTime;
+    [SerializeField] private bool timeRunning;
 
     // Weapons info
     WeaponType weaponUsed = WeaponType.NONE;
@@ -33,11 +34,16 @@ public class CanvasManager : MonoBehaviour
     // Inventory
     InventoryManager inventoryManager;
 
+    // Message
+    string message;
+
     // Debug
     float deltaTime;
     List<float> fpsList = new List<float>();
     [SerializeField] int fpsIndex = 0;
     const int fpsListSize = 500;
+
+    public string Message { get => message; set => message = value; }
 
     void Awake()
     {
@@ -47,6 +53,7 @@ public class CanvasManager : MonoBehaviour
 
     void Start()
     {
+        timeRunning = true;
         initialTime = Time.time;
         timePassed = 0;
 
@@ -57,13 +64,13 @@ public class CanvasManager : MonoBehaviour
         inventoryManager = GameReferences.player.GetComponent<InventoryManager>();
 
         deltaTime = 0;
+
+        ShowMessage("");
     }
 
     // Update is called once per frame
     void Update()
     {
-        timePassed = Time.time - initialTime;
-
         ShowTime();
         ShowWeapons();
         ShowStats();
@@ -71,8 +78,21 @@ public class CanvasManager : MonoBehaviour
         ShowDebug();
     }
 
+    public void StopTime()
+    {
+        timeRunning = false;
+    }
+
+    internal void ShowMessage(string message)
+    {
+        messageTMP.text = message;
+    }
+
     private void ShowTime()
     {
+        if (timeRunning)
+            timePassed = Time.time - initialTime;
+
         var timeSpan = System.TimeSpan.FromSeconds(timePassed);
         int hour = timeSpan.Hours;
         int minutes = timeSpan.Minutes;
