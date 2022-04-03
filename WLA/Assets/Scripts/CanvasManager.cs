@@ -4,7 +4,7 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-
+using System.Linq;
 
 public class CanvasManager : MonoBehaviour
 {
@@ -12,6 +12,8 @@ public class CanvasManager : MonoBehaviour
     public TextMeshProUGUI timeTMP;
     public TextMeshProUGUI weaponsTMP;
     public TextMeshProUGUI statsTMP;
+    public TextMeshProUGUI inventoryTMP;
+    public TextMeshProUGUI debugTMP;
 
     // Time info
     private float timePassed;
@@ -28,6 +30,15 @@ public class CanvasManager : MonoBehaviour
     BowController bowController;
     MagicController magicController;
 
+    // Inventory
+    InventoryManager inventoryManager;
+
+    // Debug
+    float deltaTime;
+    List<float> fpsList = new List<float>();
+    [SerializeField] int fpsIndex = 0;
+    const int fpsListSize = 500;
+
     void Awake()
     {
         GameReferences.canvasManager = this;
@@ -42,6 +53,10 @@ public class CanvasManager : MonoBehaviour
         playerHealth = GameReferences.player.GetComponent<HealthSystem>();
         bowController = GameReferences.player.GetComponent<BowController>();
         magicController = GameReferences.player.GetComponent<MagicController>();
+
+        inventoryManager = GameReferences.player.GetComponent<InventoryManager>();
+
+        deltaTime = 0;
     }
 
     // Update is called once per frame
@@ -52,6 +67,8 @@ public class CanvasManager : MonoBehaviour
         ShowTime();
         ShowWeapons();
         ShowStats();
+        ShowInventory();
+        ShowDebug();
     }
 
     private void ShowTime()
@@ -69,7 +86,6 @@ public class CanvasManager : MonoBehaviour
         else
         {
             timeTMP.text = System.String.Format ("{0:00}:{1:00}:{2:00}.{3:000}", hour, minutes, seconds, milliseconds);
-
         }
     }
 
@@ -133,6 +149,38 @@ public class CanvasManager : MonoBehaviour
         }
         
         statsTMP.text = statsStr;
+    }
+
+    private void ShowInventory()
+    {
+        string inventoryStr = "";
+        if (inventoryManager.Keys != 0)
+        {
+            inventoryStr += System.String.Format("Keys: {0}\n", inventoryManager.Keys);
+        }
+        
+        inventoryTMP.text = inventoryStr;
+    }
+
+    private void ShowDebug()
+    {
+        deltaTime += (Time.deltaTime - deltaTime) * 0.1f;
+        float fps = 1.0f / deltaTime;
+        
+        if (fpsList.Count < fpsListSize)
+        {
+            fpsList.Add(fps);
+        }
+        else
+        {
+            fpsList[fpsIndex] = fps;
+            fpsIndex = (fpsIndex + 1) % fpsListSize;
+        }
+        
+
+        string debugStr = System.String.Format("FPS: {0}", Mathf.Ceil(fpsList.Average()));
+
+        debugTMP.text = debugStr;
     }
 
 }

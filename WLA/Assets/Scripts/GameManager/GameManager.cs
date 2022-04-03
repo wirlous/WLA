@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -61,4 +62,16 @@ public class GameManager : MonoBehaviour
         // Debug.LogFormat("Size = {0}, index = {1}", size, index);
         return magicData.spells[index];
     }
+
+    public void RestartLevel()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    public void QuitApplication()
+    {
+        Application.Quit();
+    }
+
+
 }

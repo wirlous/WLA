@@ -282,6 +282,7 @@ public class PlayerController : MonoBehaviour
 
     void Die()
     {
+        GameReferences.gameManager.RestartLevel();
         Debug.Log("Player dies");
     }
 

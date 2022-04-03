@@ -22,6 +22,7 @@ public class InventoryManager : MonoBehaviour
     PlayerController playerController;
     CanvasManager canvasManager;
 
+    public int Keys { get => keys; }
 
     void Awake()
     {
@@ -45,11 +46,6 @@ public class InventoryManager : MonoBehaviour
         if (hasSword) canvasManager.SetWeaponName(WeaponType.SWORD, swordController.GetWeaponName());
         if (hasBow) canvasManager.SetWeaponName(WeaponType.BOW, bowController.GetWeaponName());
         if (hasMagic) canvasManager.SetWeaponName(WeaponType.MAGIC, magicController.GetWeaponName());
-    }
-
-    public int GetKeys()
-    {
-        return keys;
     }
 
     public bool UseKeys(int useKeys)
