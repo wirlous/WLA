@@ -14,6 +14,9 @@ public class MagicController : MonoBehaviour
     [SerializeField] int maxMana; // TODO: Extract to ManaSystem (Similar to HealthSystem)
     [SerializeField] int manaCost;
 
+    public int Mana { get => mana; }
+    public int MaxMana { get => maxMana; }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -35,14 +38,14 @@ public class MagicController : MonoBehaviour
     public void ChangeWeapon(ref int index)
     {
         magicData = GameReferences.gameManager.GetMagicData(ref index);
-        maxMana = 1000000;
+        maxMana = magicData.maxMana;
         manaCost = magicData.manaCost;
         mana = maxMana;
     }
 
     public void Attack(Direction dir)
     {
-        if ((mana - manaCost) > 0)
+        if (mana >= manaCost)
         {
             // Debug.Log("Attacking with " + magicData.name + " in direction " + dir);
             float magicAngle = GameReferences.GetAngleFromDir(dir);

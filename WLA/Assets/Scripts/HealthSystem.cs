@@ -5,10 +5,12 @@ using UnityEngine;
 
 public class HealthSystem : MonoBehaviour
 {
-    [Range(5, 100)] public int minHealth;
-    [Range(5, 100)] public int maxHealth;
-    
+    [Range(1, 100)] public int minHealth;
+    [Range(1, 100)] public int maxHealth;
+
     [SerializeField] private int health;
+
+    public int Health { get => health; }
 
     public delegate void Death(); // Delegate
     public event Death OnDeath; // Event

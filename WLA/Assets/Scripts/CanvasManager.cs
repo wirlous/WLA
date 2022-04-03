@@ -11,16 +11,22 @@ public class CanvasManager : MonoBehaviour
     [Header("Text")]
     public TextMeshProUGUI timeTMP;
     public TextMeshProUGUI weaponsTMP;
+    public TextMeshProUGUI statsTMP;
 
     // Time info
     private float timePassed;
     private float initialTime;
 
     // Weapons info
-    [SerializeField] WeaponType weaponUsed = WeaponType.NONE;
+    WeaponType weaponUsed = WeaponType.NONE;
     string swordName = "";
     string bowName = "";
     string magicName = "";
+
+    // Stats info
+    HealthSystem playerHealth;
+    BowController bowController;
+    MagicController magicController;
 
     void Awake()
     {
@@ -32,6 +38,10 @@ public class CanvasManager : MonoBehaviour
     {
         initialTime = Time.time;
         timePassed = 0;
+
+        playerHealth = GameReferences.player.GetComponent<HealthSystem>();
+        bowController = GameReferences.player.GetComponent<BowController>();
+        magicController = GameReferences.player.GetComponent<MagicController>();
     }
 
     // Update is called once per frame
@@ -41,6 +51,7 @@ public class CanvasManager : MonoBehaviour
 
         ShowTime();
         ShowWeapons();
+        ShowStats();
     }
 
     private void ShowTime()
@@ -104,6 +115,24 @@ public class CanvasManager : MonoBehaviour
         }
         
         weaponsTMP.text = weaponStr;
+    }
+
+    private void ShowStats()
+    {
+        string statsStr = "";
+        statsStr += System.String.Format("Health: {0}/{1}\n", playerHealth.Health, playerHealth.maxHealth);
+
+        if (bowName != "")
+        {
+            statsStr += System.String.Format("Arrows: {0}\n", bowController.Ammunition);
+        }
+
+        if (magicName != "")
+        {
+            statsStr += System.String.Format("Mana: {0}/{1}\n", magicController.Mana, magicController.MaxMana);
+        }
+        
+        statsTMP.text = statsStr;
     }
 
 }

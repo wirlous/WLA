@@ -10,6 +10,12 @@ public class ProyectileController : MonoBehaviour
 
     private Vector3 originPosition;
 
+    void Awake()
+    {
+        Collider2D col = GetComponent<Collider2D>();
+        col.isTrigger = true;
+    }
+
     void Start()
     {
         originPosition = transform.position;

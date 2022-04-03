@@ -13,6 +13,8 @@ public class BowController : MonoBehaviour
     [SerializeField] BowDataStructure bowData;
     [SerializeField] int ammunition;
 
+    public int Ammunition { get => ammunition; }
+
     // Start is called before the first frame update
     void Start()
     {

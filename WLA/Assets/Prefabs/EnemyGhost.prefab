@@ -115,10 +115,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 065b75ab985479844b484943dd7268b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 2
-  minDistanceToPlayer: 1.5
+  moveSpeed: 3
+  damage: 2
+  minDistanceToPlayer: 0.5
   maxDistanceToPlayer: 5.5
-  damage: 1
+  movement: {x: 0, y: 0}
+  moveSpeedStore: 0
+  knockbackDistance: {x: 0, y: 0}
+  isKnockback: 0
 --- !u!114 &736000747
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -131,8 +135,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe7ef37aa1a2a2740823a0b8fa5a2b88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minHealth: 13
-  maxHealth: 31
+  minHealth: 5
+  maxHealth: 30
   health: 0
 --- !u!1 &6875492974853812054
 GameObject:

@@ -112,7 +112,7 @@ public class PlayerController : MonoBehaviour
     {
         facingDirection = new Vector2(0,-1);
 
-        health.SetMinMaxHealth(20, 20);
+        health.SetMinMaxHealth(GameReferences.playerHealth, GameReferences.playerHealth);
         health.ResetHealth();
 
         sprites = GetComponentsInChildren<SpriteRenderer>();

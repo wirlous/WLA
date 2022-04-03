@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3501526811478605574}
   - component: {fileID: 4309481810137195422}
-  - component: {fileID: 3327453291499525357}
+  - component: {fileID: 7018121522032506456}
   - component: {fileID: -4105640309869487593}
   m_Layer: 19
   m_Name: Spell
@@ -55,8 +55,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!70 &3327453291499525357
-CapsuleCollider2D:
+--- !u!58 &7018121522032506456
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -65,12 +65,12 @@ CapsuleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.5, y: 1}
-  m_Direction: 0
+  serializedVersion: 2
+  m_Radius: 0.2
 --- !u!114 &-4105640309869487593
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -156,7 +156,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 30
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 9018532037963940513, guid: 2acd0e7725c9ce042b401259d5d1fa38,
+    type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -164,7 +165,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!95 &6027507484219385041
