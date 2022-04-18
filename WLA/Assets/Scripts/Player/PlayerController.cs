@@ -80,7 +80,7 @@ public class PlayerController : MonoBehaviour
         playerInput.Gameplay.ChangeWeaponType.performed += ctx => ToggleWeapon();
         
         // Register WeaponUp
-        playerInput.Gameplay.ChangeWeaponUp.performed += ctx => WeaponUp();   
+        playerInput.Gameplay.ChangeWeaponUp.performed += ctx => WeaponUp();
     }
 
     internal WeaponType GetWeapon()
@@ -271,7 +271,6 @@ public class PlayerController : MonoBehaviour
     {
         playerInput.Gameplay.Enable();
         health.OnDeath += Die;
-
     }
 
     void OnDisable()

@@ -14,6 +14,8 @@ public class GameManager : MonoBehaviour
     public int points;
     public float time;
 
+    public bool degug;
+
     [SerializeField] private SwordData swordData;
     [SerializeField] private BowData bowData;
     [SerializeField] private MagicData magicData;
@@ -42,7 +44,7 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (GameReferences.enemies.Count == 0)
+        if (GameReferences.enemies.Count == 0 && !degug)
         {
             Win();
         }
