@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Cinemachine;
 
 public class GameManager : MonoBehaviour
 {
@@ -26,6 +27,9 @@ public class GameManager : MonoBehaviour
     void Awake()
     {
         GameReferences.gameManager = this;
+
+        GameObject[] cmvcam = GameObject.FindGameObjectsWithTag("cmvcam");
+        GameReferences.cmvcam = cmvcam[0].GetComponent<CinemachineVirtualCamera>();
 
         string swordString = swordJson.text;
         swordData = JsonUtility.FromJson<SwordData>(swordString);

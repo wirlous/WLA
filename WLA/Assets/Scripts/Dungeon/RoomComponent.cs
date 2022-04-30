@@ -27,12 +27,9 @@ public class RoomComponent : MonoBehaviour
 
     [SerializeField] private Vector2 index;
 
+    private Dictionary<CardinalDirection, RoomComponent> adjacentRoom = new Dictionary<CardinalDirection, RoomComponent>();
     private Dictionary<CardinalDirection, bool> doorOpen = new Dictionary<CardinalDirection, bool>();
     private Dictionary<CardinalDirection, bool> wallOpen = new Dictionary<CardinalDirection, bool>();
-    // public bool nOpen;
-    // public bool sOpen;
-    // public bool wOpen;
-    // public bool eOpen;
 
     [SerializeField] private DungeonGenerator dungeonGenerator;
 
@@ -83,26 +80,14 @@ public class RoomComponent : MonoBehaviour
 
     void CreateFloor()
     {
-        int xi = -roomWidth/2;
-        int yi = -roomHeight/2;
-        int xf = roomWidth/2;
-        int yf = roomHeight/2;
-
-        for (int x = xi; x <= xf; x++)
-        {
-            for (int y = yi; y <= yf; y++)
-            {
-                GameObject f = Instantiate(dungeonGenerator.floorPrefab, new Vector3(x + transform.position.x, y + transform.position.y, transform.position.z), Quaternion.identity);
-                f.transform.parent = Floor.transform;
-            }
-        }
+        GameObject floor = Instantiate(dungeonGenerator.floorPrefab, new Vector3(transform.position.x, transform.position.y, transform.position.z), Quaternion.identity);
+        floor.transform.parent = Floor.transform;
+        SpriteRenderer floorSR = floor.GetComponent<SpriteRenderer>();
+        floorSR.size = new Vector2(roomWidth+2, roomHeight+2);
     }
 
     public void CreateWallCorners()
     {
-        int xi = -roomWidth/2;
-        int yi = -roomHeight/2;
-
         int xf = roomWidth/2;
         int yf = roomHeight/2;
 
@@ -110,8 +95,13 @@ public class RoomComponent : MonoBehaviour
         {
             Vector2 indexOffset = GetDirection(dirComposite);
             bool cornerExist = dungeonGenerator.CheckRoom(indexOffset + index);
-            GameObject prefab = (GetDictionaryState(wallOpen, dirComposite) && cornerExist) ? dungeonGenerator.floorPrefab : dungeonGenerator.wallPrefab;
+
+            if (GetDictionaryState(wallOpen, dirComposite) && cornerExist)
+                continue;
+
+            GameObject prefab = dungeonGenerator.wallPrefab;
             Vector2 offset = indexOffset * new Vector2(xf+1, yf+1);
+            
             GameObject corner = Instantiate(prefab, new Vector3(offset.x + transform.position.x, offset.y + transform.position.y, transform.position.z), Quaternion.identity);
             corner.transform.parent = Walls.transform;
         }
@@ -119,22 +109,19 @@ public class RoomComponent : MonoBehaviour
 
     public void CreateWallSides()
     {
-        int xi = -roomWidth/2;
-        int yi = -roomHeight/2;
-
-        int xf = roomWidth/2;
-        int yf = roomHeight/2;
-
         foreach (CardinalDirection dir in Enum.GetValues(typeof(CardinalDirection)))
         {
-            GameObject prefab = GetDictionaryState(wallOpen, dir) ? dungeonGenerator.floorPrefab : dungeonGenerator.wallPrefab;
-            List<Vector2> range = GetRange(dir, xi, xf, yi, yf);
-            foreach (Vector2 pos in range)
-            {
-                GameObject side = Instantiate(prefab, new Vector3(pos.x + transform.position.x, pos.y + transform.position.y, transform.position.z), Quaternion.identity);
-                side.transform.parent = Walls.transform;
+            if (GetDictionaryState(wallOpen, dir))
+                continue;
 
-            }
+            GameObject prefab = dungeonGenerator.wallPrefab;
+
+            Vector2 pos = GetWallPosition(dir);
+            GameObject side = Instantiate(prefab, new Vector3(pos.x + transform.position.x, pos.y + transform.position.y, transform.position.z), Quaternion.identity);
+            side.transform.parent = Walls.transform;
+            
+            SpriteRenderer sideSR = side.GetComponent<SpriteRenderer>();
+            sideSR.size = GetWallSize(dir);
         }
     }
 
@@ -167,6 +154,13 @@ public class RoomComponent : MonoBehaviour
     public void SetWallState(CardinalDirection dir, bool state)
     {
         wallOpen[dir] = state;
+    }
+
+    public void SetAdjacent(CardinalDirection dir, RoomComponent room)
+    {
+        adjacentRoom[dir] = room;
+        SetDoorState(dir, true);
+        SetWallState(dir, true);
     }
 
     private Vector2 GetDirection(CardinalDirection dir)
@@ -209,6 +203,20 @@ public class RoomComponent : MonoBehaviour
             }
         }
         return range;
+    }
+
+    private Vector2 GetWallSize(CardinalDirection cardDir)
+    {
+        Vector2 dir = GetDirection(cardDir);
+        float width  = (dir.x != 0) ? 1 : roomWidth;
+        float height = (dir.y != 0) ? 1 : roomHeight;
+        return new Vector2(width, height);
+    }
+
+    private Vector2 GetWallPosition(CardinalDirection cardDir)
+    {
+        Vector2 dir = GetDirection(cardDir);
+        return dir * new Vector2((roomWidth+1)/2f, (roomHeight+1)/2f);
     }
 
     private Vector2 GetDirection(CardinalDirectionComposite dir)

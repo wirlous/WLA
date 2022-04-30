@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Cinemachine;
 
 [System.Serializable]
 public enum Direction
@@ -32,6 +33,7 @@ public class KeyValuePair<K,V>
 public static class GameReferences
 {
     public static GameManager gameManager;
+    public static CinemachineVirtualCamera cmvcam;
     public static CanvasManager canvasManager;
     public static InventoryManager inventoryManager;
     public static PlayerController player;

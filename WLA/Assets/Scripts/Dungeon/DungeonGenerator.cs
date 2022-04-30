@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 using System;
+using Cinemachine;
 
 public class DungeonGenerator : MonoBehaviour
 {
@@ -21,6 +22,7 @@ public class DungeonGenerator : MonoBehaviour
     public GameObject doorPrefab;
     public GameObject floorPrefab;
     public GameObject exitPrefab;
+    public GameObject outsidePrefab;
 
     [SerializeField] private RoomComponent startingRoom;
     [SerializeField] private RoomComponent endRoom;
@@ -52,6 +54,7 @@ public class DungeonGenerator : MonoBehaviour
         float deltaTime = Time.realtimeSinceStartup - initialTime;
         Debug.Log("Time building dungeon: " + deltaTime.ToString("f6") + " seconds");
 
+        PlaceOutside();
     }
 
     private RoomComponent GetFurthestRoom()
@@ -73,6 +76,44 @@ public class DungeonGenerator : MonoBehaviour
             Debug.Log("Failed getting fursthest room");
         }
         return furthestRoom;
+    }
+
+    private void PlaceOutside()
+    {
+        float maxTop    = float.MinValue;
+        float maxBottom = float.MaxValue;
+        float maxRight  = float.MinValue;
+        float maxLeft   = float.MaxValue;
+
+        foreach (var room in rooms)
+        {
+            float roomX = room.transform.position.x;
+            float roomY = room.transform.position.y;
+            if (roomY > maxTop)
+                maxTop = roomY;
+            if (roomY < maxBottom)
+                maxBottom = roomY;
+            if (roomX > maxRight)
+                maxRight = roomX;
+            if (roomX < maxLeft)
+                maxLeft = roomX;
+        }
+
+        Vector2 pos = new Vector2((maxRight+maxLeft)/2f, (maxTop+maxBottom)/2f);
+        Vector2 size = new Vector2(maxRight-maxLeft+2*roomWidth, maxTop-maxBottom+2*roomHeight);
+        // Vector2 size = new Vector2(maxRight-maxLeft, maxTop-maxBottom);
+
+        Debug.Log("Dungeon center: " + pos);
+        Debug.Log("Dungeon size: " + size);
+
+        GameObject outside = Instantiate(outsidePrefab, new Vector3(pos.x, pos.y, 0), Quaternion.identity);
+        outside.transform.parent = this.transform;
+        SpriteRenderer outsideSR = outside.GetComponent<SpriteRenderer>();
+        outsideSR.size = size;
+        // CompositeCollider2D outsideCol = outside.GetComponent<CompositeCollider2D>();
+        
+        // CinemachineConfiner confiner = GameReferences.cmvcam.GetComponent<CinemachineConfiner>();
+        // confiner.m_BoundingShape2D = outsideCol;
     }
 
     // Update is called once per frame
@@ -148,8 +189,7 @@ public class DungeonGenerator : MonoBehaviour
                 roomsChecked.Add(upRoom);
                 roomQueue.Enqueue(upRoom);
             }
-            room.SetState(CardinalDirection.NORTH, true, true);
-            upRoom.SetState(CardinalDirection.SOUTH, true, true);
+            SetRoomsAdjacent(room, CardinalDirection.NORTH, upRoom, CardinalDirection.SOUTH);
         }
 
         Vector2 right = room.Index + Vector2.right;
@@ -161,8 +201,7 @@ public class DungeonGenerator : MonoBehaviour
                 roomsChecked.Add(rightRoom);
                 roomQueue.Enqueue(rightRoom);
             }
-            room.SetState(CardinalDirection.EAST, true, true);
-            rightRoom.SetState(CardinalDirection.WEST, true, true);
+            SetRoomsAdjacent(room, CardinalDirection.EAST, rightRoom, CardinalDirection.WEST);
         }
 
         Vector2 down = room.Index + Vector2.down;
@@ -174,8 +213,7 @@ public class DungeonGenerator : MonoBehaviour
                 roomsChecked.Add(downRoom);
                 roomQueue.Enqueue(downRoom);
             }
-            room.SetState(CardinalDirection.SOUTH, true, true);
-            downRoom.SetState(CardinalDirection.NORTH, true, true);
+            SetRoomsAdjacent(room, CardinalDirection.SOUTH, downRoom, CardinalDirection.NORTH);
         }
 
         Vector2 left = room.Index + Vector2.left;
@@ -187,9 +225,14 @@ public class DungeonGenerator : MonoBehaviour
                 roomsChecked.Add(leftRoom);
                 roomQueue.Enqueue(leftRoom);
             }
-            room.SetState(CardinalDirection.WEST, true, true);
-            leftRoom.SetState(CardinalDirection.EAST, true, true);
+            SetRoomsAdjacent(room, CardinalDirection.WEST, leftRoom, CardinalDirection.EAST);
         }
+    }
+
+    private void SetRoomsAdjacent(RoomComponent room1, CardinalDirection dir1, RoomComponent room2, CardinalDirection dir2)
+    {
+        room1.SetAdjacent(dir1, room2);
+        room2.SetAdjacent(dir2, room1);
     }
 
     private void AddSpawnPoints(RoomComponent roomComponent)

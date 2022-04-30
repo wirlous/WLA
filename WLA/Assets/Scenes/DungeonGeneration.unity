@@ -352,7 +352,7 @@ GameObject:
   - component: {fileID: 1260562932}
   m_Layer: 0
   m_Name: CM vcam1
-  m_TagString: Untagged
+  m_TagString: cmvcam
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -776,8 +776,24 @@ PrefabInstance:
     - target: {fileID: 7068285743391337921, guid: 833d94673a7fe1b45a348a3e098690ad,
         type: 3}
       propertyPath: roomCount
-      value: 25
+      value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 7068285743391337921, guid: 833d94673a7fe1b45a348a3e098690ad,
+        type: 3}
+      propertyPath: roomWidth
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7068285743391337921, guid: 833d94673a7fe1b45a348a3e098690ad,
+        type: 3}
+      propertyPath: roomHeight
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7068285743391337921, guid: 833d94673a7fe1b45a348a3e098690ad,
+        type: 3}
+      propertyPath: outsidePrefab
+      value: 
+      objectReference: {fileID: 5999042189065254492, guid: 1d457c8dc846cff4f9edeb5a0d071a65,
+        type: 3}
     - target: {fileID: 7068285743391337934, guid: 833d94673a7fe1b45a348a3e098690ad,
         type: 3}
       propertyPath: m_Name
