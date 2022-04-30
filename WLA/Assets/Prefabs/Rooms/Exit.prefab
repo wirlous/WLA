@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4239231151472679252}
   - component: {fileID: 5763004301514232912}
   m_Layer: 0
-  m_Name: Floor
+  m_Name: Exit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -70,7 +70,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 101516136333829222, guid: 0672f4f11886b6142a8e847e583da923, type: 3}
+  m_Sprite: {fileID: 4480090208973383843, guid: 0672f4f11886b6142a8e847e583da923,
+    type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

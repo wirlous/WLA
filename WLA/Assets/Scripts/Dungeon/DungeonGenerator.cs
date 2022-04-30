@@ -14,14 +14,13 @@ public class DungeonGenerator : MonoBehaviour
     public bool useRandomSeed;
     [HideInInspector] private System.Random prng;
 
-    [Range(0,5)] public int dungeonWidth;
-    [Range(0,5)] public int dungeonHeight;
     [SerializeField] private int dungeonCounter = 0;
 
     public GameObject roomPrefab;
     public GameObject wallPrefab;
     public GameObject doorPrefab;
     public GameObject floorPrefab;
+    public GameObject exitPrefab;
 
     [SerializeField] private RoomComponent startingRoom;
     [SerializeField] private RoomComponent endRoom;
@@ -39,15 +38,20 @@ public class DungeonGenerator : MonoBehaviour
             seed = Time.time.ToString();
         }
         prng = new System.Random(seed.GetHashCode());
-
     }
 
     // Start is called before the first frame update
     void Start()
     {
+        float initialTime = Time.realtimeSinceStartup;
         CreateDungeon();
 
         endRoom = GetFurthestRoom();
+        endRoom.PlaceExit();
+        
+        float deltaTime = Time.realtimeSinceStartup - initialTime;
+        Debug.Log("Time building dungeon: " + deltaTime.ToString("f6") + " seconds");
+
     }
 
     private RoomComponent GetFurthestRoom()
@@ -58,7 +62,7 @@ public class DungeonGenerator : MonoBehaviour
         {
             float dist = Vector2.Distance(startingRoom.transform.position, room.transform.position);
             // if ((dist > maxDist))
-            if ((dist > maxDist) && room.GetNumberDoors() == 1) // Fursthest must have only one door
+            if ((dist > maxDist) && room.GetNumberDoorsOpen() == 1) // Fursthest must have only one door
             {
                 maxDist = dist;
                 furthestRoom = room;
@@ -104,7 +108,14 @@ public class DungeonGenerator : MonoBehaviour
         foreach (var room in rooms)
         {
             room.CreateDoors();
+            room.CreateWallCorners();
+            room.CreateWallSides();
         }
+    }
+
+    internal bool CheckRoom(Vector2 cornerIndex)
+    {
+        return indexDict.ContainsKey(cornerIndex);
     }
 
     private bool OpenDoors(Queue<RoomComponent> roomQueue)
@@ -137,8 +148,8 @@ public class DungeonGenerator : MonoBehaviour
                 roomsChecked.Add(upRoom);
                 roomQueue.Enqueue(upRoom);
             }
-            room.nOpen = true;
-            upRoom.sOpen = true;
+            room.SetState(CardinalDirection.NORTH, true, true);
+            upRoom.SetState(CardinalDirection.SOUTH, true, true);
         }
 
         Vector2 right = room.Index + Vector2.right;
@@ -150,8 +161,8 @@ public class DungeonGenerator : MonoBehaviour
                 roomsChecked.Add(rightRoom);
                 roomQueue.Enqueue(rightRoom);
             }
-            room.eOpen = true;
-            rightRoom.wOpen = true;
+            room.SetState(CardinalDirection.EAST, true, true);
+            rightRoom.SetState(CardinalDirection.WEST, true, true);
         }
 
         Vector2 down = room.Index + Vector2.down;
@@ -163,8 +174,8 @@ public class DungeonGenerator : MonoBehaviour
                 roomsChecked.Add(downRoom);
                 roomQueue.Enqueue(downRoom);
             }
-            room.sOpen = true;
-            downRoom.nOpen = true;
+            room.SetState(CardinalDirection.SOUTH, true, true);
+            downRoom.SetState(CardinalDirection.NORTH, true, true);
         }
 
         Vector2 left = room.Index + Vector2.left;
@@ -176,8 +187,8 @@ public class DungeonGenerator : MonoBehaviour
                 roomsChecked.Add(leftRoom);
                 roomQueue.Enqueue(leftRoom);
             }
-            room.wOpen = true;
-            leftRoom.eOpen = true;
+            room.SetState(CardinalDirection.WEST, true, true);
+            leftRoom.SetState(CardinalDirection.EAST, true, true);
         }
     }
 
@@ -235,21 +246,21 @@ public class DungeonGenerator : MonoBehaviour
     }
 
 
-    void CreateDungeonDummy()
-    {
-        int xi = -dungeonWidth/2;
-        int yi = -dungeonHeight/2;
-        int xf = dungeonWidth/2;
-        int yf = dungeonHeight/2;
+    // void CreateDungeonDummy()
+    // {
+    //     int xi = -dungeonWidth/2;
+    //     int yi = -dungeonHeight/2;
+    //     int xf = dungeonWidth/2;
+    //     int yf = dungeonHeight/2;
 
-        for (int x = xi; x <= xf; x++)
-        {
-            for (int y = yi; y <= yf; y++)
-            {
-                CreateRoom(new Vector2(x, y));
-            }
-        }
-    }
+    //     for (int x = xi; x <= xf; x++)
+    //     {
+    //         for (int y = yi; y <= yf; y++)
+    //         {
+    //             CreateRoom(new Vector2(x, y));
+    //         }
+    //     }
+    // }
 
     void IndexToPosition(Vector2 index, out Vector3 position)
     {

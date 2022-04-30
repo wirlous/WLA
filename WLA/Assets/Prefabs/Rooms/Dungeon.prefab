@@ -45,11 +45,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   roomWidth: 19
   roomHeight: 11
-  roomCount: 20
+  roomCount: 100
   seed: MyFirstDungeon
   useRandomSeed: 0
-  dungeonWidth: 0
-  dungeonHeight: 0
   dungeonCounter: 0
   roomPrefab: {fileID: 3572505197126167294, guid: e6fde03de3524884090b541499e6b6bb,
     type: 3}
@@ -58,6 +56,8 @@ MonoBehaviour:
   doorPrefab: {fileID: 5173363208875974775, guid: cd4d7a414cfb0e94cb04b4c3e715ad7b,
     type: 3}
   floorPrefab: {fileID: 5999042189065254492, guid: 1ae42101438971143baf5b581ae13a9b,
+    type: 3}
+  exitPrefab: {fileID: 5999042189065254492, guid: f01c9d1066b96e44ea3ba7bed77499d5,
     type: 3}
   startingRoom: {fileID: 0}
   endRoom: {fileID: 0}

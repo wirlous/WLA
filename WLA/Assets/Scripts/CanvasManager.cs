@@ -61,7 +61,7 @@ public class CanvasManager : MonoBehaviour
 
         inventoryManager = GameReferences.player.GetComponent<InventoryManager>();
         
-        showDebug = false;
+        showDebug = true;
         deltaTime = 0;
 
         ShowMessage("");
