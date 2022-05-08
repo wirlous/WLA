@@ -9,6 +9,7 @@ public class ProyectileController : MonoBehaviour
     [SerializeField] private int damage;
 
     private Vector3 originPosition;
+    private int wallLayer;
 
     void Awake()
     {
@@ -19,6 +20,7 @@ public class ProyectileController : MonoBehaviour
     void Start()
     {
         originPosition = transform.position;
+        wallLayer = LayerMask.NameToLayer("Wall");
     }
 
     void Update()
@@ -58,7 +60,7 @@ public class ProyectileController : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other)
     {
         var tag = other.tag;
-        if (tag.Equals("Terrain"))
+        if (tag.Equals("Terrain") || (other.gameObject.layer == wallLayer))
         {
             Delete();
         }

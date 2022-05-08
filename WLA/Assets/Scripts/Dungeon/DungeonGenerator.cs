@@ -214,7 +214,7 @@ public class DungeonGenerator : MonoBehaviour
         bool ok = OpenDoors(roomQueue);
         if (!ok)
         {
-            Debug.Log("ERROR OPEN DOOR");
+            Debug.LogError("ERROR OPEN DOOR");
         }
 
         foreach (var room in rooms)

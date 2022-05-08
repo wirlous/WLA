@@ -135,6 +135,7 @@ public class RoomComponent : MonoBehaviour
             
             GameObject corner = Instantiate(prefab, new Vector3(offset.x + transform.position.x, offset.y + transform.position.y, transform.position.z), Quaternion.identity);
             corner.transform.parent = Walls.transform;
+            corner.layer = Walls.layer;
         }
     }
 
@@ -150,6 +151,8 @@ public class RoomComponent : MonoBehaviour
             Vector2 pos = GetWallPosition(dir);
             GameObject side = Instantiate(prefab, new Vector3(pos.x + transform.position.x, pos.y + transform.position.y, transform.position.z), Quaternion.identity);
             side.transform.parent = Walls.transform;
+            side.layer = Walls.layer;
+
             
             SpriteRenderer sideSR = side.GetComponent<SpriteRenderer>();
             sideSR.size = GetWallSize(dir);
@@ -182,7 +185,9 @@ public class RoomComponent : MonoBehaviour
             GameObject wall1 = Instantiate(dungeonGenerator.wallPrefab, new Vector3(pos1.x + transform.position.x, pos1.y + transform.position.y, transform.position.z), Quaternion.identity);
             door.transform.parent = Doors.transform;
             wall0.transform.parent = Walls.transform;
+            wall0.layer = Walls.layer;
             wall1.transform.parent = Walls.transform;
+            wall1.layer = Walls.layer;
 
             Vector2 sizeBase = GetWallSize(dir);
             Vector2 dirV2Abs = new Vector2(Math.Abs(dirV2.x), Math.Abs(dirV2.y));

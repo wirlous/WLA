@@ -15,6 +15,8 @@ public class GameManager : MonoBehaviour
 
     [Header("Dungeon")]
     [Range(0,5)] public int numDungeons;
+    [Range(4,30)]public int initialNumberRooms;
+    [Range(1,5)]public int incrementNumberRooms;
     [SerializeField] private List<DungeonGenerator> dungeons = new List<DungeonGenerator>();
     [SerializeField] private int dungeonIndex;
     public GameObject dungeonPrefab;
@@ -62,7 +64,7 @@ public class GameManager : MonoBehaviour
             GameObject dungeonGo = Instantiate(dungeonPrefab, new Vector3(0, 0, 0), Quaternion.identity);
             DungeonGenerator dungeon = dungeonGo.GetComponent<DungeonGenerator>();
 
-            dungeon.roomCount = 4+i*2;
+            dungeon.roomCount = initialNumberRooms+ (i*incrementNumberRooms);
             dungeon.useRandomSeed = true;
             dungeon.seed = "Dungeon" + i;
 
