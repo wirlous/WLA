@@ -6,4 +6,7 @@ Wirlous' Little Adventure is a roguelike action-adventure 2D game made in Unity.
 # Prueba PEC2
 La PEC 2 se puede probar en este [enlace](https://wirlous.itch.io/wirlouslittleadventurepec2). Se tiene que jugar en pantalla completa para ver la información del Canvas.
 
+# Prueba PEC3
+La PEC 3 se puede probar en este [enlace](https://wirlous.itch.io/wirlouslittleadventurepec3). Se tiene que jugar en pantalla completa para ver la información del Canvas.
+
 ## TODO

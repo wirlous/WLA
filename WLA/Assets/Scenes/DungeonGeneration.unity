@@ -206,6 +206,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4592826218293174260, guid: f6687c966443d2946908ef1edd85ccb4,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4592826218510857430, guid: f6687c966443d2946908ef1edd85ccb4,
         type: 3}
       propertyPath: m_margin.x
@@ -687,7 +692,7 @@ PrefabInstance:
     - target: {fileID: 4770606101374589832, guid: 7dc58632f3c447f4abf238fcc57cd6dc,
         type: 3}
       propertyPath: initialNumberRooms
-      value: 10
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4770606101374589832, guid: 7dc58632f3c447f4abf238fcc57cd6dc,
         type: 3}
