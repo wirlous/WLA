@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using Cinemachine;
+using System;
 
 public class GameManager : MonoBehaviour
 {
@@ -12,6 +13,14 @@ public class GameManager : MonoBehaviour
     public TextAsset magicJson;
     public TextAsset pickUpJson;
 
+    [Header("Dungeon")]
+    [Range(0,5)] public int numDungeons;
+    [SerializeField] private List<DungeonGenerator> dungeons = new List<DungeonGenerator>();
+    [SerializeField] private int dungeonIndex;
+    public GameObject dungeonPrefab;
+
+
+    [Header("Other")]
     public int points;
     public float time;
 
@@ -28,9 +37,6 @@ public class GameManager : MonoBehaviour
     {
         GameReferences.gameManager = this;
 
-        GameObject[] cmvcam = GameObject.FindGameObjectsWithTag("cmvcam");
-        GameReferences.cmvcam = cmvcam[0].GetComponent<CinemachineVirtualCamera>();
-
         string swordString = swordJson.text;
         swordData = JsonUtility.FromJson<SwordData>(swordString);
 
@@ -43,6 +49,55 @@ public class GameManager : MonoBehaviour
         playerInput = new PlayerInput();
         playerInput.Control.GameQuit.performed += ctx => QuitApplication();
         playerInput.Control.ShowDebug.performed += ctx => ToggleDebug();
+        playerInput.Control.ResetGame.performed += ctx => RestartLevel();
+    }
+
+    void Start()
+    {
+        for (int i = 0; i < numDungeons; i++)
+        {
+            // GameObject dungeon = new GameObject("Dungeon" + i);
+            // dungeon.AddComponent<DungeonGenerator>
+
+            GameObject dungeonGo = Instantiate(dungeonPrefab, new Vector3(0, 0, 0), Quaternion.identity);
+            DungeonGenerator dungeon = dungeonGo.GetComponent<DungeonGenerator>();
+
+            dungeon.roomCount = 4+i*2;
+            dungeon.useRandomSeed = true;
+            dungeon.seed = "Dungeon" + i;
+
+            dungeon.StartDungeon();
+
+            dungeons.Add(dungeon);
+
+            if (i!=0)
+                dungeonGo.SetActive(false);
+        }
+
+        if (numDungeons > 0)
+            PlacePlayer();
+    }
+
+    public void PlacePlayer()
+    {
+        dungeonIndex = 0;
+        GameReferences.player.transform.position = dungeons[dungeonIndex].InitialPosition;
+    }
+
+    public void ExitReached()
+    {
+        dungeons[dungeonIndex].gameObject.SetActive(false);
+
+        dungeonIndex = (dungeonIndex+1)%dungeons.Count;
+        if (dungeonIndex == 0)
+        {
+            Win();
+        }
+        else
+        {
+            dungeons[dungeonIndex].gameObject.SetActive(true);
+            GameReferences.player.transform.position = dungeons[dungeonIndex].InitialPosition;
+        }
     }
 
     // Update is called once per frame
@@ -50,7 +105,7 @@ public class GameManager : MonoBehaviour
     {
         if (GameReferences.enemies.Count == 0 && !degug)
         {
-            Win();
+            // Win();
         }
     }
 
@@ -129,5 +184,4 @@ public class GameManager : MonoBehaviour
     {
         GameReferences.canvasManager.ToggleDebug();
     }
-
 }

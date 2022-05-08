@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 4239231151472679252}
   - component: {fileID: 5763004301514232912}
   - component: {fileID: 237418805950594780}
+  - component: {fileID: 469538162168557381}
   m_Layer: 0
   m_Name: Exit
-  m_TagString: Untagged
+  m_TagString: Exit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -109,3 +110,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &469538162168557381
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5999042189065254492}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a2305e1bc3a11643a1603abfcbf6b68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  openSprite: {fileID: 4390047903045719436, guid: cb00bf1c2d27533468dec87c01cb3fad,
+    type: 3}
+  closeSprite: {fileID: 8140237301984854206, guid: cb00bf1c2d27533468dec87c01cb3fad,
+    type: 3}

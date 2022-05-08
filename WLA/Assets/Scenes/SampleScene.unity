@@ -28823,6 +28823,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4770606101374589832, guid: 7dc58632f3c447f4abf238fcc57cd6dc,
+        type: 3}
+      propertyPath: numDungeons
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4770606101374589833, guid: 7dc58632f3c447f4abf238fcc57cd6dc,
         type: 3}
       propertyPath: m_Name

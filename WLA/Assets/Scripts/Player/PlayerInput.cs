@@ -315,6 +315,14 @@ public class @PlayerInput : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""ResetGame"",
+                    ""type"": ""Button"",
+                    ""id"": ""c129de9d-93df-4bfb-b7d7-9b44700358e4"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -361,6 +369,17 @@ public class @PlayerInput : IInputActionCollection, IDisposable
                     ""action"": ""ShowDebug"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""afa7c7b9-12da-426c-b7d7-1af635cba916"",
+                    ""path"": ""<Keyboard>/r"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""ResetGame"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -400,6 +419,7 @@ public class @PlayerInput : IInputActionCollection, IDisposable
         m_Control = asset.FindActionMap("Control", throwIfNotFound: true);
         m_Control_GameQuit = m_Control.FindAction("GameQuit", throwIfNotFound: true);
         m_Control_ShowDebug = m_Control.FindAction("ShowDebug", throwIfNotFound: true);
+        m_Control_ResetGame = m_Control.FindAction("ResetGame", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -508,12 +528,14 @@ public class @PlayerInput : IInputActionCollection, IDisposable
     private IControlActions m_ControlActionsCallbackInterface;
     private readonly InputAction m_Control_GameQuit;
     private readonly InputAction m_Control_ShowDebug;
+    private readonly InputAction m_Control_ResetGame;
     public struct ControlActions
     {
         private @PlayerInput m_Wrapper;
         public ControlActions(@PlayerInput wrapper) { m_Wrapper = wrapper; }
         public InputAction @GameQuit => m_Wrapper.m_Control_GameQuit;
         public InputAction @ShowDebug => m_Wrapper.m_Control_ShowDebug;
+        public InputAction @ResetGame => m_Wrapper.m_Control_ResetGame;
         public InputActionMap Get() { return m_Wrapper.m_Control; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -529,6 +551,9 @@ public class @PlayerInput : IInputActionCollection, IDisposable
                 @ShowDebug.started -= m_Wrapper.m_ControlActionsCallbackInterface.OnShowDebug;
                 @ShowDebug.performed -= m_Wrapper.m_ControlActionsCallbackInterface.OnShowDebug;
                 @ShowDebug.canceled -= m_Wrapper.m_ControlActionsCallbackInterface.OnShowDebug;
+                @ResetGame.started -= m_Wrapper.m_ControlActionsCallbackInterface.OnResetGame;
+                @ResetGame.performed -= m_Wrapper.m_ControlActionsCallbackInterface.OnResetGame;
+                @ResetGame.canceled -= m_Wrapper.m_ControlActionsCallbackInterface.OnResetGame;
             }
             m_Wrapper.m_ControlActionsCallbackInterface = instance;
             if (instance != null)
@@ -539,6 +564,9 @@ public class @PlayerInput : IInputActionCollection, IDisposable
                 @ShowDebug.started += instance.OnShowDebug;
                 @ShowDebug.performed += instance.OnShowDebug;
                 @ShowDebug.canceled += instance.OnShowDebug;
+                @ResetGame.started += instance.OnResetGame;
+                @ResetGame.performed += instance.OnResetGame;
+                @ResetGame.canceled += instance.OnResetGame;
             }
         }
     }
@@ -572,5 +600,6 @@ public class @PlayerInput : IInputActionCollection, IDisposable
     {
         void OnGameQuit(InputAction.CallbackContext context);
         void OnShowDebug(InputAction.CallbackContext context);
+        void OnResetGame(InputAction.CallbackContext context);
     }
 }

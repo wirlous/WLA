@@ -9,7 +9,7 @@ public enum Direction
     UP,
     DOWN,
     RIGHT,
-    LEFT
+    LEFT,
 };
 
 [System.Serializable]
@@ -33,7 +33,6 @@ public class KeyValuePair<K,V>
 public static class GameReferences
 {
     public static GameManager gameManager;
-    public static CinemachineVirtualCamera cmvcam;
     public static CanvasManager canvasManager;
     public static InventoryManager inventoryManager;
     public static PlayerController player;

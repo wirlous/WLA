@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7068285743391337920}
   - component: {fileID: 7068285743391337921}
+  - component: {fileID: 940684889741542870}
   m_Layer: 0
   m_Name: Dungeon
   m_TagString: Untagged
@@ -43,12 +44,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 322a1885f3c2b424082b56186391363b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  roomWidth: 19
-  roomHeight: 11
-  roomCount: 100
+  roomWidth: 13
+  roomHeight: 7
+  roomCount: 8
+  enemyChance: 5
+  weaponChance: 10
+  pickUpChance: 20
+  nothingChance: 30
   seed: MyFirstDungeon
-  useRandomSeed: 0
-  dungeonCounter: 0
+  useRandomSeed: 1
   roomPrefab: {fileID: 3572505197126167294, guid: e6fde03de3524884090b541499e6b6bb,
     type: 3}
   wallPrefab: {fileID: 371563871951054935, guid: 1b4f399bc0f803746a2bcd74b297db3c,
@@ -59,8 +63,33 @@ MonoBehaviour:
     type: 3}
   exitPrefab: {fileID: 5999042189065254492, guid: f01c9d1066b96e44ea3ba7bed77499d5,
     type: 3}
+  outsidePrefab: {fileID: 5999042189065254492, guid: 1d457c8dc846cff4f9edeb5a0d071a65,
+    type: 3}
+  spawnManager: {fileID: 0}
+  spawnPos: []
+  spawnObj: []
   startingRoom: {fileID: 0}
   endRoom: {fileID: 0}
+  exitDungeon: {fileID: 0}
   rooms: []
-  spawnPositions: []
+  roomSpawnPos: []
   roomIndexes: []
+--- !u!114 &940684889741542870
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7068285743391337934}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cad6c8ce0b447d1468de488dce67a1b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyPrefabs:
+  - {fileID: 6875492974354390754, guid: db58e52da8c79c04c920d645f3c1fcd1, type: 3}
+  - {fileID: 8625082773963581510, guid: 11a3bb5b20cfc574297aa8374a6add29, type: 3}
+  - {fileID: 800793862827286004, guid: 683e5b55b041aad488a19d91f42e11db, type: 3}
+  - {fileID: 375900472903972619, guid: 76ef3434e0d484c48950f575ece019f5, type: 3}
+  pickupPrefab: {fileID: 9161354585711037202, guid: 96d60a4929b57a94e9e767a9d4655642,
+    type: 3}

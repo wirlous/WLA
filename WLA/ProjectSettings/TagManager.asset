@@ -7,7 +7,7 @@ TagManager:
   - Arrow
   - Terrain
   - Magic
-  - cmvcam
+  - Exit
   layers:
   - Default
   - TransparentFX

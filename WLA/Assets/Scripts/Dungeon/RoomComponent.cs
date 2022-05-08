@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Freya;
 
 public enum CardinalDirection
 {
@@ -38,11 +39,15 @@ public class RoomComponent : MonoBehaviour
     public GameObject Floor;
     public GameObject Exit;
 
+    [SerializeField] private int rng;
+
+
     public Vector2 Index { get => index; set => index = value; }
 
     public void SetDungeonGenerator(DungeonGenerator dungeon)
     {
         dungeonGenerator = dungeon;
+        rng = dungeonGenerator.GenerateRandomInt(0, 1<<16);
     }
 
     public void CreateRoom(int width, int height)
@@ -57,16 +62,42 @@ public class RoomComponent : MonoBehaviour
         CreateFloor();
     }
 
+    public void CreateSpawnPoints()
+    {
+        // Debug.Log("rng " + String.Format("{0:X}", rng&0b11111));
+
+        for (int i = 0; i < 5; i++)
+        {
+            // if (GetBit(rng, i))
+            // {
+            // Debug.Log("Spawn " + i);
+            float xPos = GetBit(i, 0) ? roomWidth : -roomWidth;
+            float yPos = GetBit(i, 1) ? roomHeight : -roomHeight;
+            float factor = GetBit(i, 2) ? 0 : 0.25f;
+            
+            Vector2 pos = factor * new Vector2(xPos, yPos) + transform.position.XY();
+            dungeonGenerator.AddSpawnPoints(pos);
+            // }
+        }
+    }
+
+    private bool GetBit(int num, int pos)
+    {
+        return  ((num & (1 << pos)) != 0);
+    }
+
     private void AdaptDimensions(int width, int height)
     {
         roomWidth = (width%2==1) ? width : width+1;
         roomHeight = (height%2==1) ? height : height+1;
     }
 
-    internal void PlaceExit()
+    internal GameObject PlaceExit()
     {
         GameObject exit = Instantiate(dungeonGenerator.exitPrefab, new Vector3(transform.position.x, transform.position.y, transform.position.z), Quaternion.identity);
         exit.transform.parent = Exit.transform;
+        dungeonGenerator.FreePosition(transform.position.XY());
+        return exit;
     }
 
     private void InitOpenVariables()
@@ -96,7 +127,7 @@ public class RoomComponent : MonoBehaviour
             Vector2 indexOffset = GetDirection(dirComposite);
             bool cornerExist = dungeonGenerator.CheckRoom(indexOffset + index);
 
-            if (GetDictionaryState(wallOpen, dirComposite) && cornerExist)
+            if ((GetDictionaryState(wallOpen, dirComposite) && !GetDictionaryState(doorOpen, dirComposite)) && cornerExist)
                 continue;
 
             GameObject prefab = dungeonGenerator.wallPrefab;
@@ -127,15 +158,42 @@ public class RoomComponent : MonoBehaviour
 
     public void CreateDoors()
     {
-        int xf = roomWidth/2;
-        int yf = roomHeight/2;
-
         foreach (CardinalDirection dir in Enum.GetValues(typeof(CardinalDirection)))
         {
-            GameObject prefab = (doorOpen[dir]) ? dungeonGenerator.doorPrefab : dungeonGenerator.wallPrefab;
-            Vector2 offset = GetDirection(dir) * new Vector2(xf+1, yf+1);
-            GameObject door = Instantiate(prefab, new Vector3(offset.x + transform.position.x, offset.y + transform.position.y, transform.position.z), Quaternion.identity);
+            if (!GetDictionaryState(doorOpen, dir))
+                continue;
+
+            Vector2 pos = GetWallPosition(dir);
+
+            Vector2 dirV2 = GetDirection(dir);
+            dirV2 = new Vector2(dirV2.y, dirV2.x);
+            
+            Vector2 posT = dirV2 * new Vector2((roomWidth+1)/2f, (roomHeight+1)/2f) * 0.5f;
+            // posT = new Vector2(posT.y, posT.x);
+
+            // Debug.Log("pos = " + pos );
+            // Debug.Log("posT = " + posT );
+
+            Vector2 pos0 = pos + posT;
+            Vector2 pos1 = pos - posT;
+
+            GameObject door  = Instantiate(dungeonGenerator.floorPrefab, new Vector3(pos.x + transform.position.x, pos.y + transform.position.y, transform.position.z), Quaternion.identity);
+            GameObject wall0 = Instantiate(dungeonGenerator.wallPrefab, new Vector3(pos0.x + transform.position.x, pos0.y + transform.position.y, transform.position.z), Quaternion.identity);
+            GameObject wall1 = Instantiate(dungeonGenerator.wallPrefab, new Vector3(pos1.x + transform.position.x, pos1.y + transform.position.y, transform.position.z), Quaternion.identity);
             door.transform.parent = Doors.transform;
+            wall0.transform.parent = Walls.transform;
+            wall1.transform.parent = Walls.transform;
+
+            Vector2 sizeBase = GetWallSize(dir);
+            Vector2 dirV2Abs = new Vector2(Math.Abs(dirV2.x), Math.Abs(dirV2.y));
+            Vector2 size = ((dirV2Abs * sizeBase) - (3*dirV2Abs)) * 0.5f + Vector2.one;
+
+            SpriteRenderer wall0SR = wall0.GetComponent<SpriteRenderer>();
+            wall0SR.size = size;
+
+            SpriteRenderer wall1SR = wall1.GetComponent<SpriteRenderer>();
+            wall1SR.size = size;
+
         }
     }
 
@@ -218,6 +276,7 @@ public class RoomComponent : MonoBehaviour
         Vector2 dir = GetDirection(cardDir);
         return dir * new Vector2((roomWidth+1)/2f, (roomHeight+1)/2f);
     }
+
 
     private Vector2 GetDirection(CardinalDirectionComposite dir)
     {

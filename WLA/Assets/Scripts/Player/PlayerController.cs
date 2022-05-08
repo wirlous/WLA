@@ -80,7 +80,7 @@ public class PlayerController : MonoBehaviour
         playerInput.Gameplay.ChangeWeaponType.performed += ctx => ToggleWeapon();
         
         // Register WeaponUp
-        playerInput.Gameplay.ChangeWeaponUp.performed += ctx => WeaponUp();
+        // playerInput.Gameplay.ChangeWeaponUp.performed += ctx => WeaponUp();
     }
 
     internal WeaponType GetWeapon()
@@ -442,6 +442,10 @@ public class PlayerController : MonoBehaviour
         
         // Debug.LogFormat("Trigger enter detected: {0}", other.gameObject.name);
 
+        if (other.gameObject.tag == "Exit")
+        {
+            GameReferences.gameManager.ExitReached();
+        }
     }
 
     void OnTriggerExit2D(Collider2D other)
