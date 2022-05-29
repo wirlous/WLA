@@ -9,6 +9,7 @@ public class CanvasManager : MonoBehaviour
 {
     [Header("Text")]
     public TextMeshProUGUI timeTMP;
+    public TextMeshProUGUI scoreTMP;
     public TextMeshProUGUI weaponsTMP;
     public TextMeshProUGUI statsTMP;
     public TextMeshProUGUI inventoryTMP;
@@ -17,7 +18,7 @@ public class CanvasManager : MonoBehaviour
 
     // Time info
     private float timePassed;
-    private float initialTime;
+    [HideInInspector] public float initialTime;
     [SerializeField] private bool timeRunning;
 
     // Weapons info
@@ -76,6 +77,7 @@ public class CanvasManager : MonoBehaviour
     void Update()
     {
         ShowTime();
+        ShowScore();
         ShowWeapons();
         ShowStats();
         ShowInventory();
@@ -96,6 +98,7 @@ public class CanvasManager : MonoBehaviour
     {
         if (timeRunning)
             timePassed = Time.time - initialTime;
+        
 
         var timeSpan = System.TimeSpan.FromSeconds(timePassed);
         int hour = timeSpan.Hours;
@@ -111,6 +114,11 @@ public class CanvasManager : MonoBehaviour
         {
             timeTMP.text = System.String.Format ("{0:00}:{1:00}:{2:00}.{3:000}", hour, minutes, seconds, milliseconds);
         }
+    }
+
+    private void ShowScore()
+    {
+        scoreTMP.text = GameReferences.score.ToString();
     }
 
     internal void SetWeaponName(WeaponType weapon, string name)

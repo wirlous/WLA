@@ -21,11 +21,6 @@ public class GameManager : MonoBehaviour
     [SerializeField] private int dungeonIndex;
     public GameObject dungeonPrefab;
 
-
-    [Header("Other")]
-    public int points;
-    public float time;
-
     public bool degug;
 
     [SerializeField] private SwordData swordData;
@@ -58,15 +53,23 @@ public class GameManager : MonoBehaviour
     {
         for (int i = 0; i < numDungeons; i++)
         {
-            // GameObject dungeon = new GameObject("Dungeon" + i);
-            // dungeon.AddComponent<DungeonGenerator>
-
             GameObject dungeonGo = Instantiate(dungeonPrefab, new Vector3(0, 0, 0), Quaternion.identity);
             DungeonGenerator dungeon = dungeonGo.GetComponent<DungeonGenerator>();
 
-            dungeon.roomCount = initialNumberRooms+ (i*incrementNumberRooms);
-            dungeon.useRandomSeed = true;
-            dungeon.seed = "Dungeon" + i;
+            dungeon.roomCount = initialNumberRooms + (i*incrementNumberRooms);
+            dungeon.level = i;
+            if (GameReferences.initialSeed.Equals(""))
+            {
+                // Debug.Log("Initial seed empty");
+                dungeon.useRandomSeed = true;
+                dungeon.seed = "Dungeon" + i;
+            }
+            else
+            {
+                // Debug.Log("Initial seed not empty");
+                dungeon.useRandomSeed = false;
+                dungeon.seed = GameReferences.initialSeed + i;
+            }
 
             dungeon.StartDungeon();
 
@@ -88,26 +91,18 @@ public class GameManager : MonoBehaviour
 
     public void ExitReached()
     {
-        dungeons[dungeonIndex].gameObject.SetActive(false);
-
-        dungeonIndex = (dungeonIndex+1)%dungeons.Count;
-        if (dungeonIndex == 0)
+        if (dungeonIndex == (dungeons.Count-1))
         {
+            GameReferences.timePassed = (int)(Time.time - GameReferences.canvasManager.initialTime);
             Win();
         }
         else
         {
+            AddPoints(100);
+            dungeons[dungeonIndex].gameObject.SetActive(false);
+            dungeonIndex = (dungeonIndex+1)%dungeons.Count;
             dungeons[dungeonIndex].gameObject.SetActive(true);
             GameReferences.player.transform.position = dungeons[dungeonIndex].InitialPosition;
-        }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        if (GameReferences.enemies.Count == 0 && !degug)
-        {
-            // Win();
         }
     }
 
@@ -155,20 +150,31 @@ public class GameManager : MonoBehaviour
             enemy.StartStun();
         }
         GameReferences.player.moveSpeed = 0;
-        StartCoroutine( RestartLevelCorrutine(2) );
+        StartCoroutine( QuitApplicationCorrutine(2) );
     }
 
     public void Win()
     {
         GameReferences.canvasManager.ShowMessage("You win!");
         GameReferences.canvasManager.StopTime();
-        StartCoroutine( RestartLevelCorrutine(2) );
+
+        int currentBestTime = PlayerPrefs.GetInt("BestTime", 0);
+        int currentHightScore = PlayerPrefs.GetInt("HighScore", 0);
+
+        if ((currentBestTime == 0) || (currentBestTime > GameReferences.timePassed))
+            PlayerPrefs.SetInt("BestTime", GameReferences.timePassed);
+
+        if ((currentHightScore == 0) || (currentHightScore < GameReferences.score))
+            PlayerPrefs.SetInt("HighScore", GameReferences.score);
+        
+        
+        StartCoroutine( QuitApplicationCorrutine(2) );
     }
 
-    IEnumerator RestartLevelCorrutine(int seconds)
+    IEnumerator QuitApplicationCorrutine(int seconds)
     {
         yield return new WaitForSeconds(seconds);
-        RestartLevel();
+        QuitApplication();
     }
     
 
@@ -179,11 +185,26 @@ public class GameManager : MonoBehaviour
 
     private void QuitApplication()
     {
-        Application.Quit();
+        SceneManager.LoadScene(0);
+        // Application.Quit();
     }
 
     private void ToggleDebug()
     {
         GameReferences.canvasManager.ToggleDebug();
     }
+
+
+    public void AddPoints(int points)
+    {
+        GameReferences.score += points;
+    }
+
+    public void SubstractPoints(int points)
+    {
+        GameReferences.score -= points;
+        if (GameReferences.score < 0)
+            GameReferences.score = 0;
+    }
+
 }

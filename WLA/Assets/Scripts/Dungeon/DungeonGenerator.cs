@@ -13,6 +13,7 @@ public class DungeonGenerator : MonoBehaviour
     [Range(3,25)] public int roomWidth;
     [Range(3,25)] public int roomHeight;
     [Range(2,100)] public int roomCount;
+    public int level;
 
     [Range(1,100)] public int enemyChance;
     [Range(1,100)] public int weaponChance;
@@ -46,7 +47,6 @@ public class DungeonGenerator : MonoBehaviour
 
     private Vector3 initialPosition;
 
-
     [SerializeField] private RoomComponent startingRoom;
     [SerializeField] private RoomComponent endRoom;
     [SerializeField] private GameObject exitDungeon;
@@ -67,7 +67,7 @@ public class DungeonGenerator : MonoBehaviour
             // seed = Time.time.ToString();
             seed = seed + System.DateTime.Now.ToString();
         }
-        // Debug.Log("Seed = " + seed);
+        // Debug.Log("Dungeon: " + gameObject.name + " Seed: " + seed);
         prng = new System.Random(seed.GetHashCode());
     }
 
@@ -241,7 +241,7 @@ public class DungeonGenerator : MonoBehaviour
 
             if (chance < enemyChance)
             {
-                obj = spawnManager.GetEnemy(pos);
+                obj = spawnManager.GetEnemy(pos, level);
                 container = enemyContainer;
             }
             else if (chance < weaponChance)

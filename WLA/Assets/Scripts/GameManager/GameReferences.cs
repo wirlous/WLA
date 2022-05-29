@@ -37,11 +37,16 @@ public static class GameReferences
     public static InventoryManager inventoryManager;
     public static PlayerController player;
     public static List<EnemyAI> enemies = new List<EnemyAI>();
+    public static AudioManager audioManager;
 
     public static int playerHealth = 50;
     public static float knockbackSpeed = 10f;
     public static float knockbackFactor = 1f;
     public static float shootOffset = 0.5f;
+
+    public static string initialSeed = "";
+    public static int timePassed = 0;
+    public static int score = 0;
 
 
     public static void AddEnemy(EnemyAI obj)

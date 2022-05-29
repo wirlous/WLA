@@ -206,45 +206,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4592826218293174260, guid: f6687c966443d2946908ef1edd85ccb4,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4592826218510857430, guid: f6687c966443d2946908ef1edd85ccb4,
-        type: 3}
-      propertyPath: m_margin.x
-      value: -40.875053
-      objectReference: {fileID: 0}
-    - target: {fileID: 4592826219063372594, guid: f6687c966443d2946908ef1edd85ccb4,
-        type: 3}
-      propertyPath: m_fontColor.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4592826219063372594, guid: f6687c966443d2946908ef1edd85ccb4,
-        type: 3}
-      propertyPath: m_fontColor.g
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4592826219063372594, guid: f6687c966443d2946908ef1edd85ccb4,
-        type: 3}
-      propertyPath: m_fontColor.b
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4592826219063372594, guid: f6687c966443d2946908ef1edd85ccb4,
-        type: 3}
-      propertyPath: m_fontColor32.rgba
-      value: 4278190335
-      objectReference: {fileID: 0}
     - target: {fileID: 4592826219761351454, guid: f6687c966443d2946908ef1edd85ccb4,
         type: 3}
       propertyPath: m_Name
       value: Canvas
-      objectReference: {fileID: 0}
-    - target: {fileID: 4592826219761351454, guid: f6687c966443d2946908ef1edd85ccb4,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4592826219761351457, guid: f6687c966443d2946908ef1edd85ccb4,
         type: 3}
@@ -653,61 +618,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4770606101374589832, guid: 7dc58632f3c447f4abf238fcc57cd6dc,
-        type: 3}
-      propertyPath: dungeons.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4770606101374589832, guid: 7dc58632f3c447f4abf238fcc57cd6dc,
-        type: 3}
-      propertyPath: degug
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4770606101374589832, guid: 7dc58632f3c447f4abf238fcc57cd6dc,
-        type: 3}
-      propertyPath: dungeons.Array.data[0]
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 4770606101374589832, guid: 7dc58632f3c447f4abf238fcc57cd6dc,
-        type: 3}
-      propertyPath: dungeons.Array.data[1]
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 4770606101374589832, guid: 7dc58632f3c447f4abf238fcc57cd6dc,
-        type: 3}
-      propertyPath: dungeons.Array.data[2]
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 4770606101374589832, guid: 7dc58632f3c447f4abf238fcc57cd6dc,
-        type: 3}
-      propertyPath: dungeonPrefab
-      value: 
-      objectReference: {fileID: 7068285743391337934, guid: 833d94673a7fe1b45a348a3e098690ad,
-        type: 3}
-    - target: {fileID: 4770606101374589832, guid: 7dc58632f3c447f4abf238fcc57cd6dc,
-        type: 3}
-      propertyPath: numDungeons
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4770606101374589832, guid: 7dc58632f3c447f4abf238fcc57cd6dc,
-        type: 3}
-      propertyPath: initialNumberRooms
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 4770606101374589832, guid: 7dc58632f3c447f4abf238fcc57cd6dc,
-        type: 3}
-      propertyPath: incrementNumberRooms
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 4770606101374589833, guid: 7dc58632f3c447f4abf238fcc57cd6dc,
         type: 3}
       propertyPath: m_Name
       value: GameManager
-      objectReference: {fileID: 0}
-    - target: {fileID: 4770606101374589833, guid: 7dc58632f3c447f4abf238fcc57cd6dc,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4770606101374589839, guid: 7dc58632f3c447f4abf238fcc57cd6dc,
         type: 3}

@@ -6,6 +6,11 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Menu.unity
+    guid: 65683f115cdccf8478360bd59cad7063
+  - enabled: 1
     path: Assets/Scenes/DungeonGeneration.unity
     guid: 0e52456195977a241b9dddadf16473e3
-  m_configObjects: {}
+  m_configObjects:
+    com.unity.addressableassets: {fileID: 11400000, guid: 78c6fa06287881f418a3f86bd7602d7a,
+      type: 2}

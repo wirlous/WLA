@@ -47,8 +47,14 @@ MonoBehaviour:
   bowJson: {fileID: 4900000, guid: ce6be10bd00523f48ac9a435fa143ade, type: 3}
   magicJson: {fileID: 4900000, guid: 363013da98350cd4f9d9d67c74ad9a1d, type: 3}
   pickUpJson: {fileID: 4900000, guid: 31e006ef157c40549b9b20c00cbed6d7, type: 3}
-  points: 0
-  time: 0
+  numDungeons: 5
+  initialNumberRooms: 8
+  incrementNumberRooms: 4
+  dungeons: []
+  dungeonIndex: 0
+  dungeonPrefab: {fileID: 7068285743391337934, guid: 833d94673a7fe1b45a348a3e098690ad,
+    type: 3}
+  degug: 1
   swordData:
     version: 
     swords: []

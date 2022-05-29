@@ -412,14 +412,16 @@ public class PlayerController : MonoBehaviour
         if ((enemy != null) && isHitable)
         {
             // Debug.LogFormat("Receive damage from {0}", enemy.gameObject.name);
+            GameReferences.gameManager.SubstractPoints(5);
+
             ReceiveDamage(enemy.GetDamage(), enemy.transform.position);
         }
     }
 
-    void OnCollisionExit2D(Collision2D collision)
-    {
-        // Debug.LogFormat("Collision exit detected: {0}", collision.gameObject.name);
-    }
+    // void OnCollisionExit2D(Collision2D collision)
+    // {
+    //     // Debug.LogFormat("Collision exit detected: {0}", collision.gameObject.name);
+    // }
 
     void OnCollisionStay2D(Collision2D collision)
     {
@@ -434,12 +436,6 @@ public class PlayerController : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        // EnemyAI enemy = other.gameObject.GetComponent<EnemyAI>();
-        // enemy?.ReceiveHit(transform.position);
-
-        // HealthSystem otherHealth = other.gameObject.GetComponent<HealthSystem>();
-        // otherHealth?.ReceiveDamage(damage);
-        
         // Debug.LogFormat("Trigger enter detected: {0}", other.gameObject.name);
 
         if (other.gameObject.tag == "Exit")
@@ -448,14 +444,14 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    void OnTriggerExit2D(Collider2D other)
-    {
-        // Debug.LogFormat("Trigger exit detected: {0}", other.gameObject.name);
-    }
+    // void OnTriggerExit2D(Collider2D other)
+    // {
+    //     // Debug.LogFormat("Trigger exit detected: {0}", other.gameObject.name);
+    // }
 
-    void OnTriggerStay2D(Collider2D other)
-    {
-        // Debug.LogFormat("Trigger stay detected: {0}", other.gameObject.name);
-    }
+    // void OnTriggerStay2D(Collider2D other)
+    // {
+    //     // Debug.LogFormat("Trigger stay detected: {0}", other.gameObject.name);
+    // }
 }
   

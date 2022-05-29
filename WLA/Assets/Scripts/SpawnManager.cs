@@ -15,12 +15,22 @@ public class SpawnManager : MonoBehaviour
         dungeonGenerator = dungeon;
     }
 
-    public GameObject GetEnemy(Vector2 pos)
+    public GameObject GetEnemy(Vector2 pos, int level)
     {
         int idx = dungeonGenerator.GenerateRandomInt(0, enemyPrefabs.Count);
         GameObject prefab = enemyPrefabs[idx];
+        float levelMult = ((float)level)/10f;
+        levelMult += 1;
 
         GameObject go = Instantiate(prefab, pos, Quaternion.identity);
+        EnemyAI enemy = go.GetComponent<EnemyAI>();
+        enemy.moveSpeed *= levelMult;
+        enemy.damage += level;
+        enemy.level = level+2;
+        HealthSystem health = go.GetComponent<HealthSystem>();
+        health.minHealth += level;
+        health.maxHealth += level;
+        health.ResetHealth();
         return go;
     }
 

@@ -16,6 +16,9 @@ public class EnemyAI : MonoBehaviour
     [Range(5f, 10f)] public float maxDistanceToPlayer = 5f;
 
     [Header("Debug")]
+    public int level = 1;
+
+    [Header("Debug")]
     [SerializeField] Vector2 movement;
     [SerializeField] float moveSpeedStore;
     [SerializeField] Vector2 knockbackDistance;
@@ -211,6 +214,9 @@ public class EnemyAI : MonoBehaviour
     private void Die()
     {
         // Debug.LogFormat("Enemy {0} dies", name);
+
+        GameReferences.gameManager.AddPoints(20*level);
+
         moveSpeed = 0;
         col2D.enabled = false;
         animator?.SetTrigger("Die");
