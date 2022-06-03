@@ -39,7 +39,7 @@ public static class GameReferences
     public static List<EnemyAI> enemies = new List<EnemyAI>();
     public static AudioManager audioManager;
 
-    public static int playerHealth = 25;
+    public static int playerHealth = 50;
     public static float knockbackSpeed = 10f;
     public static float knockbackFactor = 1f;
     public static float shootOffset = 0.5f;

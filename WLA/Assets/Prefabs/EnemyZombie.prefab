@@ -85,7 +85,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 1
-  damage: 15
+  damage: 8
   minDistanceToPlayer: 0.5
   maxDistanceToPlayer: 5.5
   level: 1
