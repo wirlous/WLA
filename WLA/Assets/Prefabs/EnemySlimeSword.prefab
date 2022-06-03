@@ -84,10 +84,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 065b75ab985479844b484943dd7268b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 2
-  damage: 4
+  moveSpeed: 3
+  damage: 10
   minDistanceToPlayer: 0.5
   maxDistanceToPlayer: 5.5
+  level: 1
   movement: {x: 0, y: 0}
   moveSpeedStore: 0
   knockbackDistance: {x: 0, y: 0}

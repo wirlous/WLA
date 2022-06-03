@@ -6,8 +6,8 @@
             "name"          : "Spell 1",
             "code"          : 0,
             "damage"        : 5,
-            "maxMana"       : 20,
-            "manaCost"      : 4,
+            "maxMana"       : 100,
+            "manaCost"      : 2,
 
             "spell" :
             {
@@ -21,7 +21,7 @@
             "name"          : "Spell 2",
             "code"          : 1,
             "damage"        : 10,
-            "maxMana"       : 30,
+            "maxMana"       : 100,
             "manaCost"      : 5,
 
             "spell" :
@@ -36,7 +36,7 @@
             "name"          : "Spell 3",
             "code"          : 2,
             "damage"        : 15,
-            "maxMana"       : 40,
+            "maxMana"       : 200,
             "manaCost"      : 10,
 
             "spell" :

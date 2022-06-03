@@ -116,9 +116,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 2
-  damage: 1
+  damage: 5
   minDistanceToPlayer: 0.5
   maxDistanceToPlayer: 5.5
+  level: 1
   movement: {x: 0, y: 0}
   moveSpeedStore: 0
   knockbackDistance: {x: 0, y: 0}
