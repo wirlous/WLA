@@ -81,6 +81,10 @@ public class GameManager : MonoBehaviour
 
         if (numDungeons > 0)
             PlacePlayer();
+
+        // Initialize time and score
+        GameReferences.timePassed = 0;
+        GameReferences.score = 0;
     }
 
     public void PlacePlayer()
