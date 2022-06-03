@@ -22,7 +22,7 @@ public class CanvasManager : MonoBehaviour
     [SerializeField] private bool timeRunning;
 
     // Weapons info
-    WeaponType weaponUsed = WeaponType.NONE;
+    WeaponType weaponUsed = WeaponType.SWORD;
     string swordName = "";
     string bowName = "";
     string magicName = "";

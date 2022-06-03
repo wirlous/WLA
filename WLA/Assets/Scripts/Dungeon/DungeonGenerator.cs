@@ -97,8 +97,8 @@ public class DungeonGenerator : MonoBehaviour
 
         // Transform changes to accumulated
         weaponChance = enemyChance+weaponChance;
-        pickUpChance = enemyChance+pickUpChance;
-        nothingChance = enemyChance+nothingChance;
+        pickUpChance = weaponChance+pickUpChance;
+        nothingChance = pickUpChance+nothingChance;
 
 
         spawnManager = gameObject.GetComponent<SpawnManager>();

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7068285743391337921}
   - component: {fileID: 940684889741542870}
   m_Layer: 0
-  m_Name: Dungeon
+  m_Name: DungeonTrailer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -48,10 +48,10 @@ MonoBehaviour:
   roomHeight: 7
   roomCount: 8
   level: 0
-  enemyChance: 25
+  enemyChance: 20
   weaponChance: 5
   pickUpChance: 10
-  nothingChance: 60
+  nothingChance: 70
   seed: MyFirstDungeon
   useRandomSeed: 1
   roomPrefab: {fileID: 3572505197126167294, guid: e6fde03de3524884090b541499e6b6bb,
@@ -64,7 +64,7 @@ MonoBehaviour:
     type: 3}
   exitPrefab: {fileID: 5999042189065254492, guid: f01c9d1066b96e44ea3ba7bed77499d5,
     type: 3}
-  outsidePrefab: {fileID: 5999042189065254492, guid: 1d457c8dc846cff4f9edeb5a0d071a65,
+  outsidePrefab: {fileID: 5999042189065254492, guid: ec9c488dc3c09434e9746044c9bdb52f,
     type: 3}
   spawnManager: {fileID: 0}
   spawnPos: []

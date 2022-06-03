@@ -52,13 +52,18 @@ public class MainMenuManager : MonoBehaviour
         // Debug.Log("Initial seed = " + seed);
         GameReferences.initialSeed = seed.ToLower();
 
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(2);
     }
 
     public void QuitApplication()
     {
         Debug.Log("Quit game");
         Application.Quit();
+    }
+
+    public void GoToControlMenu(int index)
+    {
+        SceneManager.LoadScene(1);
     }
 }
 

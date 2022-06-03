@@ -15,7 +15,7 @@ public class GameManager : MonoBehaviour
 
     [Header("Dungeon")]
     [Range(0,5)] public int numDungeons;
-    [Range(4,30)]public int initialNumberRooms;
+    [Range(4,100)]public int initialNumberRooms;
     [Range(1,5)]public int incrementNumberRooms;
     [SerializeField] private List<DungeonGenerator> dungeons = new List<DungeonGenerator>();
     [SerializeField] private int dungeonIndex;
